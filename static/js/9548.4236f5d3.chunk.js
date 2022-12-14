@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_app=self.webpackChunkreact_app||[]).push([[9548],{19548:function(a,n,e){e.r(n);var t=e(43504),c=e(80184);n.default=function(){return(0,c.jsx)("div",{className:"news-managment text-center",children:(0,c.jsxs)("div",{className:"container",children:[(0,c.jsx)("h1",{children:"Notifications Managment Page"}),(0,c.jsx)(t.rU,{to:"/dashboard/admin/add-notification",className:"btn btn-danger d-block mb-4",children:"Add Notifications"})]})})}}}]);
+//# sourceMappingURL=9548.4236f5d3.chunk.js.map
