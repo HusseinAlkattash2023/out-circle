@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_app=self.webpackChunkreact_app||[]).push([[8195],{51719:function(e,a,t){t.r(a);t(72791);var n=t(7508),p=t(43005),c=t(80184);a.default=function(){return(0,c.jsx)("div",{children:(0,c.jsx)(p.Z,{image:n})})}},7508:function(e,a,t){e.exports=t.p+"static/media/Mask Group -4.81915eade77e912f4244.png"}}]);
+//# sourceMappingURL=8195.007b5606.chunk.js.map
