@@ -2,11 +2,15 @@ import React , {useState} from 'react'
 import './Visiter.css'
 import { Link , useNavigate } from 'react-router-dom'
 import back from '../../Assets/images/back.png';
-import image from '../../Assets/images/ar_photo/corporate.png'
-import {BsPersonPlus} from "react-icons/bs"
+import {BsPersonPlus} from "react-icons/bs";
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from "react-hook-form";
+import image1 from "../../Assets/images/ar_photo/corporate.png";
+import image2 from "../../Assets/images/ar_photo/institute.png";
+import image3 from "../../Assets/images/ar_photo/scientific.png";
+import image4 from "../../Assets/images/ar_photo/handicraft.png";
+import image5 from "../../Assets/images/ar_photo/Mask Group -6.png";
 import toast, { Toaster } from "react-hot-toast";
 
 const schema = yup
@@ -25,7 +29,25 @@ const Visiter = () => {
     
     const navigate = useNavigate();
 
-    const change_route = localStorage.getItem("change_route")
+    const change_route = localStorage.getItem("change_route");
+
+    const arr = change_route.split("/");
+  
+    const TypeImage = () => {
+      let image_;
+      if (arr[0] === "career-service" || arr[0] === "personal-service") {
+        image_ = image5;
+      } else if (arr[0] === "corporate") {
+        image_ = image1;
+      } else if (arr[0] === "institute") {
+        image_ = image2;
+      } else if (arr[0] === "scientific") {
+        image_ = image3;
+      } else if (arr[0] === "handicraft") {
+        image_ = image4;
+      }
+      return image_;
+    };
 
     const { register, handleSubmit , formState:{errors}} = useForm({resolver: yupResolver(schema)});
 
@@ -69,7 +91,7 @@ const Visiter = () => {
             </form>
         </div>
         <div className='section2_ar'>
-            <img src={image} alt=""/>
+            <img src={TypeImage()} alt=""/>
         </div>
     </div>
   )

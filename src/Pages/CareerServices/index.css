@@ -61,8 +61,8 @@
 }
 .careerServices .career_ar{
     position: absolute;
-    top: 75%;
-    right: 10%;
+    top: 80%;
+    right: 8%;
     font-size: 30px;
     color:#c4f9ae;
     letter-spacing: 1px;
@@ -86,6 +86,9 @@
 @media only screen and (max-width: 1300px){
     .careerServices .career{
         left: 4%;
+    }
+    .careerServices .career_ar{
+        right: 4%;
     }
 }
 @media only screen and (max-width: 1150px){
