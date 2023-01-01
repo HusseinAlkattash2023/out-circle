@@ -51,11 +51,10 @@ const Visiter = () => {
             <div><Toaster/></div>
             <form onSubmit = {handleSubmit(onSubmit)} encType="multipart/form-data">
             <div className='body'>
-                <div>
+                <div className="my-3">
                 <input {...register("email")} value={data.email} onChange={(e)=> setData({...data , email:e.target.value})} className='my-2' type="email" placeholder='البريد الإلكتروني'/>
                 <span style={{color:"red"}} className="error">{errors.email?.message}</span>
                 </div>
-                <span>or</span>
                 <div>
                     <input value={data.phone_number} onChange={(e)=> setData({...data , phone_number:e.target.value})} className='my-2' type="number" placeholder='رقم الموبايل'/>
                 </div>

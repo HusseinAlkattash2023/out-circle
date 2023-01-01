@@ -63,7 +63,6 @@ function HomeAr() {
 
   const [adsImage, setAdsImage] = useState([]);
   const [newsInfo, setNewsInfo] = useState([]);
-  const [isShowWelcomeMessageAr , setShowWelcomeMessageAr] = useState("yes");
   const [isLogin, setIsLogin] = useState(false);
 
     const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
@@ -92,12 +91,6 @@ function HomeAr() {
   
     useEffect(() => {
       setIsLogin(localStorage.getItem("is-user-login"));
-    let showWelcomeMessageTemp = localStorage.getItem("showWelcomeMessageAr");
-    if(!showWelcomeMessageTemp) {
-      localStorage.setItem("showWelcomeMessageAr", "yes");
-    } else {
-      setShowWelcomeMessageAr(localStorage.getItem("showWelcomeMessageAr"));
-    }
       getAllNews()
         .then((data) => {
           setNewsInfo(data);
@@ -115,8 +108,8 @@ function HomeAr() {
     navigate("/login")
   }
   return (
-    <div className='home'>
-      {isShowWelcomeMessageAr === "yes" && <div className="welcome_"><WelcomeMessage/></div>}
+      <div className='home'>
+      <div className="welcome_"><WelcomeMessage/></div>
       <img className='img2_ar' src={es} alt=""/>
       <header className='_header1'>
       <button className="Ar_" style={{borderRadius:"20px 0px 0px 20px" , width:"40px" , border:"2px solid #000"}} onClick={() => navigate("/ar")}>Ar</button>

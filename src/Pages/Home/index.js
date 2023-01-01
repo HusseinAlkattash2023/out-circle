@@ -59,7 +59,6 @@ function Home() {
 
   const [adsImage, setAdsImage] = useState([]);
   const [newsInfo, setNewsInfo] = useState([]);
-  const [isShowWelcomeMessage, setShowWelcomeMessage] = useState("yes");
   const [isLogin, setIsLogin] = useState(false);
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
@@ -86,12 +85,6 @@ function Home() {
 
   useEffect(() => {
     setIsLogin(localStorage.getItem("is-user-login"));
-    let showWelcomeMessageTemp = localStorage.getItem("showWelcomeMessage");
-    if (!showWelcomeMessageTemp) {
-      localStorage.setItem("showWelcomeMessage", "yes");
-    } else {
-      setShowWelcomeMessage(localStorage.getItem("showWelcomeMessage"));
-    }
     getAllNews()
       .then((data) => {
         setNewsInfo(data);
@@ -111,11 +104,7 @@ function Home() {
 
   return (
     <div className="home">
-      {isShowWelcomeMessage === "yes" && (
-        <div className="welcome_">
-          <WelcomeMessage />
-        </div>
-      )}
+      <div className="welcome_"><WelcomeMessage /></div>
       <img className="img2" src={es} alt="" />
       <header className="_header1">
         <button

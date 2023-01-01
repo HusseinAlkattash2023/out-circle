@@ -62,13 +62,13 @@ function Croporate() {
         demand8="corporate/service8"
         service="Croporate"
         service1="Consultations on the current work in all fields of banking services , financial transactions and marketing strategies"
-        service2="New business advice and ideas."
-        service3="Account management (financial and banking/social media... ect)."
-        service4="Follow-up  services for the investment activities."
-        service5="(Real estate, transpotation, financial, licenses ..ect) services."
-        service6="Cladding and decoration ideas and services for the company."
+        service2="New business advice and ideas"
+        service3="Account management (financial and banking/social media... ect)"
+        service4="Follow-up  services for the investment activities of the company"
+        service5="(Real estate, transpotation, financial, commercial registry ..ect) services"
+        service6="Cladding and decoration ideas and services for the company"
         service7="Providing qualified employees."
-        service8="Advertising Services."
+        service8="Advertising Services"
         />
     </div>
 )
