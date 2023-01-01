@@ -1,0 +1,93 @@
+.personalServices{
+    background-color: #0a382b;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.personalServices header a{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.personalServices header a img{
+    width: 30px;
+}
+.personalServices .link{
+    display: none;
+}
+.personalServices header a span{
+    border: 2px solid white;
+    padding: 5px 55px 5px 5px;
+    position: relative;
+    right: -50px;
+    border-radius: 20px 0% 0% 20px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+    border-right: none;
+}
+.personalServices header a:hover span{
+    opacity: 1;
+    visibility: visible;
+}
+
+.personalServices .personal{
+    position: absolute;
+    top: 75%;
+    left: 12%;
+    font-size: 20px;
+    color:#c4f9ae;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: book;
+}
+.personalServices .section2{
+    padding-top: 150px;
+    height: 550px;
+}
+.personalServices .personal_ar{
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    font-size: 30px;
+    color:#c4f9ae;
+    letter-spacing: 1px;
+    font-family: 'Lemonada', medium;
+}
+
+@font-face{
+    font-family: book;
+    src:url('../../Assets/fonts/Book\ Antiqua\ Font.ttf')
+}
+
+@media only screen and (max-width: 1050px){
+    .personalServices{
+        position: relative;
+        height: 900px;
+        width: 100%;
+    }
+    .personalServices .personal{
+        display: none;
+    }
+    .personalServices .personal_ar{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .personalServices header a ,
+    .personalServices header .back{
+        display: none;
+    }
+    .personalServices .section2{
+        padding-top: 120px;
+    }
+}
+@media only screen and (max-width: 470px){
+    .personalServices .section2{
+        padding-top: 0px;
+        height: 460px;
+    }
+}
