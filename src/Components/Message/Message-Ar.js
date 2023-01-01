@@ -158,6 +158,9 @@ const Message1 = ({ text, image, gmail, admin, change_route }) => {
           console.log(err);
         });
     }
+    setValue1("")
+    setValue2();
+    setValue3();
   };
 
   const visitorInformation = () => {
@@ -326,6 +329,9 @@ const Message2 = ({
           console.log(err);
         });
     }
+    setValue1("")
+    setValue2();
+    setValue3();
   };
 
   const addAudioElement = (blob) => {

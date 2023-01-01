@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Message.css";
-import { Link , useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import uploade from "../../Assets/images/Group 375.png";
 import check from "../../Assets/images/check_box.png";
 import send_message from "../../Assets/images/sendMessage.png";
@@ -138,6 +138,9 @@ const Message1 = ({ text, image , gmail , admin , change_route}) => {
         console.log(err);
       });
     }
+    setValue1("")
+    setValue2()
+    setValue3()
   };
 
   const visitorInformation = ()=> {
@@ -314,6 +317,9 @@ const Message2 = ({
         console.log(err);
       });
     }
+    setValue1("")
+    setValue2()
+    setValue3()
   };
 
   const visitorInformation = ()=> {

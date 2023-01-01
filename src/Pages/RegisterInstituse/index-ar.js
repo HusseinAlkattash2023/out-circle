@@ -110,17 +110,59 @@ function RegisterInstituse() {
     }
   ]
 
-  //--------------add validation ----------
-  const validate = (values) => {
+   //--------------add validation ----------
+   const validate = (values) => {
     let errors = {};
-    if(values.password.length < 4){
-      errors.password = "بجب أن تحوي كلمة المرور أكثر من 4 محارف"
+    if(!values.username){
+      errors.username = "من فضلك أدخل اسم المستخدم";
     }
-    if(values.password !== values.confirm_password){
-      errors.confirm_password="يجب أن تتطابق كلمات المرور"
+    else if (values.password.length < 4) {
+      errors.password = "كلمة السر يجب أن تحوي على الأقل 4 محارف";
+    }
+    else if (values.password !== values.confirm_password) {
+      errors.confirm_password = "يجب أن تتطابق كلمات المرور";
+    }
+    else if(!values.full_name){
+      errors.full_name = "من فضلك أدخل اسمك الكامل";
+    }
+    else if(!values.born_date){
+      errors.born_date = "من فضلك أدخل المواليد";
+    }
+    else if(!num){
+      errors.num = "من فضلك أدخل رقم الموبايل";
+    }
+    else if(!values.email){
+      errors.email = "من فضلك أدخل إيميلك";
+    }
+    else if(!values.institute_name){
+      errors.institute_name = "من فضلك أدخل اسم المؤسسة";
+    }
+    else if(!values.record_number){
+      errors.record_number = "من فضلك أدخل رقم سجل المؤسسة";
+    }
+    else if(!values.record_history){
+      errors.record_history = "من فضلك أدخل تاريخ سجل المؤسسة";
+    }
+    else if(!values.current_city){
+      errors.current_city = "من فضلك أدخل محافظتك";
+    }
+    else if(!values.current_address){
+      errors.current_address = "من فضلك أدخل عنوانك الحالي";
+    }
+    else if(!values.detailed_business){
+      errors.detailed_business = "من فضلك ادخل هذا الحقل";
+    }
+    else if(!values.start_date){
+      errors.start_date = "من فضلك ادخل هذا الحقل";
+    }
+    else if(!values.institute_email){
+      errors.institute_email = "من فضلك ادخل هذا الحقل";
+    }
+    else if(!values.landline_number){
+      errors.landline_number = "من فضلك ادخل هذا الحقل";
     }
     return errors;
-  }
+  };
 
   const BASE_API_URL = useSelector(state => state.BASE_API_URL);
 
