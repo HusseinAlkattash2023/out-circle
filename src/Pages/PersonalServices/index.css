@@ -35,13 +35,13 @@
 
 .personalServices .personal{
     position: absolute;
-    top: 75%;
-    left: 12%;
-    font-size: 20px;
+    top: 80%;
+    left: 6%;
+    font-size: 30px;
     color:#c4f9ae;
     letter-spacing: 1px;
     text-align: center;
-    font-family: book;
+    font-family:algerian;
 }
 .personalServices .section2{
     padding-top: 150px;
@@ -57,9 +57,15 @@
     font-family: 'Lemonada', medium;
 }
 
-@font-face{
-    font-family: book;
-    src:url('../../Assets/fonts/Book\ Antiqua\ Font.ttf')
+@font-face {
+    font-family: "algerian";
+    src: url('../../Assets/fonts/Algerian\ Regular.ttf');
+}
+
+@media only screen and (max-width: 1300px){
+    .personalServices .personal{
+        left: 2%;
+    }
 }
 
 @media only screen and (max-width: 1050px){
