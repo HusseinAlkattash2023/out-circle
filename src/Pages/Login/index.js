@@ -86,11 +86,12 @@ function Login() {
   };
   const validate = (values) => {
     let errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    var mailFormat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})|([0-9]{10})+$/;
     if (!values.text) {
-      errors.text = "Please enter email"
-    } else if (!regex.test(values.text)) {
-      errors.text = "Invalid Input Please Email";
+      errors.text = "Please enter email or mobile number"
+    } else if (!mailFormat.test(values.text)) {
+      errors.text = "Invalid Input Please enter Email Or mobile number";
     }
     if (!values.password) {
       errors.password = "Please enter password";

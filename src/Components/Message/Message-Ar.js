@@ -196,7 +196,7 @@ const Message1 = ({ text, image, gmail, admin, change_route }) => {
             <label htmlFor="file">
               <img src={uploade} alt="" width="40px" />
               {!value2 ? (
-                <p>تحميل الملف هنا لمزيد من التفاصيل</p>
+                <p>تحميل الملف هنا لإرسال مزيد من التفاصيل</p>
               ) : (
                 <p>تم تحميل ملفك بنجاح</p>
               )}
@@ -399,7 +399,7 @@ const Message2 = ({
             <label htmlFor="file">
               <img src={uploade} alt="" width="40px" />
               {!value2 ? (
-                <p>تحميل الملف هنا لمزيد من التفاصيل</p>
+                <p>تحميل الملف هنا ﻹرسال مزيد من التفاصيل</p>
               ) : (
                 <p>تم تحميل ملفك بنجاح</p>
               )}

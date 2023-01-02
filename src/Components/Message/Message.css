@@ -10,6 +10,8 @@
 .audio .audio-recorder ,
 .audio_ar .audio-recorder{
     background-color: #29d9a7;
+    box-shadow: none;
+    border-radius: 15px;
 }
 .message .back {
     position: absolute;
@@ -742,6 +744,9 @@
         position: absolute;
         top: 150px;
         left:-10px;
+    }
+    .message2 .content form label p{
+        font-size: 15px;
     }
     .message2 .content_en form label img{
         position: relative;

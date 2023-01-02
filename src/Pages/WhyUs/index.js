@@ -35,7 +35,8 @@ function WhyUs() {
                     </p>
                     <p>To know more details and benefit from our services, please sign in individually according to the field of work.</p>
                     <p>Very important notes:</p>
-                    <p>- Our main field of work the consulting ones with the possibility of applying them to become occupational services according of the agreement</p>
+                    <p>- Our main field of work is the consulting aspect.</p>
+                    <p>- Most of our services are consulting ones with the possibility of applying them to become occupational services according to the agreement.</p>
                     <p>- The occupational and personal services that we provide do not nacessarily have to met because our services need an organized and accurate study to be accepted, 
                         so please you have to give us enough time to avoid any problems.
                     </p>

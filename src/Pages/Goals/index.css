@@ -141,11 +141,11 @@
     height: 400px;
     overflow-y: scroll;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     position: relative;
     top:25px;
     text-align:right;
-    font-family: 'Readex Pro', sans-serif;
+    font-family: 'Almarai', sans-serif;
 }
  
 .goals .main .text::-webkit-scrollbar,

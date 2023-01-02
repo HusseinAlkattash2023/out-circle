@@ -15,9 +15,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
 const schema = yup.object({
   username: yup.string().required("Please Enter your username"),
   email: yup.string().email().required("Please enter your Email"),
@@ -34,9 +31,6 @@ const schema = yup.object({
   scientific_specialization: yup
     .string()
     .required("Please enter your scientific specialization"),
-  mobile_number: yup
-    .string()
-    .matches(phoneRegExp, "Please enter your phone number"),
 });
 
 function RegisterScientific() {
@@ -69,6 +63,16 @@ function RegisterScientific() {
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
   const navigate = useNavigate();
+
+  const [formError , setFormError] = useState({});
+
+  const validate = (n) => {
+    let errors={};
+    if(n === ""){
+      errors.num = "Please enter your mobile number";
+    }
+    return errors;
+  }
 
   useEffect(() => {
     if (localStorage.getItem("is-user-login")) {
@@ -138,6 +142,9 @@ function RegisterScientific() {
   ];
 
   const onSubmit = () => {
+
+    setFormError(validate(num));
+
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
 
@@ -145,6 +152,9 @@ function RegisterScientific() {
       formData.append("file2" + i, file1[i]);
     }
 
+    const errors = Object.values(validate(num));
+
+    if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/scientific-careers/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;
@@ -160,6 +170,7 @@ function RegisterScientific() {
       .catch((err) => {
         console.error(err);
       });
+    }
   };
   return (
     <div className="scientific">
@@ -343,10 +354,10 @@ function RegisterScientific() {
                 defaultCountry="sy"
                 enableSearchField
               />
+              {formError.num && (<span className="error" style={{ color: "red" }}>{formError.num}</span>)}
             </div>
             <div className="my-3 input_">
               <input
-                {...register("mobile_number")}
                 value={data.whatsapp_number}
                 onChange={(e) => {
                   setData({ ...data, whatsapp_number: e.target.value });
@@ -354,10 +365,7 @@ function RegisterScientific() {
                 className="input"
                 placeholder="Whatsapp number"
                 type="number"
-              /><br/>
-              <span style={{ color: "red" }}>
-                {errors.mobile_number?.message}
-              </span>
+              />
             </div>
             <div className="my-3 input_">
               <input

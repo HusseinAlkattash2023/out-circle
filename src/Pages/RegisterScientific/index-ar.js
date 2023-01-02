@@ -14,8 +14,6 @@ import Axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const schema = yup.object({
   username: yup.string().required("من فضلك أدخل اسم المستخدم"),
@@ -31,9 +29,6 @@ const schema = yup.object({
   current_city: yup.string().required("من فضلك أدخل مدينتك الحالية"),
   current_address: yup.string().required("من فضلك أدخل عنوانك الحالي"),
   scientific_specialization: yup.string().required("من فضلك أدخل تخصصك العلمي"),
-  mobile_number: yup
-    .string()
-    .matches(phoneRegExp, "من فضلك أدخل رقم الواتس أب"),
 });
 
 function RegisterScientificAr() {
@@ -62,6 +57,16 @@ function RegisterScientificAr() {
   const [num, setNum] = useState("");
   const [file1, setFile1] = useState();
   const navigate = useNavigate();
+  const [formError , setFormError] = useState({});
+
+
+  const validate = (n) => {
+    let errors={};
+    if(n === ""){
+      errors.num = "من فضلك أدخل رقم الموبايل";
+    }
+    return errors;
+  }
 
   useEffect(() => {
     if (localStorage.getItem("is-user-login")) {
@@ -135,8 +140,15 @@ function RegisterScientificAr() {
   ];
 
   const onSubmit = () => {
+
+    setFormError(validate(num));
+
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
+
+    const errors = Object.values(validate(num));
+
+    if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/scientific-careers/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;
@@ -150,6 +162,7 @@ function RegisterScientificAr() {
       .catch((err) => {
         console.error(err);
       });
+    }
   };
 
   return (
@@ -333,6 +346,7 @@ function RegisterScientificAr() {
                 defaultCountry="sy"
                 enableSearchField
               />
+              {formError.num && (<span className="error" style={{ color: "red" }}>{formError.num}</span>)}
             </div>
             <div className="my-3 input_">
               <input

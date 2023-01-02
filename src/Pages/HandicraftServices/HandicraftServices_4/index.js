@@ -9,7 +9,7 @@ const HandicraftServices_4 = () => {
         admin={"outcircle2023@gmail.com"}
         change_route={"handicraft/service4"}
         user={"user_handicraft"}
-        image={image} text={"Follow-up  services for the investment activities of the company"}
+        image={image} text={"Follow-up  services for the investment activities"}
         head={"Handicraft"} address={"Follow-up  services for the investment activities"}
         text1={"Financial portfolio management"}
         text2={"Supervising the financial portfolio"}

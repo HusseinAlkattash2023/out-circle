@@ -178,7 +178,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
           <div className="upload">
             <label htmlFor="file">
             {
-                !value2 ? <p>Upload file here for more detials</p> : <p>Your file has been uploaded successfully</p>
+                !value2 ? <p>Upload a file here to send more detials</p> : <p>Your file has been uploaded successfully</p>
             }
               <img src={uploade} alt="" width="40px" />
             </label>
@@ -204,7 +204,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
           !user_obj ? (
           <div className="check" onClick={visitorInformation} style={{cursor:"pointer"}}>
             <p>
-                Information that must be complated first in case you are a
+                Information must be complated first in case you are a
                 visitor to send that request.
             </p>
             <img src={check} alt="" width="40px" />
@@ -380,7 +380,7 @@ const Message2 = ({
           <div className="upload">
           <label htmlFor="file">
               {
-                !value2 ? <p>Upload file here for more detials</p> : <p className="uploaded">Your file has been uploaded successfully</p>
+                !value2 ? <p>Upload a file here to send more detials</p> : <p className="uploaded">Your file has been uploaded successfully</p>
               }
               <img src={uploade} alt="" width="40px" />
             </label>
@@ -404,7 +404,7 @@ const Message2 = ({
           !user_obj ? (
           <div className="check" onClick={visitorInformation} style={{cursor:"pointer"}}>
             <p>
-                Information that must be complated first in case you are a
+                Information must be complated first in case you are a
                 visitor to send that request.
             </p>
             <img src={check} alt="" width="40px" />

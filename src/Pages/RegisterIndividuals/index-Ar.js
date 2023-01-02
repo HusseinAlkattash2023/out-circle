@@ -15,8 +15,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
 
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
 
 const schema = yup.object({
     user_name: yup.string().required("من فضلك إدخل اسم المستخدم"),
@@ -26,7 +24,6 @@ const schema = yup.object({
     full_name:yup.string().required("من فضلك ادخل اسمك الكامل"),
     current_city:yup.string().required("من فضلك إدخل مدينتك الحالية"),
     current_address:yup.string().required("من فضلك إدخل عنوانك الحالي"),
-    mobile_number:yup.string().matches(phoneRegExp, 'من فضلك أدخل رقم الواتس أب'),
     current_work:yup.string().required("من فضلك أدخل عملك الحالي"),
     experience:yup.string().required("من فضلك إدخل تفاصيل خبرتك العملية"),
     skills:yup.string().required("من فضلك إدخل مهاراتك اللغوية"),
@@ -59,6 +56,15 @@ function RegisterIndividualsAr() {
   const [num1, setNum1] = useState("");
   const [file1, setFile1] = useState();
   const [file2, setFile2] = useState();
+  const [formError , setFormError] = useState({});
+
+  const validate = (n) => {
+    let errors={};
+    if(n === ""){
+      errors.num1 = "من فضلك أدخل رقم الموبايل";
+    }
+    return errors;
+  }
 
   useEffect(() => {
     if (localStorage.getItem("is-user-login")) {
@@ -143,17 +149,23 @@ function RegisterIndividualsAr() {
     }
   ]
   const onSubmit =() => {
+
+    setFormError(validate(num1));
+
     const formData = new FormData();
     data_.map((item)=>(
       formData.append(item.key , item.value)
     ))
+
+    const errors = Object.values(validate(num1));
 
     if (file2) {
       for (let i = 0; i < file2.length; i++) {
           formData.append("file2" + i, file2[i]);
       }
   }
-
+    
+    if(errors.length() === 0){
     Axios.post(`${BASE_API_URL}/api/individuals/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;
@@ -169,6 +181,7 @@ function RegisterIndividualsAr() {
       .catch((err) => {
         console.error(err);
       });
+    }
   };
 
   const ref1 = useRef();
@@ -316,10 +329,10 @@ function RegisterIndividualsAr() {
                 defaultCountry="sy"
                 enableSearchField
               />
+              {formError.num1 && (<span className="error" style={{ color: "red" }}>{formError.num1}</span>)}
             </div>
             <div className="my-3 input_">
               <input
-                {...register("mobile_number")}
                 className="input"
                 value={data.whatsapp_number}
                 onChange={(e) => {
@@ -328,7 +341,6 @@ function RegisterIndividualsAr() {
                 placeholder="رقم الواتس أب"
                 type="number"
               />
-              <span style={{color:"red"}}>{errors.mobile_number?.message}</span>
             </div>
             <div className="my-3 input_">
               <input

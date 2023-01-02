@@ -14,9 +14,7 @@ import Axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
+ 
 const schema = yup.object({
   username: yup.string().required("من فضلك أدخل اسم المستخدم"),
   email: yup.string().email().required("من فضلك أدخل ايميلك"),
@@ -32,9 +30,6 @@ const schema = yup.object({
   current_address: yup.string().required("من فضلك أدخل عنوانك الحالي"),
   craft_specialization: yup.string().required("من فضلك أدخل تخصصك الحرفي"),
   current_work: yup.string().required("من فضلك أدخل عنوان عملك الحالي"),
-  mobile_number: yup
-    .string()
-    .matches(phoneRegExp, "من فضلك أدخل رقم الواتس أب"),
 });
 
 function RegisterHandicraftAr() {
@@ -52,7 +47,6 @@ function RegisterHandicraftAr() {
     start_date: "",
     work_address: "",
     whatsapp_number: "",
-    landline_number: "",
   });
   const [num1, setNum1] = useState("");
   const [file1, setFile1] = useState();
@@ -60,6 +54,16 @@ function RegisterHandicraftAr() {
   const ref1 = useRef();
   const ref2 = useRef();
   const navigate = useNavigate();
+  const [formError , setFormError] = useState({});
+
+  const validate = (n) => {
+    let errors={};
+    if(n === ""){
+      errors.num1 = "من فضلك أدخل رقم الموبايل";
+    }
+    return errors;
+  }
+
 
   useEffect(() => {
     if (localStorage.getItem("is-user-login")) {
@@ -118,10 +122,6 @@ function RegisterHandicraftAr() {
       value: data.craft_specialization,
     },
     {
-      key: "landline_number",
-      value: data.landline_number,
-    },
-    {
       key: "phone_number",
       value:num1,
     },
@@ -146,8 +146,14 @@ function RegisterHandicraftAr() {
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const onSubmit = () => {
+
+    setFormError(validate(num1));
+
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
+
+    const errors = Object.values(validate(num1));
+
 
     if (file2) {
         for (let i = 0; i < file2.length; i++) {
@@ -155,6 +161,7 @@ function RegisterHandicraftAr() {
         }
     }
 
+    if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/craftsmen/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;
@@ -170,6 +177,7 @@ function RegisterHandicraftAr() {
       .catch((err) => {
         console.error(err);
       });
+    }
   };
 
   return (
@@ -355,17 +363,6 @@ function RegisterHandicraftAr() {
               </span>
             </div>
             <div className="my-3 input_">
-              <input
-                value={data.landline_number}
-                onChange={(e) => {
-                  setData({ ...data, landline_number: e.target.value });
-                }}
-                className="input"
-                placeholder="رقم الهاتف الأرصي"
-                type="number"
-              />
-            </div>
-            <div className="my-3 input_">
               <ReactPhoneInput
                 value={num1}
                 onChange={setNum1}
@@ -374,10 +371,10 @@ function RegisterHandicraftAr() {
                 defaultCountry="sy"
                 enableSearchField
               />
+              {formError.num1 && (<span className="error" style={{ color: "red" }}>{formError.num1}</span>)}
             </div>
             <div className="my-3 input_">
               <input
-                {...register("mobile_number")}
                 value={data.whatsapp_number}
                 onChange={(e) => {
                   setData({ ...data, whatsapp_number: e.target.value });
@@ -386,10 +383,6 @@ function RegisterHandicraftAr() {
                 placeholder="رقم الواتس أب"
                 type="number"
               />
-              <br />
-              <span style={{ color: "red" }}>
-                {errors.mobile_number?.message}
-              </span>
             </div>
             <div className="my-3 input_">
               <input

@@ -87,11 +87,12 @@ function Login_ar() {
     };
     const validate = (values) => {
         let errors = {};
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        var mailFormat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})|([0-9]{10})+$/;
+
         if (!values.text) {
             errors.text = "الرجاء إدخال البريد الإلكتروني";
-        } else if (!regex.test(values.text)) {
-            errors.text = "تنسيق بريد إلكتروني غير صالح";
+        } else if (!mailFormat.test(values.text)) {
+            errors.text = "إدخال غير صحيح الرجاء إدخال البريد الإلكتروني أو رقم الهاتف المحمول";
         }
         if (!values.password) {
         errors.password = "الرجاء إدخال كلمة المرور";

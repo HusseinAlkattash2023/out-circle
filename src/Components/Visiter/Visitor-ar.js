@@ -68,7 +68,7 @@ const Visiter = () => {
         <div className='section1_ar'>
             <header>
                 <span className='icon'><BsPersonPlus/></span>
-                <span className='text'>زائراً</span>
+                <span className='text'>زائر</span>
             </header>
             <div><Toaster/></div>
             <form onSubmit = {handleSubmit(onSubmit)} encType="multipart/form-data">

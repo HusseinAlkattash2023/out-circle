@@ -11,7 +11,7 @@ const InstituteService_6 = () => {
         user={"user_institute"}
         image={image1} text={"Cladding and decoration ideas and services for the company."}
         head={"Institute"} address={"Cladding and decoration ideas and services for the company"}
-        text1={"Concluding contracts to Completely or partially cladding a real estate2"}
+        text1={"Concluding contracts to Completely or partially cladding a real estate"}
         text2={"Supervising and following up the existing cladding"}
         text3={"Ideas for decoration"}
         text4={"The possibility of completing, applying and following up the  decorative designs"}

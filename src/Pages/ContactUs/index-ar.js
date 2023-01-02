@@ -36,20 +36,20 @@ function ContactUs() {
                 </div>
                 <div className='text_ar'>
                 <div className='text-center mb-3'>
-            <h3>خدمة الزبائن</h3>
+            <h3>خدمة العملاء</h3>
             <p>موبايل 1 : 0946202311</p>
             <p>موبايل 2 : 0986202311</p>
           </div>
           <div className='media'>
             <div>
-              <a href="" className='mx-1'><img src={Bussines} alt="" width="40px"/></a>
-              <a href="" className='mx-1'><img src={telegram} alt="" width="40px"/></a>
-              <a href="" className='ms-1'><img src={Email} alt="" width="40px"/></a>
+              <a href="https://wa.me/+963946202311" className='mx-1'><img src={Bussines} alt="" width="40px"/></a>
+              <a href="https://t.me/+963946202311" className='mx-1'><img src={telegram} alt="" width="40px"/></a>
+              <a href="mailto:Cs.outcircle@gmail.com" className='ms-1'><img src={Email} alt="" width="40px"/></a>
             </div>
             <div className=''>
-              <a href="" className='me-1'><img src={facebook} alt="" width="40px"/></a>
-              <a href="" className='mx-1'><img src={instegram} alt="" width="40px"/></a>
-              <a href="" className='mx-1'><img src={linkedin} alt="" width="40px"/></a>
+              <a href="https://m.facebook.com/profile.php?id=100088302496274&mibextid=ZbWKwL" className='me-1'><img src={facebook} alt="" width="40px"/></a>
+              <a href="https://www.instagram.com/out.circle.2023/?fbclid=IwAR1Y7wuS-QtVNNG7hhzwsbzzNfPNUbVGrqTAfCVYPwKMZUGKfKdKJSPU9K8" className='mx-1'><img src={instegram} alt="" width="40px"/></a>
+              <a href="https://www.linkedin.com/in/out-circle-463675259" className='mx-1'><img src={linkedin} alt="" width="40px"/></a>
             </div>
           </div>
           <p className='text-center mt-3'>--------------------------------</p>
@@ -59,9 +59,9 @@ function ContactUs() {
             <p>موبايل : 0946332211</p>
           </div>
           <div className='text-center'>
-              <a href="" className='me-1'><img src={whatsapp} alt="" width="40px"/></a>
-              <a href="" className='mx-1'><img src={telegram} alt="" width="40px"/></a>
-              <a href="" className='ms-1'><img src={Email} alt="" width="40px"/></a>
+              <a href="https://wa.me/+963946332211" className='me-1'><img src={whatsapp} alt="" width="40px"/></a>
+              <a href="https://t.me/+963946332211" className='mx-1'><img src={telegram} alt="" width="40px"/></a>
+              <a href="mailto:Management.outcircle@gmail.com" className='ms-1'><img src={Email} alt="" width="40px"/></a>
           </div>
           <p className='text-center mt-2'>---------------------------------</p>
           <div className='text-center apps'>
@@ -73,45 +73,6 @@ function ContactUs() {
           </div>
                 </div>
             </section>
-        <footer className="footer">
-        <div className='icons_ar'>
-        <ul>
-            <li className="mx-0">
-              <a href="https://wa.me/+963946202311" target="_blank">
-                <img src={whatsapp} alt="" />
-              </a>
-            </li>
-            <li className="mx-0">
-              <a href="https://m.facebook.com/profile.php?id=100088302496274&mibextid=ZbWKwL" target="_blank">
-                <img src={facebook} alt="" />
-              </a>
-            </li>
-            <li className="mx-0">
-              <a href="" target="_blank">
-                <img src={linkedin} alt="" />
-              </a>
-            </li>
-            <li className="mx-0">
-              <a href="http://t.me/OutCircle" target="_blank">
-                <img src={telegram} alt="" />
-              </a>
-            </li>
-            <li className="mx-0">
-              <a href="" target="_blank">
-                <img src={instegram} alt="" />
-              </a>
-            </li>
-          </ul>
-        <div className='ddd ms-2'>
-            <Link to="" className='me-1'>
-                <img src={googlePlay} alt="" />
-            </Link>
-            <Link to="" className='ms-1'>
-                <img src={appStore} alt="" />
-            </Link>
-        </div>
-        </div>
-            </footer>
         </div>
 )
 }

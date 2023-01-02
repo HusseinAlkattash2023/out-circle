@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./index.css";
 import { Link, useNavigate } from "react-router-dom";
-import ReactPhoneInput from "react-phone-input-2";
+import ReactPhoneInput , { isValidPhoneNumber } from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import back from "../../Assets/images/back.png";
 import { BsPersonPlus } from "react-icons/bs";
@@ -14,9 +14,6 @@ import file from "../../Assets/images/file.png";
 import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
 const schema = yup.object({
   user_name: yup.string().required("Please enter your username"),
   email: yup.string().email().required("Please enter your Email"),
@@ -28,9 +25,6 @@ const schema = yup.object({
     .string()
     .oneOf([yup.ref("password"), null], "Passwords must match"),
   full_name: yup.string().required("Please enter your Full name"),
-  mobile_number: yup
-    .string()
-    .matches(phoneRegExp, "Please Enter your whatsapp number"),
   current_city: yup.string().required("Please enter your current city"),
   current_address: yup.string().required("Please enter your current address"),
   current_work: yup.string().required("Please enter your current work"),
@@ -68,6 +62,15 @@ function RegisterIndividuals() {
   const [num1, setNum1] = useState("");
   const [file1, setFile1] = useState();
   const [file2, setFile2] = useState();
+  const [formError , setFormError] = useState({});
+
+  const validate = (n) => {
+    let errors={};
+    if(n === ""){
+      errors.num1 = "Please enter your mobile number";
+    }
+    return errors;
+  }
 
   useEffect(() => {
     if (localStorage.getItem("is-user-login")) {
@@ -172,15 +175,21 @@ function RegisterIndividuals() {
     },
   ];
   const onSubmit = () => {
+
+    setFormError(validate(num1));
+
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
+
+    const errors = Object.values(validate(num1));
 
     if (file2) {
       for (let i = 0; i < file2.length; i++) {
         formData.append("file2" + i, file2[i]);
       }
     }
-
+    
+    if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/individuals/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;
@@ -196,6 +205,7 @@ function RegisterIndividuals() {
       .catch((err) => {
         console.error(err);
       });
+    }
   };
 
   const ref1 = useRef();
@@ -359,10 +369,11 @@ function RegisterIndividuals() {
                 defaultCountry="sy"
                 enableSearchField
               />
+              {formError.num1 && (<span className="error" style={{ color: "red" }}>{formError.num1}</span>)}
+              <span>{() => validate()}</span>
             </div>
             <div className="my-3 input_">
               <input
-                {...register("mobile_number")}
                 className="input"
                 value={data.whatsapp_number}
                 onChange={(e) => {
@@ -371,10 +382,6 @@ function RegisterIndividuals() {
                 placeholder="Whatsapp number"
                 type="number"
               />
-              <br />
-              <span style={{ color: "red" }}>
-                {errors.mobile_number?.message}
-              </span>
             </div>
             <div className="my-3 input_">
               <input

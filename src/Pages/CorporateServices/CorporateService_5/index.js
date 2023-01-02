@@ -10,7 +10,7 @@ const CorporateService_5 = () => {
         change_route={"corporate/service5"}
         user={"user_corporate"}
         image={image} text={"(Real estate, transpotation, financial, commercial registry ..ect) services"}
-        head={"Corporate"} address={"(Real estate, transpotation, financial, licenses ..ect) services"}
+        head={"Corporate"} address={"(Real estate, transpotation, financial, commercial registry ..ect) services"}
         text1={"Follow up the transactions of real estate, financial and municipality"}
         text2={"Follow up the transactions of the commercial registry and social affairs"}
         text3={"Follow up the transactions in transportation directorate and other government department"}
