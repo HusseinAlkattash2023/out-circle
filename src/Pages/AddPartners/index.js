@@ -14,6 +14,27 @@ const AddPartners = () => {
   const [partnersInfo, setPartnersInfo] = useState([]);
   const number_of_partners = localStorage.getItem("number_partners");
   const company_id = localStorage.getItem("company_id");
+  const [formErrors , setFormErrors] = useState({});
+
+  const [data, setData] = useState({
+    full_name: "",
+    birthday: "",
+    email: "",
+    phone_number: "",
+    whatsapp_number: "",
+    land_phone_extension: "",
+    participation_rate: "",
+  });
+
+  const validate =()=>{
+    const errors ={};
+    if(!data.full_name){
+      errors.full_name = "Please enter this field"
+    }
+    return errors;
+  }
+
+
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
   
 
@@ -56,6 +77,9 @@ const AddPartners = () => {
                 arr.push(
                   <div key={i}>
                     <Partner
+                      formErrors={formErrors}
+                      setData={setData}
+                      data={data}
                       num={i}
                       setPartnersInfo={setPartnersInfo}
                       partnersInfo={partnersInfo}

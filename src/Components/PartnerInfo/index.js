@@ -1,16 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-function Partner({ num, setPartnersInfo, partnersInfo }) {
+function Partner({ num, setPartnersInfo, partnersInfo , data , setData , formErrors}) {
+
   const ref1 = useRef();
-  const [data, setData] = useState({
-    full_name: "",
-    birthday: "",
-    email: "",
-    phone_number: "",
-    whatsapp_number: "",
-    land_phone_extension: "",
-    participation_rate: "",
-  });
 
   return (
     <div className="my-4">
@@ -32,7 +24,8 @@ function Partner({ num, setPartnersInfo, partnersInfo }) {
           }}
           type="text"
           placeholder="Partner's full name"
-        />
+        /><br/>
+        {formErrors.full_name && (<span className="error" style={{ color: "red" }}>{formErrors.full_name}</span>)}
       </div>
       <div className="my-3 input_">
         <input
