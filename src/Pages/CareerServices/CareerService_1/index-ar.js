@@ -8,6 +8,7 @@ const CareerServiceAr_1 = () => {
         gmail={"c.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"career-service/service1-ar"}
+        user={"user_individuals"}
         head={"أفراد"} address={"تأمين الدورات التطويرية المناسبة"} 
         image={image1} text={"تأمين الدورات التطويرية المناسبة"}
         text1={"CV دراسة الوضع الأكاديمي من خلال تزويدنا  بال"}

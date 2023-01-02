@@ -8,6 +8,7 @@ return (
         gmail={"scientific.professions.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service8-ar"}
+        user={"user_scientific"}
         image={image1} text={"الخدمات الإعلانية"}
         head={"مهن علمية"} address = {"الخدمات الإعلانية"}
         text1={"حجز مساحة إعلانية لمنتجك أو خدمتك"}

@@ -7,7 +7,10 @@ import logout from '../../Assets/images/logout.png'
 import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png'
 import image1 from '../../Assets/images/New folder/Group 427.png';
-import image2 from '../../Assets/images/New folder/Component 31 – 12.png'
+import image2 from '../../Assets/images/New folder/Component 31 – 12.png';
+import home from '../../Assets/images/padlock.png';
+
+
 function Institute() {
   const Logout = () => {
     localStorage.removeItem("user_institute");
@@ -38,6 +41,10 @@ function Institute() {
                         <Link onClick={Logout} to="/" className="my-2">
                             <span>Logout</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/" className="my-2">
+                            <span>Home</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

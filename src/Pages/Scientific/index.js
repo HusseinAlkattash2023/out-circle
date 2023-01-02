@@ -8,6 +8,9 @@ import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
 import image1 from '../../Assets/images/New folder/Group 426.png';
 import image2 from '../../Assets/images/New folder/Component 31 – 10.png';
+import home from '../../Assets/images/padlock.png';
+
+
 function Scietific() {
     
     const Logout = () => {
@@ -40,6 +43,10 @@ function Scietific() {
                         <Link onClick={Logout} to="/" className="my-2">
                             <span>Logout</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/" className="my-2">
+                            <span>Home</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

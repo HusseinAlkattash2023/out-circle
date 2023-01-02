@@ -9,6 +9,7 @@ import logout from '../../Assets/images/logout.png';
 import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
 import { FaUsers } from "react-icons/fa";
+import home from '../../Assets/images/padlock.png';
 
 
 function Croporate_ar() {
@@ -45,6 +46,10 @@ function Croporate_ar() {
                         <Link onClick={Logout} to="/" className="my-2">
                             <span>تسجيل الخروج</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/" className="my-2">
+                            <span>الصفحة الرئيسية</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

@@ -8,6 +8,7 @@ const HandicraftServices_8 = () => {
         gmail={"handicraft.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"handicraft/service8"}
+        user={"user_handicraft"}
         image={image} text={"Advertising Services."}
         head={"Handicraft"} address={"Advertising Services"}
         text1={"Reserve advertising space for your product or service"}

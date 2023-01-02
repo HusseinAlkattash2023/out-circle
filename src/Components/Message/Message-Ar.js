@@ -152,6 +152,7 @@ const Message1 = ({ text, image, gmail, admin, change_route }) => {
         .then((res) => {
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
+            localStorage.removeItem("visitor");
           }
         })
         .catch((err) => {
@@ -323,6 +324,7 @@ const Message2 = ({
         .then((res) => {
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
+            localStorage.removeItem("visitor");
           }
         })
         .catch((err) => {

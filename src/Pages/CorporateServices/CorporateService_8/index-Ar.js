@@ -8,6 +8,7 @@ const CorporateServiceAr_8 = () => {
         admin={"outcircle2023@gmail.com"}
         gmail={"corporate.outcircle@gmail.com"}
         change_route={"corporate/service8-ar"}
+        user={"user_corporate"}
         image={image1} text={"الخدمات الإعلانية"}
         head={"شركة"} address = {"الخدمات الإعلانية"}
         text1={"حجز مساحة إعلانية لمنتجك أو خدمتك"}

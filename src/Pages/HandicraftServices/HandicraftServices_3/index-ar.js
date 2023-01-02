@@ -8,6 +8,7 @@ const HandicraftServiceAr_3 = () => {
         gmail={"handicraft.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"handicraft/service3-ar"}
+        user={"user_handicraft"}
         image={image1} text={"إدارة الحسابات(المالية والمصرفية / وسائل التواصل الاجتماعي ... إلخ)"}
         head={"حرفيين"} address = {"إدارة الحسابات(المالية والمصرفية / وسائل التواصل الاجتماعي ... إلخ)"}
         text1={"إدارة الحسابات المالية جزئيا أو كلياً"}

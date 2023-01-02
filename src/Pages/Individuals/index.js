@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import back from '../../Assets/images/back.png';
+import home from '../../Assets/images/padlock.png';
 import circle from '../../Assets/images/New folder/Group 429.png';
 import logout from '../../Assets/images/logout.png';
 import notifications from '../../Assets/images/notification.png';
@@ -10,7 +11,6 @@ function Individuals() {
     const ClearLocalStorate = ()=>{
         localStorage.removeItem("user_individuals");
         localStorage.removeItem("user");
-        localStorage.removeItem("individuals_id");
         localStorage.removeItem("is-user-login");
     }
     const state = localStorage.getItem("user_individuals");
@@ -37,6 +37,10 @@ function Individuals() {
                         <Link onClick={ClearLocalStorate} to="/" className="my-2">
                             <span>Logout</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/" className="my-2">
+                            <span>home</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

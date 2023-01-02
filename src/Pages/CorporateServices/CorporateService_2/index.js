@@ -7,6 +7,7 @@ const CorporateService_2 = () => {
         <Message 
         admin={"outcircle2023@gmail.com"}
         gmail={"corporate.outcircle@gmail.com"}
+        user={"user_corporate"}
         change_route={"corporate/service2"}
         image={image1} text={"New business advice and ideas."}
         head={"Corporate"} address={"New business advice and ideas."}

@@ -8,6 +8,7 @@ return (
         gmail={"scientific.professions.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service3-ar"}
+        user={"user_scientific"}
         image={image1} text={"إدارة الحسابات(المالية والمصرفية / وسائل التواصل الاجتماعي ... إلخ)"}
         head={"مهن علمية"} address = {"إدارة الحسابات(المالية والمصرفية / وسائل التواصل الاجتماعي ... إلخ)"}
         text1={"إدارة الحسابات المالية جزئيا أو كلياً"}

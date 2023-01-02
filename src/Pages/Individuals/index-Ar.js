@@ -1,6 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import back from '../../Assets/images/back.png'
+import {Link} from 'react-router-dom';
+import home from '../../Assets/images/padlock.png';
+import back from '../../Assets/images/back.png';
 import logout from '../../Assets/images/logout.png'
 import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
@@ -11,7 +12,6 @@ function Individuals() {
     const ClearLocalStorate = ()=>{
         localStorage.removeItem("user_individuals");
         localStorage.removeItem("user");
-        localStorage.removeItem("individuals_id");
         localStorage.removeItem("is-user-login");
     }
     
@@ -39,6 +39,10 @@ function Individuals() {
                         <Link onClick={ClearLocalStorate} to="/ar" className="my-2">
                             <span>تسجيل الخروج</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/ar" className="my-2">
+                            <span>الصفحة الرئيسية</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

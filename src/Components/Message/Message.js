@@ -16,6 +16,7 @@ function getWindowSize() {
 }
 
 const Message = ({
+  user,
   address,
   head,
   image,
@@ -43,7 +44,7 @@ const Message = ({
   }, []);
   const width = windowSize.innerWidth;
   return width > 600 ? (
-    <Message1 text={text} image={image} gmail={gmail} admin={admin} change_route={change_route}/>
+    <Message1 user={user} text={text} image={image} gmail={gmail} admin={admin} change_route={change_route}/>
   ) : (
     <Message2
       head={head}
@@ -58,15 +59,16 @@ const Message = ({
       gmail={gmail}
       admin={admin}
       change_route={change_route}
+      user={user}
     />
   );
 };
 
 export default Message;
 
-const Message1 = ({ text, image , gmail , admin , change_route}) => {
+const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
 
-  const user_ = localStorage.getItem("user");
+  const user_ = localStorage.getItem(`${user}`);
   const user_obj = JSON.parse(user_);
   const data = user_ ? localStorage.getItem("user") : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
@@ -132,6 +134,7 @@ const Message1 = ({ text, image , gmail , admin , change_route}) => {
       .then((res) => {
         if (typeof res.data === "object") {
           toast.success("Your message was sent successfully");
+          localStorage.removeItem("visitor");
         }
       })
       .catch((err) => {
@@ -236,11 +239,12 @@ const Message2 = ({
   text7,
   gmail,
   admin,
-  change_route
+  change_route,
+  user
 }) => {
 
 
-  const user_ = localStorage.getItem("user");
+  const user_ = localStorage.getItem(`${user}`);
   const user_obj = JSON.parse(user_);
   const data = user_ ? localStorage.getItem("user") : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
@@ -257,7 +261,7 @@ const Message2 = ({
     const url = URL.createObjectURL(blob);
     const audio = document.createElement("audio");
     audio.src = url;
-    setValue3(audio.src);
+    setValue3(url);
     audio.controls = true;
     document.body.appendChild(audio);
     const nest = document.body.appendChild(audio);
@@ -311,6 +315,7 @@ const Message2 = ({
       .then((res) => {
         if (typeof res.data === "object") {
           toast.success("Your message was sent successfully");
+          localStorage.removeItem("visitor");
         }
       })
       .catch((err) => {

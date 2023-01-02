@@ -8,6 +8,7 @@ const ScientificServiceAr_1 = () => {
         gmail={"scientific.professions.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service1-ar"}
+        user={"user_scientific"}
         image={image1} text={"استشارات حول العمل الحالي في كافة مجالات الخدمات المصرفية والمعاملات المالية واستراتيجيات التسويق"}
         head={"مهن علمية"} address = {"استشارات حول العمل الحالي في كافة مجالات الخدمات المصرفية والمعاملات المالية واستراتيجيات التسويق"}
         text1={"حلول المشكلات المالية و البنكية الحالية"}

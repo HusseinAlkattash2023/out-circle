@@ -8,6 +8,7 @@ const CorporateServiceAr_4 = () => {
         admin={"outcircle2023@gmail.com"}
         gmail={"corporate.outcircle@gmail.com"}
         change_route={"corporate/service4-ar"}
+        user={"user_corporate"}
         image={image1} text={"متابعة الأنشطة الاستثمارية للشركة"}
         head={"شركة"} address = {"متابعة الأنشطة الاستثمارية للشركة"}
         text1={"إدراة المحفظة المالية"}

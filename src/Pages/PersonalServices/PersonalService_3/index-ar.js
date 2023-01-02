@@ -8,6 +8,7 @@ const PersonalServiceAr_3 = () => {
         gmail={"p.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"personal-service/service3-ar"}
+        user={"user_individuals"}
         image={image} text={"خدمات المناسبات والهدايا"}
         head={"أفراد"} address={"خدمات المناسبات والهدايا"}
         text1={"تقديم الأفكار الجديدة كليّاً في نوع الهدية المطلوبة"}

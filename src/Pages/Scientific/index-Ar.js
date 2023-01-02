@@ -6,8 +6,11 @@ import back from '../../Assets/images/back.png';
 import logout from '../../Assets/images/logout.png'
 import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
-import image from '../../Assets/images/Component 31 – 26.png'
-import image2 from '../../Assets/images/hover_ar/Component 31 – 26.png'
+import image from '../../Assets/images/Component 31 – 26.png';
+import image2 from '../../Assets/images/hover_ar/Component 31 – 26.png';
+import home from '../../Assets/images/padlock.png';
+
+
 function ScietificAr() {
     
     const Logout = () => {
@@ -40,6 +43,10 @@ function ScietificAr() {
                         <Link onClick={Logout} to="/ar" className="my-2">
                             <span>تسجيل الخروج</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/ar" className="my-2">
+                            <span>الصفحة الرئيسية</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

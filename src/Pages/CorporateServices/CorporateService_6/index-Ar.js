@@ -7,6 +7,7 @@ const CorporateServiceAr_6 = () => {
         <MessageAr 
         admin={"outcircle2023@gmail.com"}
         gmail={"corporate.outcircle@gmail.com"}
+        user={"user_corporate"}
         change_route={"corporate/service6-ar"}
         image={image1} text={"أفكار وخدمات إكساء وديكور للشركة"}
         head={"شركة"} address = {"أفكار وخدمات إكساء وديكور للشركة"}

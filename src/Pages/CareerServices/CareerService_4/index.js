@@ -8,6 +8,7 @@ const CareerService_4 = () => {
         gmail={"c.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"career-services/service4"}
+        user={"user_individuals"}
         image={image} text={"New businees advice and ideas"}
         head={"individuals"} address={"New businees advice and ideas"}
         text1={"Providing new business ideas in the context of current work"}

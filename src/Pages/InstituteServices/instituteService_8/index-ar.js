@@ -9,6 +9,7 @@ const InstituteServiceAr_8 = () => {
         gmail={"institute.outcircle@gmail.com"}
         change_route={"institute/service8-ar"}
         image={image1} text={"الخدمات الإعلانية"}
+        user={"user_institute"}
         head={"مؤسسة"} address = {"الخدمات الإعلانية"}
         text1={"حجز مساحة إعلانية لمنتجك أو خدمتك"}
         text2={"إعلان عام لمدة محددة عبر كافة الوسائل الخاصة بنا "}

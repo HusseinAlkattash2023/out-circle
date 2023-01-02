@@ -8,6 +8,7 @@ const PersonalService_4 = () => {
         gmail={"p.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"personal-services/service4"}
+        user={"user_individuals"}
         image={image} text={"Travel and reservation services"}
         head={"individuals"} address={"Travel and reservation services"}
         text1={"Providing advice and ideas about the local or foreign tourist travel places"}

@@ -7,6 +7,8 @@ import notifications from "../../Assets/images/notification.png";
 import profile from "../../Assets/images/profile.png";
 import image1 from "../../Assets/images/New folder/Group 430.png";
 import image2 from "../../Assets/images/New folder/Component 31 – 11.png";
+import home from '../../Assets/images/padlock.png';
+
 function Handicraft() {
   const Logout = () => {
     localStorage.removeItem("user_handicraft");
@@ -36,6 +38,10 @@ function Handicraft() {
           <Link onClick={Logout} to="/">
             <span>Logout</span>
             <img src={logout} alt="" />
+          </Link>
+          <Link to="/">
+            <span>Home</span>
+            <img src={home} alt="" />
           </Link>
         </header>
       )}

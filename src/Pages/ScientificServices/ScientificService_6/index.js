@@ -8,6 +8,7 @@ const ScientificService_6 = () => {
         gmail={"scientific.professions.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service6"}
+        user={"user_scientific"}
         image={image} text={"Cladding and decoration ideas and services for the company"}
         head={"Profissional Scientific"} address={"Cladding and decoration ideas and services for the company"}
         text1={"Concluding contracts to Completely or partially cladding a real estate2"}

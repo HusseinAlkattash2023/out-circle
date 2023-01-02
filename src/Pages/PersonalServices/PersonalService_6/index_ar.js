@@ -8,6 +8,7 @@ const PersonalServiceAr_6 = () => {
         gmail={"p.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"personal-service/service6-ar"}
+        user={"user_individuals"}
         image={image} text={"خدمات دفع الفواتير و الرسوم"}
         head={"أفراد"} address={"خدمات دفع الفواتير و الرسوم"}
         text1={"توفير الوقت والجهد من خلال تقديم اشتراكات شهرية لدفع فواتير الكهرباء والماء والهاتف الأرضي والموبايل والأنترنت بأسعار رمزية وبشكل منظم"}

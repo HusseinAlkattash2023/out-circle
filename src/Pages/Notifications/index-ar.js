@@ -53,12 +53,6 @@ useEffect(()=> {
   return (
     <div className='notifications'>
         <div className='notification'>
-            <header>
-            <Link className='back_ar' to="/individuals">
-                <span>رجوع</span>
-                <img src={back} alt="" width="30px"/>
-            </Link>
-            </header>
             <div className='rectangle_ar'>
             {
                 notificationInfo.map((item) => (

@@ -8,6 +8,8 @@ import logout from '../../Assets/images/logout.png';
 import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
 import { FaUsers } from "react-icons/fa";
+import home from '../../Assets/images/padlock.png';
+
 
 import './index.css'
 function Croporate() {
@@ -45,6 +47,10 @@ function Croporate() {
                         <Link onClick={Logout} to="/" className="my-2">
                             <span>Logout</span>
                             <img src={logout} alt=""/>
+                        </Link>
+                        <Link to="/" className="my-2">
+                            <span>Home</span>
+                            <img src={home} alt=""/>
                         </Link>
                     </header>
                     )

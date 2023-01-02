@@ -8,6 +8,7 @@ const CorporateServiceAr_7 = () => {
         admin={"outcircle2023@gmail.com"}
         gmail={"corporate.outcircle@gmail.com"}
         change_route={"corporate/service7-ar"}
+        user={"user_corporate"}
         image={image1} text={"تأمين موظفين مؤهلين"}
         head={"شركة"} address = {"تأمين موظفين مؤهلين"}
         text1={"تأمين الموظفين أصحاب الكفاءات في المجال المطلوب"}

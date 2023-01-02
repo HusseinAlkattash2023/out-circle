@@ -7,6 +7,7 @@ return (
         <MessageAr 
         gmail={"scientific.professions.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
+        user={"user_scientific"}
         change_route={"scientific/service2-ar"}
         image={image1} text={"نصائح وأفكار تجارية جديدة"}
         head={"مهن علمية"} address={"نصائح وأفكار تجارية جديدة"}

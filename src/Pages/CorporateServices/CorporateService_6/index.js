@@ -8,6 +8,7 @@ const CorporateService_6 = () => {
         admin={"outcircle2023@gmail.com"}
         gmail={"corporate.outcircle@gmail.com"}
         change_route={"corporate/service6"}
+        user={"user_corporate"}
         image={image} text={"Cladding and decoration ideas and services for the company"}
         head={"Corporate"} address={"Cladding and decoration ideas and services for the company"}
         text1={"Concluding contracts to Completely or partially cladding a real estate2"}

@@ -9,6 +9,7 @@ const PersonalServiceAr_7 = () => {
         admin={"outcircle2023@gmail.com"}
         change_route={"personal-service/service7-ar"}
         image={image} text={"خدمات الطاقة البديلة"}
+        user={"user_individuals"}
         head={"أفراد"} address={"خدمات الطاقة البديلة"}
         text1={"تقديم النصائح الصادقة حول المنتجات المناسبة للطاقة البديلة وتقييم الاحتياجات الحقيقية لكل شخص"}
         text2={"المساعدة في تأمين منظومات طاقة بديلة بأسعار منطقية ومنافسة ومضمونة"}

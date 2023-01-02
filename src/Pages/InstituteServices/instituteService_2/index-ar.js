@@ -8,6 +8,7 @@ const InstituteServiceAr_2 = () => {
         admin={"outcircle2023@gmail.com"}
         gmail={"institute.outcircle@gmail.com"}
         change_route={"institute/service2-ar"}
+        user={"user_institute"}
         image={image1} text={"نصائح وأفكار تجارية جديدة"}
         head={"مؤسسة"} address={"نصائح وأفكار تجارية جديدة"}
         text1={"أفكار عمل جديدة في سياق العمل الحالي"}

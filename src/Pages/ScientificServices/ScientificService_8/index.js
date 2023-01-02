@@ -8,6 +8,7 @@ return (
         gmail={"scientific.professions.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service8"}
+        user={"user_scientific"}
         image={image} text={"Providing qualified employees"}
         head={"Profissional Scientific"} address={"Advertising Services"}
         text1={"Reserve advertising space for your product or service"}
