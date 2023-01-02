@@ -72,7 +72,6 @@ const ProfileInstitute = () => {
       )
         .then((res) => {
           setUserInfo(res.data);
-          console.log(res.data)
         })
         .catch((err) => {
           console.log(err);

@@ -23,7 +23,7 @@ const schema = yup.object({
   password: yup
     .string()
     .required("من فضلك أدخل كلمة المرور")
-    .min(4, "يجب أن تكون كلمة المرور أكثر من 4 محارف"),
+    .min(8, "كلمة المرور يجب ان تحوي 8 محارف على الأقل"),
   confirm_password: yup
     .string()
     .oneOf([yup.ref("password"), null], "يجب أن تتطابف كلمات المرور"),

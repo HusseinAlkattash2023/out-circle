@@ -125,8 +125,8 @@ function RegisterCorporateAr() {
     let errors = {};
     if (!values.username) {
       errors.username = "من فضلك ادخل اسم المستخدم";
-    } else if (values.password.length < 4) {
-      errors.password = "كلمة المرور يجب ان تحوي أكثر من 4 محارف";
+    } else if (values.password.length < 8) {
+      errors.password = "كلمة المرور يجب ان تحوي 8 محارف على الأقل";
     } else if (values.password !== values.confirmPassword) {
       errors.confirmPassword = "يجب ان تتطابق كلمات المرور";
     } else if(!data.companyName){

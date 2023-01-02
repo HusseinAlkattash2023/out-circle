@@ -95,8 +95,8 @@ function Login_ar() {
         }
         if (!values.password) {
         errors.password = "الرجاء إدخال كلمة المرور";
-        } else if (values.password.length < 4) {
-            errors.password = "يجب أن تكون كلمة المرور أكثر من 4 أحرف";
+        } else if (values.password.length < 8) {
+            errors.password = "يجب أن تكون كلمة المرور أكثر من 8 أحرف";
         }
         if(!values.user_type){
             errors.user_type = "الرجاء إدخال نوع الحساب الخاص بك";

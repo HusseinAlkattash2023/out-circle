@@ -127,8 +127,8 @@ function RegisterCorporate() {
     if (!values.username) {
       errors.username = "Please enter a username";
     }
-    else if (values.password.length < 4) {
-      errors.password = "Password must contain more than 4 characters";
+    else if (values.password.length < 8) {
+      errors.password = "Password must contain at least 8 characters";
     }
     else if (values.password !== values.confirmPassword) {
       errors.confirmPassword = "Passwords must match";

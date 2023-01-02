@@ -105,9 +105,7 @@ function Home() {
   }, [BASE_API_URL, getAllNews, getAllAds]);
 
   const navigate = useNavigate();
-  const OnClick = () => {
-    navigate("/login");
-  };
+
 
   return (
     <div className="home">
@@ -189,7 +187,7 @@ function Home() {
         <div className="main">
           <img className="outcircle" src={outcircle} alt="" width="154" />
           <div className="cards">
-            <Link to="/corporate" className="hov" onClick={OnClick}>
+            <Link to="/corporate" className="hov">
               <img className="img_ mx-3" src={i1} alt="" />
               <img className="iui" src={iui1} alt="" />
             </Link>

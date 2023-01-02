@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 const schema = yup
   .object({
     old_password: yup.string().required("Please enter old password"),
-    new_password: yup.string().min(4).required("Password is required"),
+    new_password: yup.string().required("Password is required").min(8 , "Password must be more than 8 characters"),
     confirm_password: yup
       .string()
       .oneOf([yup.ref("new_password"), null], "Passwords must match"),

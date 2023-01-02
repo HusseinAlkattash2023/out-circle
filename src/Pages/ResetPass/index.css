@@ -49,6 +49,16 @@
     align-items: flex-end;
     margin: 10px auto 10px auto;
 }
+.reset form .pass_ar span{
+    font-size: 13px;
+    text-align: right;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.reset form .pass span{
+    font-size: 14px;
+    text-align: left;
+}
 
 .reset .body form div label{
     font-size: 20px ;

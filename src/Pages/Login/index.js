@@ -94,8 +94,8 @@ function Login() {
     }
     if (!values.password) {
       errors.password = "Please enter password";
-    } else if (values.password.length < 4) {
-      errors.password = "Password must be more than 4 characters";
+    } else if (values.password.length < 8) {
+      errors.password = "Password must be more than 8 characters";
     }
     if (!values.user_type) {
       errors.user_type = "Please enter type account";

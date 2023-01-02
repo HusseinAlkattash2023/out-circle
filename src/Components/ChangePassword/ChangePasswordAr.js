@@ -16,7 +16,7 @@ const schema = yup
     new_password: yup
       .string()
       .required("من فضلك أدخل كلمة المرور الجديدة")
-      .min(4, "يجب أن تكون كلمة المرور أكثر من 4 أحرف"),
+      .min(8, "يجب أن تكون كلمة المرور أكثر من 8 أحرف"),
     confirm_password: yup
       .string()
       .oneOf([yup.ref("new_password"), null], "يجب أن تتطابق كلمات المرور"),

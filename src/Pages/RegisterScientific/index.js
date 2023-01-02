@@ -24,7 +24,7 @@ const schema = yup.object({
   password: yup
     .string()
     .required("Please enter a password")
-    .min(4, "Password too short"),
+    .min(8, "Password must contain at least 8 characters"),
   confirm_password: yup
     .string()
     .oneOf([yup.ref("password"), null], "Passwords must match"),

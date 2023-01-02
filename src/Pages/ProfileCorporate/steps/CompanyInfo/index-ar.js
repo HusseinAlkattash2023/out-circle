@@ -166,9 +166,9 @@ const PersonalInfo = ({
       <div className="information">
         <label htmlFor="file1">
           {!file1 ? (
-            <p>Upload uodated company record</p>
+            <p>تحميل سجل الشركة بعد التحديث</p>
           ) : (
-            <p>Your file has been uploaded successfully</p>
+            <p>تم تحميل الملف بنجاح</p>
           )}
           <img src={file} alt="" />
         </label>
@@ -182,9 +182,9 @@ const PersonalInfo = ({
       <div className="information">
         <label htmlFor="file2">
           {!file2 ? (
-            <p>Upload company contract supplement</p>
+            <p>تحميل ملحق عقد الشركة الأخير</p>
           ) : (
-            <p>Your file has been uploaded successfully</p>
+            <p>تم تحميل الملف بنجاح</p>
           )}
           <img src={file} alt="" />
         </label>

@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 
 const schema = yup.object({
   code: yup.string().required("Please Enter code"),
-  password: yup.string().min(4).required('Password is required'),
+  password: yup.string().required('Password is required').min(8 , "Password must contain at least 8 characters"),
   passwordConfirmation: yup.string()
     .oneOf([yup.ref('password'), null], 'Passwords must match')
 }).required();
@@ -61,17 +61,17 @@ const ResetPass = () => {
             <img src={imagepass} alt=""/>
         </header>
         <form onSubmit={handleSubmit(onSubmit)} className="my-2">
-          <div className=''>
+          <div className='pass'>
             <label>Enter Code</label>
             <input type="text" {...register("code")} value={code_} onChange={(e)=> setCode_(e.target.value)}/>
             <span style={{color:"red"}}>{errors.code?.message}</span>
           </div>
-          <div className=''>
+          <div className='pass'>
             <label>New Password</label>
             <input type="password" {...register("password")} value={password} onChange={(e)=>{setPassword(e.target.value)}} />
             <span style={{color:"red"}}>{errors.password?.message}</span>
           </div>
-          <div>
+          <div className='pass'>
             <label>Confirm Password</label>
             <input type="password" {...register("passwordConfirmation")} />
             <span style={{color:"red"}}>{errors.passwordConfirmation?.message}</span>

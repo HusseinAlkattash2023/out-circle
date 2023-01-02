@@ -11,10 +11,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 
 const schema = yup.object({
-  code: yup.string().required("Please Enter code"),
-  password: yup.string().min(4).required('Password is required'),
+  code: yup.string().required("من فضلك أدخل الكود"),
+  password: yup.string().required('من فضلك أدخل كلمة المرور').min(8 , "كلمة المرور يجب ان تحوي 8 محارف على الأقل"),
   passwordConfirmation: yup.string()
-    .oneOf([yup.ref('password'), null], 'Passwords must match')
+    .oneOf([yup.ref('password'), null], 'يجب أن تتطابق كلمات المرور')
 }).required();
 
 const ResetPass = () => {

@@ -130,7 +130,7 @@ function RegisterInstituse() {
       errors.username = "Please enter your username";
     }
     else if (values.password.length < 4) {
-      errors.password = "Password must contain more than 4 characters";
+      errors.password = "Password must contain at least 8 characters";
     }
     else if (values.password !== values.confirm_password) {
       errors.confirm_password = "Passwords do not match";

@@ -21,7 +21,7 @@ const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2
 const schema = yup.object({
     user_name: yup.string().required("من فضلك إدخل اسم المستخدم"),
     email: yup.string().email().required("من فضلك أدخل بريدك الإلكتروني"),
-    password: yup.string().required("من فضلك إدخل كلمة المرور").min(4, "يجب أن تكون كلمة المرور أكثر من 4 أحرف"),
+    password: yup.string().required("من فضلك إدخل كلمة المرور").min(8, "كلمة المرور يجب ان تحوي 8 محارف على الأقل"),
     confirm_password: yup.string().oneOf([yup.ref('password'), null], 'يجب ان تتطابق كلمات المرور'),
     full_name:yup.string().required("من فضلك ادخل اسمك الكامل"),
     current_city:yup.string().required("من فضلك إدخل مدينتك الحالية"),
