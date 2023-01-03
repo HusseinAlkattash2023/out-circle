@@ -20,7 +20,7 @@ const IndividualsManagment = () => {
         <div className="individuals-managment text-center">
             <div className="container">
                 <h1>Individuals Managment Page</h1>
-                {craftsmenInfoList.length > 0 ?
+                {individualsInfoList.length > 0 ?
                     /* Start Individuals Info Section */
                     <section className="individuals-info">
                         {individualsInfoList.map((individualInfo, index) =>
