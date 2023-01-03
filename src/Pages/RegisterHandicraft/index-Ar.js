@@ -127,6 +127,10 @@ function RegisterHandicraftAr() {
       value:num1,
     },
     {
+      key: "landline_number",
+      value: data.phone_number,
+    },
+    {
       key: "whatsapp_number",
       value: data.whatsapp_number,
     },

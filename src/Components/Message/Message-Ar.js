@@ -102,7 +102,7 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
 
 
   const ConfirmAudio = () => {
-    value3 && toast.success("تم تحميل مقطع صوتي بنجاح")
+    toast.success("تم تحميل مقطع صوتي بنجاح")
   }
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
@@ -359,7 +359,7 @@ const Message2 = ({
   };
 
   const ConfirmAudio = () => {
-    value3 && toast.success("تم تحميل مقطع صوتي بنجاح")
+    toast.success("تم تحميل مقطع صوتي بنجاح")
   }
 
   const visitorInformation = () => {

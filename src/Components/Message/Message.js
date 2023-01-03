@@ -120,7 +120,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
   ];
 
   const ConfirmAudio = () => {
-    value3 && toast.success("Audio clip uploaded successfully")
+    toast.success("Audio clip uploaded successfully")
   }
 
 
@@ -277,7 +277,7 @@ const Message2 = ({
   };
 
   const ConfirmAudio = () => {
-    value3 && toast.success("Audio clip uploaded successfully")
+    toast.success("Audio clip uploaded successfully")
   }
 
   const data_ = [

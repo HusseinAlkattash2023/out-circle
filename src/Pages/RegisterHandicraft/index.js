@@ -133,6 +133,10 @@ function RegisterHandicraft() {
       value: data.whatsapp_number,
     },
     {
+      key: "landline_number",
+      value: data.phone_number,
+    },
+    {
       key: "work_address",
       value: data.work_address,
     },
