@@ -30,7 +30,7 @@ const schema = yup.object({
   craft_specialization: yup
     .string()
     .required("Please enter your craft specialization"),
-  current_work: yup.string().required("Please enter your current work"),
+  current_work: yup.string().required("Please enter your current work address"),
 });
 
 function RegisterHandicraft() {
@@ -358,9 +358,9 @@ function RegisterHandicraft() {
             <div className="my-3 input_">
               <input
                 {...register("current_work")}
-                value={data.current_work}
+                value={data.work_address}
                 onChange={(e) => {
-                  setData({ ...data, current_work: e.target.value });
+                  setData({ ...data, work_address: e.target.value });
                 }}
                 className="input"
                 placeholder="Current work address"

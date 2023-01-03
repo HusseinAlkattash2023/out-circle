@@ -354,9 +354,9 @@ function RegisterHandicraftAr() {
             <div className="my-3 input_">
               <input
                 {...register("current_work")}
-                value={data.current_work}
+                value={data.work_address}
                 onChange={(e) => {
-                  setData({ ...data, current_work: e.target.value });
+                  setData({ ...data, work_address: e.target.value });
                 }}
                 className="input"
                 placeholder="عنوان العمل الحالي"
