@@ -359,7 +359,7 @@ font-family: 'Readex Pro', sans-serif;
 }
 .registerCorporate .register1 .form-container .input_ .phone_number input,
 .registerCorporate .register1_ar .form-container.input_ .phone_number input{
-    padding: 8px 10px;
+    padding: 8px 50px;
     width: 300px;
     font-size: 16px;
 }
