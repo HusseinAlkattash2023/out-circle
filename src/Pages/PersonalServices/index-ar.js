@@ -18,19 +18,19 @@ function PersonalServices_ar() {
         circle={image}
         circle2={image2}
         demand1="personal-service/service1-ar"
-        demand2="personal-service/service2-ar"
-        demand3="personal-service/service3-ar"
-        demand4="personal-service/service4-ar"
-        demand5="personal-service/service5-ar"
+        demand2="personal-service/service3-ar"
+        demand3="personal-service/service4-ar"
+        demand4="personal-service/service5-ar"
+        demand5="personal-service/service7-ar"
         demand6="personal-service/service6-ar"
-        demand7="personal-service/service7-ar"
+        demand7="personal-service/service2-ar"
         service1="خدمات طبية"
-        service2="استشارات حول القضايا والمشاكل العامة"
-        service3="خدمات المناسبات والهدايا"
-        service4="خدمات السفر والجوازات"
-        service5="خدمات الصيانة"
-        service7="خدمات الطاقة البديلة"
+        service2="خدمات المناسبات والهدايا"
+        service3="خدمات السفر والجوازات"
+        service4="خدمات الصيانة"
+        service5="خدمات الطاقة البديلة"
         service6="خدمة دفع الفواتير والرسوم"
+        service7="استشارات حول القضايا والمشاكل العامة"
         />
         <span className='personal_ar'>خدمات شخصية</span>
     </div>

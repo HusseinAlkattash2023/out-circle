@@ -18,20 +18,20 @@ function PersonalServices() {
         circle1={image1}
         circle2={image2}
         demand1="personal-services/service1"
-        demand2="personal-services/service2"
-        demand3="personal-services/service3"
-        demand4="personal-services/service4"
-        demand5="personal-services/service5"
+        demand2="personal-services/service3"
+        demand3="personal-services/service4"
+        demand4="personal-services/service5"
+        demand5="personal-services/service7"
         demand6="personal-services/service6"
-        demand7="personal-services/service7"
+        demand7="personal-services/service2"
         service="Individuals"
         service1="Medical services"
-        service2="Consultations on general issues and problems"
-        service3="Git and occasions services"
-        service4="Travel and reservation services"
-        service5="Maintenance Services"
-        service7="Alternative energy services"
+        service2="Git and occasions services"
+        service3="Travel and reservation services"
+        service4="Maintenance Services"
+        service5="Alternative energy services"
         service6="Bill and fee payment service"
+        service7="Consultations on general issues and problems"
         />
         <span className='personal'>Personal services</span>
     </div>
