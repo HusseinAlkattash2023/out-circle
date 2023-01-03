@@ -34,6 +34,42 @@ const ProfessionalScintificManagment = () => {
                                             <td className="p-3">{scientific_careers_user_Info.user_name}</td>
                                         </tr>
                                         <tr>
+                                            <td className="fw-bold p-3">Full Name</td>
+                                            <td className="p-3">{scientific_careers_user_Info.full_name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Born Date</td>
+                                            <td className="p-3">{scientific_careers_user_Info.birthday}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Current City</td>
+                                            <td className="p-3">{scientific_careers_user_Info.city}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Scientific Specialization</td>
+                                            <td className="p-3">{scientific_careers_user_Info.craftsmanship}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Actual Start Date</td>
+                                            <td className="p-3">{scientific_careers_user_Info.work_start_date}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Phone Number</td>
+                                            <td className="p-3">{scientific_careers_user_Info.landline_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Mobile Number</td>
+                                            <td className="p-3">{scientific_careers_user_Info.current_address}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Whatsapp Number</td>
+                                            <td className="p-3">{scientific_careers_user_Info.whatsapp_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Email Address</td>
+                                            <td className="p-3">{scientific_careers_user_Info.email}</td>
+                                        </tr>
+                                        <tr>
                                             <td className="fw-bold">Files</td>
                                             {scientific_careers_user_Info.file_paths.length > 0 ? <td>
                                                 {scientific_careers_user_Info.file_paths.map((path, index) =>

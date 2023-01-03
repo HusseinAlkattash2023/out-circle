@@ -19,7 +19,7 @@ const HandcraftsManagment = () => {
     return (
         <div className="handcraft-managment text-center">
             <div className="container">
-                <h1>Handcraft Managment Page</h1>
+                <h1>Handicraft Managment Page</h1>
                 {craftsmenInfoList.length > 0 ?
                     /* Start Handcrafts Info Section */
                     <section className="handcrafts-info">
@@ -32,6 +32,54 @@ const HandcraftsManagment = () => {
                                         <tr>
                                             <td className="fw-bold p-3">User Name</td>
                                             <td className="p-3">{craftsmanInfo.user_name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Full Name</td>
+                                            <td className="p-3">{craftsmanInfo.full_name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Born Date</td>
+                                            <td className="p-3">{craftsmanInfo.birthday}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Current City</td>
+                                            <td className="p-3">{craftsmanInfo.city}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Current Address</td>
+                                            <td className="p-3">{craftsmanInfo.current_address}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Scientific Certificate</td>
+                                            <td className="p-3">{craftsmanInfo.scientific_certificate}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Craft Specialization</td>
+                                            <td className="p-3">{craftsmanInfo.craftsmanship}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Actual Start Date</td>
+                                            <td className="p-3">{craftsmanInfo.work_start_date}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Current Work Address</td>
+                                            <td className="p-3">{craftsmanInfo.work_address}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Phone Number</td>
+                                            <td className="p-3">{craftsmanInfo.landline_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Mobile Number</td>
+                                            <td className="p-3">{craftsmanInfo.phone_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Whatsapp Number</td>
+                                            <td className="p-3">{craftsmanInfo.whatsapp_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Email Address</td>
+                                            <td className="p-3">{craftsmanInfo.email}</td>
                                         </tr>
                                         <tr>
                                             <td className="fw-bold">Files</td>

@@ -34,6 +34,70 @@ const InstitutesManagment = () => {
                                             <td className="p-3">{instituteInfo.user_name}</td>
                                         </tr>
                                         <tr>
+                                            <td className="fw-bold p-3">Full Name</td>
+                                            <td className="p-3">{instituteInfo.full_name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Born Date</td>
+                                            <td className="p-3">{instituteInfo.birthday}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Mobile Number</td>
+                                            <td className="p-3">{instituteInfo.phone_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Whatsapp Number</td>
+                                            <td className="p-3">{instituteInfo.whatsapp_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Email Address</td>
+                                            <td className="p-3">{instituteInfo.user_email}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Institute Name</td>
+                                            <td className="p-3">{instituteInfo.institute_name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Institute Record Number</td>
+                                            <td className="p-3">{instituteInfo.institute_record_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Institute Record Date</td>
+                                            <td className="p-3">{instituteInfo.institute_record_history}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Current City</td>
+                                            <td className="p-3">{instituteInfo.city}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Current Address</td>
+                                            <td className="p-3">{instituteInfo.current_address}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Institute's detailed bussiness activity</td>
+                                            <td className="p-3">{instituteInfo.current_institute_activity_details}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Institute Email Address</td>
+                                            <td className="p-3">{instituteInfo.email}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Actual Start Date</td>
+                                            <td className="p-3">{instituteInfo.work_start_date}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Phone Number</td>
+                                            <td className="p-3">{instituteInfo.landline_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Fax Number</td>
+                                            <td className="p-3">{instituteInfo.fax_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="fw-bold p-3">Landline Extension</td>
+                                            <td className="p-3">{instituteInfo.land_phone_extension}</td>
+                                        </tr>
+                                        <tr>
                                             <td className="fw-bold">Files</td>
                                             {instituteInfo.file_paths.length > 0 ? <td>
                                                 {instituteInfo.file_paths.map((path, index) =>
