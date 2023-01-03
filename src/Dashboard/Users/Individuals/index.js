@@ -9,7 +9,7 @@ const IndividualsManagment = () => {
     const [individualsInfoList, setIndividualsInfoList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${BASE_API_URL}/api/craftsmen/all-craftsmen-users-info`)
+        axios.get(`${BASE_API_URL}/api/individuals/all-individuals-users-info`)
             .then((res) => {
                 setIndividualsInfoList(res.data);
             })

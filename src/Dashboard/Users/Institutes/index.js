@@ -9,7 +9,7 @@ const InstitutesManagment = () => {
     const [institutesInfoList, setInstitutesInfoList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${BASE_API_URL}/api/craftsmen/all-craftsmen-users-info`)
+        axios.get(`${BASE_API_URL}/api/institutes/all-institutes-info`)
             .then((res) => {
                 setInstitutesInfoList(res.data);
             })

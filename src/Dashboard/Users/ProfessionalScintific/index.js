@@ -9,7 +9,7 @@ const ProfessionalScintificManagment = () => {
     const [scientific_careers_Info_list, set_scientific_careers_Info_list] = useState([]);
 
     useEffect(() => {
-        axios.get(`${BASE_API_URL}/api/craftsmen/all-craftsmen-users-info`)
+        axios.get(`${BASE_API_URL}/api/scientific-careers/all-scientific-careers-users-info`)
             .then((res) => {
                 set_scientific_careers_Info_list(res.data);
             })
