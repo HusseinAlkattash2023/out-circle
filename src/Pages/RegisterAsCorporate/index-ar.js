@@ -235,6 +235,7 @@ function RegisterCorporateAr() {
             } else {
               toast.success("تم إنشاء حسابك بنجاح");
               localStorage.setItem("number_partners", data.number_partners);
+              localStorage.setItem("company_id" , data1);
               setTimeout(() => navigate("/add-partners-ar"), 2000);
             }
           })

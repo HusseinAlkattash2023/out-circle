@@ -17,6 +17,7 @@ function Croporate() {
         localStorage.removeItem("user_corporate");
         localStorage.removeItem("user");
         localStorage.removeItem("is-user-login");
+        localStorage.removeItem("company_id")
     };
 
     const state = localStorage.getItem("user_corporate")

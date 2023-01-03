@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "./Visiter.css";
 import { Link, useNavigate } from "react-router-dom";
 import back from "../../Assets/images/back.png";
@@ -12,6 +12,7 @@ import image2 from "../../Assets/images/Mask Group -2.png";
 import image3 from "../../Assets/images/Mask Group -3.png";
 import image4 from "../../Assets/images/Mask Group -4.png";
 import image5 from "../../Assets/images/Mask Group -5.png";
+import WelcomeVisitor from '../WelcomeVisitor/index';
 
 const schema = yup.object({
   email: yup.string().email().required("Please Enter your Email"),
@@ -65,6 +66,7 @@ const Visiter = () => {
         <span>Back</span>
         <img src={back} alt="" />
       </Link>
+      <div><WelcomeVisitor/></div>
       <div className="section1">
         <header>
           <span className="icon">

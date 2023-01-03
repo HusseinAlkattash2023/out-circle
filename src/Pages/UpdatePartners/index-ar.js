@@ -11,9 +11,9 @@ import update from "../../Assets/images/update.png";
 const UpdatePartnersAr = () => {
   const [partnersInfo, setPartnersInfo] = useState([]);
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
-  const items = localStorage.getItem("user_corporate")
-  const obj = JSON.parse(items);
-  const company_id = obj._id;
+  let items = localStorage.getItem("user_corporate")
+  let obj = JSON.parse(items);
+  let company_id = obj._id;
   const ref1 = useRef();
 
   useEffect(() => {

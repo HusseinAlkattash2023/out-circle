@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , { useState , useEffect } from 'react'
 import './Visiter.css'
 import { Link , useNavigate } from 'react-router-dom'
 import back from '../../Assets/images/back.png';

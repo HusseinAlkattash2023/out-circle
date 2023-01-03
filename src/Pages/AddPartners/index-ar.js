@@ -12,7 +12,7 @@ import toast, { Toaster } from "react-hot-toast";
 const AddPartnersAr = () => {
   const navigate = useNavigate();
   const [partnersInfo, setPartnersInfo] = useState([]);
-  const number_of_partners = localStorage.getItem("number_partners");
+  let number_of_partners = localStorage.getItem("number_partners");
   let company_id = localStorage.getItem("company_id");
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
