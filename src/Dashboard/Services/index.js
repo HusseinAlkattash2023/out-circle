@@ -7,7 +7,8 @@ const Services = () => {
         <h1>Services Page</h1>
         <Link to="/dashboard/admin/ads-managment" className="btn btn-danger d-block mb-4">Ads Managment</Link>
         <Link to="/dashboard/admin/news-managment" className="btn btn-danger d-block mb-4">News Managment</Link>
-        <Link to="/dashboard/admin/notifications-managment" className="btn btn-danger d-block">Notifications Managment</Link>
+        <Link to="/dashboard/admin/notifications-managment" className="btn btn-danger d-block mb-4">Notifications Managment</Link>
+        <Link to="/dashboard/admin/users-managment" className="btn btn-danger d-block">Users Managment</Link>
       </div>
     </div>
   );
