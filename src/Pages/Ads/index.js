@@ -55,7 +55,7 @@ const Ads = () => {
                     adsInfo && adsInfo.map((item) => (
                         <div key={item._id} className="item">
                             <img src={`${BASE_API_URL}/${item.file_paths[0]}`} alt="" className="image"/>
-                            <Link 
+                            <Link
                             onClick={
                                 () => {
                                     localStorage.setItem("ads_id" ,item._id)
