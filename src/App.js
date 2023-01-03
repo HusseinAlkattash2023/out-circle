@@ -211,9 +211,16 @@ const AddPartnersAr = lazy(() => import("./Pages/AddPartners/index-ar.js"));
 const AdminLogin = lazy(() => import("./Dashboard/AdminLogin/index.js"));
 const AdminRegister = lazy(() => import("./Dashboard/AdminRegister/index.js"));
 const Services = lazy(() => import("./Dashboard/Services/index.js"));
-const AdsManagment = lazy(() =>
+const AdsManagment = lazy(() => 
   import("./Dashboard/Ads/AdsManagment/index.js")
 );
+const UsersManagment = lazy(() => import("./Dashboard/Users/Managment/index.js"));
+const CorporateManagment = lazy(() => import("./Dashboard/Users/Corporate/index.js"));
+const InstitutesManagment = lazy(() => import("./Dashboard/Users/Institutes/index.js"));
+const ProfessionalScintificManagment = lazy(() => import("./Dashboard/Users/ProfessionalScintific/index.js"));
+const HandicraftManagment = lazy(() => import("./Dashboard/Users/Handicraft/index.js"));
+const IndividualsManagment = lazy(() => import("./Dashboard/Users/Individuals/index.js"));
+
 const AddAds = lazy(() => import("./Dashboard/Ads/AddAds/index.js"));
 const DeleteAds = lazy(() => import("./Dashboard/Ads/DeleteAds/index.js"));
 const NewsManagment = lazy(() => import("./Dashboard/News/NewsManagment/index.js"));
@@ -244,6 +251,30 @@ function App() {
     {
       path: "/dashboard/admin/services",
       element: <Services />,
+    },
+    {
+      path: "/dashboard/admin/users-managment",
+      element: <UsersManagment />,
+    },
+    {
+      path: "/dashboard/admin/corporate-managment",
+      element: <CorporateManagment />,
+    },
+    {
+      path: "/dashboard/admin/institutes-managment",
+      element: <InstitutesManagment />,
+    },
+    {
+      path: "/dashboard/admin/professional-Scintific-managment",
+      element: <ProfessionalScintificManagment />,
+    },
+    {
+      path: "/dashboard/admin/handicraft-managment",
+      element: <HandicraftManagment />,
+    },
+    {
+      path: "/dashboard/admin/individuals-managment",
+      element: <IndividualsManagment />,
     },
     {
       path: "/dashboard/admin/ads-managment",
