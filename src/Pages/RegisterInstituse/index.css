@@ -244,6 +244,10 @@ cursor: pointer;
     padding: 0px 40px;
     font-family: 'Readex Pro', sans-serif;
 }
+.instituse .register2_ar .error{
+    font-size: 13px;
+    font-family: 'Readex Pro', sans-serif;
+}
 .instituse .register2_ar .form-container .input_1 input ,
 .instituse .register2 .form-container .input_1 input{
     color:#fff;

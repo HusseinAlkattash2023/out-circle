@@ -111,55 +111,88 @@ function RegisterInstituse() {
   ]
 
    //--------------add validation ----------
+
+   const validate_ = (values)=> {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if(!values.username){
+      errors.username = "من فضلك أدخل اسم المستخدم";
+    }
+    if (values.password.length < 8) {
+      errors.password = "كلمة السر يجب أن تحوي على الأقل 8 محارف";
+    }
+    if (values.password !== values.confirm_password) {
+      errors.confirm_password = "يجب أن تتطابق كلمات المرور";
+    }
+    if(!values.full_name){
+      errors.full_name = "من فضلك أدخل اسمك الكامل";
+    }
+    if(!values.born_date){
+      errors.born_date = "من فضلك أدخل المواليد";
+    }
+    if(!num){
+      errors.num = "من فضلك أدخل رقم الموبايل";
+    }
+    if(!values.email){
+      errors.email = "من فضلك أدخل إيميلك";
+    }else if (!regex.test(data.email)) {
+      errors.email = "تنسيق بريد إلكتروني غير صالح";
+    }
+    return errors;
+  }
+
    const validate = (values) => {
     let errors = {};
     if(!values.username){
       errors.username = "من فضلك أدخل اسم المستخدم";
     }
-    else if (values.password.length < 4) {
-      errors.password = "كلمة السر يجب أن تحوي على الأقل 4 محارف";
+    if (values.password.length < 8) {
+      errors.password = "كلمة السر يجب أن تحوي على الأقل 8 محارف";
     }
-    else if (values.password !== values.confirm_password) {
+    if (values.password !== values.confirm_password) {
       errors.confirm_password = "يجب أن تتطابق كلمات المرور";
     }
-    else if(!values.full_name){
+    if(!values.full_name){
       errors.full_name = "من فضلك أدخل اسمك الكامل";
     }
-    else if(!values.born_date){
+    if(!values.born_date){
       errors.born_date = "من فضلك أدخل المواليد";
     }
-    else if(!num){
+    if(!num){
       errors.num = "من فضلك أدخل رقم الموبايل";
     }
-    else if(!values.email){
+    if(!values.email){
       errors.email = "من فضلك أدخل إيميلك";
     }
-    else if(!values.institute_name){
+    if(!values.institute_name){
       errors.institute_name = "من فضلك أدخل اسم المؤسسة";
     }
-    else if(!values.record_number){
+    if(!values.record_number){
       errors.record_number = "من فضلك أدخل رقم سجل المؤسسة";
     }
-    else if(!values.record_history){
+    if(!values.record_history){
       errors.record_history = "من فضلك أدخل تاريخ سجل المؤسسة";
     }
-    else if(!values.current_city){
+    if(!values.current_city){
       errors.current_city = "من فضلك أدخل محافظتك";
     }
-    else if(!values.current_address){
+    if(!values.current_address){
       errors.current_address = "من فضلك أدخل عنوانك الحالي";
     }
-    else if(!values.detailed_business){
+    if(!values.detailed_business){
       errors.detailed_business = "من فضلك ادخل هذا الحقل";
     }
-    else if(!values.start_date){
+    if(!values.start_date){
       errors.start_date = "من فضلك ادخل هذا الحقل";
     }
-    else if(!values.institute_email){
+    if(!values.institute_email){
       errors.institute_email = "من فضلك ادخل هذا الحقل";
     }
-    else if(!values.landline_number){
+    if(!values.landline_number){
       errors.landline_number = "من فضلك ادخل هذا الحقل";
+    }
+    if(!file1){
+      errors.file1 = "الرجاء تحميل سجل الشركة";
     }
     return errors;
   };
@@ -230,7 +263,11 @@ function RegisterInstituse() {
                 if(page === FormTitle.length-1){
                     handleSubmit()
                 }else{
-                    setPage((currPage) => currPage + 1)
+                  setFormErrors(validate_(data));
+                  const errors_ = Object.values(validate_(data));
+                  if(errors_.length === 0){
+                  setPage((currPage) => currPage + 1);
+                  }
                 }
             }}>
                 {page === FormTitle.length-1 ? "إرسال" : "التالي"}

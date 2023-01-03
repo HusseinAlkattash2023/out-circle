@@ -43,11 +43,11 @@ function Croporate_ar() {
                             <span>الشركاء</span>
                             <div className="partners"><FaUsers/></div>
                         </Link>
-                        <Link onClick={Logout} to="/" className="my-2">
+                        <Link onClick={Logout} to="/ar" className="my-2">
                             <span>تسجيل الخروج</span>
                             <img src={logout} alt=""/>
                         </Link>
-                        <Link to="/" className="my-2">
+                        <Link to="/ar" className="my-2">
                             <span>الصفحة الرئيسية</span>
                             <img src={home} alt=""/>
                         </Link>

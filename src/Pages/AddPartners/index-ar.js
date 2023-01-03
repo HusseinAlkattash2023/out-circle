@@ -12,13 +12,37 @@ import toast, { Toaster } from "react-hot-toast";
 const AddPartnersAr = () => {
   const navigate = useNavigate();
   const [partnersInfo, setPartnersInfo] = useState([]);
-  const [formErrors, setFormErrors] = useState({});
   const number_of_partners = localStorage.getItem("number_partners");
-  const company_id = localStorage.getItem("company_id");
+  let company_id = localStorage.getItem("company_id");
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  const [formErrors, setFormErrors] = useState({});
+  const [dataFromChild, setDataFromChild] = useState();
+
+  const validate = (values) => {
+    const errors = {};
+    if (!values.full_name) {
+      errors.full_name = "من فضلك ادخل هذا الحقل";
+    }
+    if (!values.birthday) {
+      errors.birthday = "من فضلك أدخل هذا الحقل";
+    }
+    if (!values.participation_rate) {
+      errors.participation_rate = "من فضلك أدخل هذا الحقل";
+    }
+    return errors;
+  };
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setFormErrors(validate(dataFromChild));
+
+    const errors = Object.values(validate(dataFromChild));
+
+    if (errors.length === 0) {
       Axios.post(`${BASE_API_URL}/api/partners/add-partners?company_id=${company_id}` , {
         partners_info: partnersInfo,
     })
@@ -29,6 +53,7 @@ const AddPartnersAr = () => {
       }, 2000);
     })
     .catch(err => console.log(err));
+  }
   };
   return (
     <div className="add_parteners">
@@ -55,6 +80,7 @@ const AddPartnersAr = () => {
                   <div key={i}>
                     <Partner
                       formErrors={formErrors}
+                      setDataFromChild={setDataFromChild}
                       num={i}
                       setPartnersInfo={setPartnersInfo}
                       partnersInfo={partnersInfo}

@@ -55,7 +55,7 @@ const UpdatePartners = () => {
           <img src={back} alt="" />
         </Link>
       </header>
-      <section className="register">
+      <section className="register1">
         <header>
           <span className="icon">
             <BsPersonPlus />

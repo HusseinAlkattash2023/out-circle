@@ -177,6 +177,11 @@ const InstituteInfo = ({ data, setData, file1, setFile1 , formErrors}) => {
             type="file"
           />
         </div>
+        {formErrors.file1 && (
+            <span className="error" style={{ color: "red" }}>
+              {formErrors.file1}
+            </span>
+          )}
       </form>
     </div>
   );

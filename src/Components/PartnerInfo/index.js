@@ -1,6 +1,18 @@
-import { useRef } from "react";
+import { useRef , useState } from "react";
 
-function Partner({ num, setPartnersInfo, partnersInfo , data , setData , formErrors}) {
+function Partner({ num, setPartnersInfo, partnersInfo  , formErrors , setDataFromChild}) {
+
+  const [data, setData] = useState({
+    full_name: "",
+    birthday: "",
+    email: "",
+    phone_number: "",
+    whatsapp_number: "",
+    land_phone_extension: "",
+    participation_rate: "",
+  });
+
+  setDataFromChild(data);
 
   const ref1 = useRef();
 
@@ -42,7 +54,8 @@ function Partner({ num, setPartnersInfo, partnersInfo , data , setData , formErr
           onBlur={() => (ref1.current.type = "text")}
           placeholder="Born date"
           type="text"
-        />
+        /><br/>
+        {formErrors.birthday && (<span className="error" style={{ color: "red" }}>{formErrors.birthday}</span>)}
       </div>
       <div className="my-3 input_">
         <input
@@ -113,7 +126,8 @@ function Partner({ num, setPartnersInfo, partnersInfo , data , setData , formErr
           }}
           type="number"
           placeholder="Participation rate"
-        />
+        /><br/>
+        {formErrors.participation_rate && (<span className="error" style={{ color: "red" }}>{formErrors.participation_rate}</span>)}
       </div>
     </div>
   );

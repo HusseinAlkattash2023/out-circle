@@ -121,39 +121,77 @@ function RegisterCorporateAr() {
   ];
 
   //--------------add validation ----------
+
+
+  const validate_ = ()=>{
+    let errors ={};
+    if (!data.username) {
+      errors.username = "من فضلك ادخل اسم المستخدم";
+    }
+    if (data.password.length < 8) {
+      errors.password = "كلمة المرور يجب ان تحوي 8 محارف على الأقل";
+    }
+    if (data.password !== data.confirmPassword) {
+      errors.confirmPassword = "يجب ان تتطابق كلمات المرور";
+    }
+    return errors;
+  }
+
   const validate = (values) => {
     let errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
     if (!values.username) {
       errors.username = "من فضلك ادخل اسم المستخدم";
-    } else if (values.password.length < 8) {
+    }
+    if (values.password.length < 8) {
       errors.password = "كلمة المرور يجب ان تحوي 8 محارف على الأقل";
-    } else if (values.password !== values.confirmPassword) {
+    }
+    if (values.password !== values.confirmPassword) {
       errors.confirmPassword = "يجب ان تتطابق كلمات المرور";
-    } else if(!data.companyName){
+    }
+    if(!data.companyName){
       errors.companyName="من فضلك أدخل اسم الشركة"
-    }else if(!data.typeCompany){
+    }
+    if(!data.typeCompany){
       errors.typeCompany="من فضلك أدخل نوع الشركة"
     }
-    else if(!data.companyDate){
+    if(!data.companyDate){
       errors.companyDate = "من فضلك أدخل تاريخ سجل الشركة"
-    }else if(!data.currentCity){
+    }
+    if(!data.currentCity){
       errors.currentCity = "من فضلك أدخل اسم المحافظة"
-    }else if(!data.currentAddress){
+    }
+    if(!data.currentAddress){
       errors.currentAddress = "من فضلك أدخل العنوان الحالي"
-    }else if(!data.detaileBusiness){
+    }
+    if(!data.detaileBusiness){
       errors.detaileBusiness = "من فضلك أدخل تفاصيل نشاط الشركة الحالي"
-    }else if(!data.companyEmail){
+    }
+    if(!data.companyEmail){
       errors.companyEmail = "من فضلك أدخل البريد الألكتروني للشركة"
-    }else if(!num){
+    }else if (!regex.test(data.companyEmail)) {
+      errors.companyEmail = "تنسيق بريد إلكتروني غير صالح";
+    }
+    if(!num){
       errors.num = "من فضلك أدخل رقم الموبايل"
-    }else if(!data.actualStart){
+    }
+    if(!data.actualStart){
       errors.actualStart = "من فضلك أدخل تاريخ بدء العمل الفعلي"
     }
-    else if(!data.number_partners){
+    if(!data.number_partners){
       errors.number_partners = "من فضلك أدخل عدد الشركاء"
+    }else if( data.number_partners < 2){
+      errors.number_partners = "لا يمكن إدخال اقل من 2 شريك/"
     }
-    else if(!data.companyRecord){
+    if(!data.companyRecord){
       errors.companyRecord = "من فضلك أدخل رقم سجل الشركة"
+    }
+    if(!data.file_record){
+      errors.file_record = "الرجاء تحميل سجل الشركة"
+    }
+    if(!data.establContract){
+      errors.establContract = "الرجاء تحميل عقد تأسيس الشركة"
     }
     return errors;
   };
@@ -261,7 +299,11 @@ function RegisterCorporateAr() {
                 if (page === FormTitle.length - 1) {
                   handleSubmit();
                 } else {
+                  setFormErrors(validate_())
+                  const errors_ = Object.values(validate_());
+                  if(errors_.length === 0){
                   setPage((currPage) => currPage + 1);
+                  }
                 }
               }}
             >

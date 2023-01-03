@@ -183,6 +183,7 @@ const CompanyInfoAr = ({ data , setData , num , setNum , formErrors }) => {
                     placeholder="Upload file" 
                     type="file"/>                     
         </div>
+        {formErrors.file_record && (<span className="error" style={{ color: "red" }}>{formErrors.file_record}</span>)}
         <div className='my-3 input_1'>
             <label htmlFor="file2">
                 <p>تحميل عقد تأسيس الشركة</p>
@@ -199,6 +200,7 @@ const CompanyInfoAr = ({ data , setData , num , setNum , formErrors }) => {
                 placeholder="Upload file" 
                 type="file"/>                     
         </div>
+        {formErrors.establContract && (<span className="error" style={{ color: "red" }}>{formErrors.establContract}</span>)}
     </div>
   )
 }

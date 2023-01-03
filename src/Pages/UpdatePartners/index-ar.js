@@ -11,7 +11,7 @@ import update from "../../Assets/images/update.png";
 const UpdatePartnersAr = () => {
   const [partnersInfo, setPartnersInfo] = useState([]);
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
-  const items = localStorage.getItem("user")
+  const items = localStorage.getItem("user_corporate")
   const obj = JSON.parse(items);
   const company_id = obj._id;
   const ref1 = useRef();
@@ -55,7 +55,7 @@ const UpdatePartnersAr = () => {
           <img src={back} alt="" />
         </Link>
       </header>
-      <section className="register_ar">
+      <section className="register1_ar">
         <header>
           <span className="icon">
             <BsPersonPlus />

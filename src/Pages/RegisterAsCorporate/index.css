@@ -218,6 +218,10 @@
     padding: 0px 20px;
 
 }
+.registerCorporate .register1_ar .error{
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 13px;
+}
 .registerCorporate .register1 .form-container .input_1 label,
 .registerCorporate .register1_ar .form-container .input_1 label{
 display: flex;

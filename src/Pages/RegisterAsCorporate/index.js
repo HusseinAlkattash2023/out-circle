@@ -122,42 +122,75 @@ function RegisterCorporate() {
   ];
 
   //--------------add validation ----------
+  const validate_ = ()=>{
+    let errors ={};
+    if (!data.username) {
+      errors.username = "Please enter a username";
+    }
+    if (data.password.length < 8) {
+      errors.password = "Password must contain at least 8 characters";
+    }
+    if (data.password !== data.confirmPassword) {
+      errors.confirmPassword = "Passwords must match";
+    }
+    return errors;
+  }
+
+
   const validate = (values) => {
     let errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.username) {
       errors.username = "Please enter a username";
     }
-    else if (values.password.length < 8) {
+    if (values.password.length < 8) {
       errors.password = "Password must contain at least 8 characters";
     }
-    else if (values.password !== values.confirmPassword) {
+    if (values.password !== values.confirmPassword) {
       errors.confirmPassword = "Passwords must match";
     }
-    else if(!data.companyName){
+    if(!data.companyName){
       errors.companyName="Please enter the company name"
-    }else if(!data.typeCompany){
+    }
+    if(!data.typeCompany){
       errors.typeCompany="Please enter the type of company"
     }
-    else if(!data.companyDate){
+    if(!data.companyDate){
       errors.companyDate = "Please enter company record history"
-    }else if(!data.currentCity){
+    }
+    if(!data.currentCity){
       errors.currentCity = "Please enter the currnet city"
-    }else if(!data.currentAddress){
+    }
+    if(!data.currentAddress){
       errors.currentAddress = "Please enter the currnet address"
-    }else if(!data.detaileBusiness){
+    }
+    if(!data.detaileBusiness){
       errors.detaileBusiness = "Please enter company's detaild business"
-    }else if(!data.companyEmail){
+    }
+    if(!data.companyEmail){
       errors.companyEmail = "Please enter the company email"
-    }else if(!num){
+    }else if (!regex.test(data.companyEmail)) {
+      errors.companyEmail = "Invalid email format";
+    }
+    if(!num){
       errors.num = "Please enter mobile number"
-    }else if(!data.actualStart){
+    }
+    if(!data.actualStart){
       errors.actualStart = "Please enter actual start date"
     }
-    else if(!data.number_partners){
+    if(!data.number_partners){
       errors.number_partners = "Please enter the number partners"
+    }else if( data.number_partners < 2){
+      errors.number_partners = "Less than 2 partners cannot be entered"
     }
-    else if(!data.companyRecord){
+    if(!data.companyRecord){
       errors.companyRecord = "Please enter the company record"
+    }
+    if(!data.file_record){
+      errors.file_record = "Please enter this field"
+    }
+    if(!data.establContract){
+      errors.establContract = "Please enter this field"
     }
     return errors;
   };
@@ -275,7 +308,11 @@ function RegisterCorporate() {
                 if (page === FormTitle.length - 1) {
                   handleSubmit();
                 } else {
+                  setFormErrors(validate_())
+                  const errors_ = Object.values(validate_());
+                  if(errors_.length === 0){
                   setPage((currPage) => currPage + 1);
+                  }
                 }
               }}
             >

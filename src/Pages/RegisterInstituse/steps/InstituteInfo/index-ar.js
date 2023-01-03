@@ -177,6 +177,11 @@ const InstituteInfoAr = ({ setFile1, data, setData, formErrors }) => {
             onChange={(e) => setFile1(e.target.files[0])}
           />
         </div>
+        {formErrors.file1 && (
+            <span className="error" style={{ color: "red" }}>
+              {formErrors.file1}
+            </span>
+          )}
       </form>
     </div>
   );

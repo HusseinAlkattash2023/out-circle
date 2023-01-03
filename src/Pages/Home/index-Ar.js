@@ -110,10 +110,9 @@ function HomeAr() {
     }, [BASE_API_URL, getAllNews, getAllAds]);
 
 
-  const navigate =  useNavigate()
-  const OnClick = ()=>{
-    navigate("/login")
-  }
+  const navigate =  useNavigate();
+
+
   return (
       <div className='home'>
       {isShowWelcomeMessageAr === "yes" && <div className="welcome_"><WelcomeMessage/></div>}
@@ -151,7 +150,7 @@ function HomeAr() {
       <div className='main_ar'>
         <img className='outcircle' src={outcircle} alt="" width="154"/>
         <div className='cards'>
-            <Link to="/individuals-ar" className='hov' onClick={OnClick}>
+            <Link to="/individuals-ar" className='hov'>
                 <img className='img_ mx-3' src={i5} alt=""/>
                 <img className='iui' src={iui5} alt=""/>
             </Link>

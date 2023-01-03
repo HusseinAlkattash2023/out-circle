@@ -181,8 +181,9 @@ const CompanyInfo = ({data , setData , setNum , num , formErrors}) => {
                   onChange = {(e)=>{
                     setData({...data , file_record:e.target.files[0]})
                   }}
-                  />                     
-        </div>
+                  /> 
+          </div>
+            {formErrors.file_record && (<span className="error" style={{ color: "red" }}>{formErrors.file_record}</span>)}
         <div className='my-3 input_1'>
             <label htmlFor="file2">
                 <p>Upload establishment contract</p>
@@ -197,8 +198,9 @@ const CompanyInfo = ({data , setData , setNum , num , formErrors}) => {
                 name='uploadFile' 
                 id="file2" 
                 placeholder="Upload file" 
-                type="file"/>                     
+                type="file"/> 
         </div>
+        {formErrors.establContract && (<span className="error" style={{ color: "red" }}>{formErrors.establContract}</span>)}
         </form>
     </div>
   )

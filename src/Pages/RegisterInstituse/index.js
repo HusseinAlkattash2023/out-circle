@@ -124,55 +124,88 @@ function RegisterInstituse() {
   ];
 
   //--------------add validation ----------
+  const validate_ = (values)=> {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if(!values.username){
+      errors.username = "Please enter your username";
+    }
+    if (values.password.length < 8) {
+      errors.password = "Password must contain at least 8 characters";
+    }
+    if (values.password !== values.confirm_password) {
+      errors.confirm_password = "Passwords do not match";
+    }
+    if(!values.full_name){
+      errors.full_name = "Please enter your full name";
+    }
+    if(!values.born_date){
+      errors.born_date = "Please enter your birthday";
+    }
+    if(!num){
+      errors.num = "Please enter your mobile number";
+    }
+    if(!values.email){
+      errors.email = "Please enter your email";
+    }else if (!regex.test(data.email)) {
+      errors.email = "Invalid email format";
+    }
+    return errors;
+  }
+
+
   const validate = (values) => {
     let errors = {};
     if(!values.username){
       errors.username = "Please enter your username";
     }
-    else if (values.password.length < 4) {
+    if (values.password.length < 4) {
       errors.password = "Password must contain at least 8 characters";
     }
-    else if (values.password !== values.confirm_password) {
+    if (values.password !== values.confirm_password) {
       errors.confirm_password = "Passwords do not match";
     }
-    else if(!values.full_name){
+    if(!values.full_name){
       errors.full_name = "Please enter your full name";
     }
-    else if(!values.born_date){
+    if(!values.born_date){
       errors.born_date = "Please enter your birthday";
     }
-    else if(!num){
+    if(!num){
       errors.num = "Please enter your mobile number";
     }
-    else if(!values.email){
+    if(!values.email){
       errors.email = "Please enter your email";
     }
-    else if(!values.institute_name){
+    if(!values.institute_name){
       errors.institute_name = "Please enter the institute name";
     }
-    else if(!values.record_number){
+    if(!values.record_number){
       errors.record_number = "Please enter institute record number";
     }
-    else if(!values.record_history){
+    if(!values.record_history){
       errors.record_history = "Please enter institute record date";
     }
-    else if(!values.current_city){
+    if(!values.current_city){
       errors.current_city = "Please enter the current city";
     }
-    else if(!values.current_address){
+    if(!values.current_address){
       errors.current_address = "Please enter the current city";
     }
-    else if(!values.detailed_business){
+    if(!values.detailed_business){
       errors.detailed_business = "Please enter this field";
     }
-    else if(!values.start_date){
+    if(!values.start_date){
       errors.start_date = "Please enter this field";
     }
-    else if(!values.institute_email){
+    if(!values.institute_email){
       errors.institute_email = "Please enter this field";
     }
-    else if(!values.landline_number){
+    if(!values.landline_number){
       errors.landline_number = "Please enter this field";
+    }
+    if(!file1){
+      errors.file1 = "Please upload institute record";
     }
     return errors;
   };
@@ -277,7 +310,11 @@ function RegisterInstituse() {
                 if (page === FormTitle.length - 1) {
                   handleSubmit();
                 } else {
+                  setFormErrors(validate_(data));
+                  const errors_ = Object.values(validate_(data));
+                  if(errors_.length === 0){
                   setPage((currPage) => currPage + 1);
+                  }
                 }
               }}
             >

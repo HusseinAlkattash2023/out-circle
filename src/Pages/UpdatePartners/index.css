@@ -55,7 +55,7 @@
     opacity: 1;
     left:-30px;
 }
-.add_parteners .register{
+.add_parteners .register1{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +65,7 @@
     right: 180px;
     top:40px;
 }
-.add_parteners .register_ar{
+.add_parteners .register1_ar{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,8 +75,8 @@
     left: 180px;
     top:40px;
 }
-.add_parteners .register header,
-.add_parteners .register_ar header{
+.add_parteners .register1 header,
+.add_parteners .register1_ar header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,25 +89,25 @@
     border: 1px solid #707070;
     opacity: 0.68;
 }
-.add_parteners .register header .icon,
-.add_parteners .register_ar header .icon{
+.add_parteners .register1 header .icon,
+.add_parteners .register1_ar header .icon{
     position: absolute;
     left: 20px;
     font-size: 35px;
     bottom: 0px;
 }
-.add_parteners .register header .text,
-.add_parteners .register_ar header .text{
+.add_parteners .register1 header .text,
+.add_parteners .register1_ar header .text{
     font-size: 22px;
     letter-spacing: 1px;
     font-weight: bold;
     font-family: 'Rubik Dirt',sans-serif;
 }
-.add_parteners .register_ar header .text{
+.add_parteners .register1_ar header .text{
     font-family: changa;
 }
-.add_parteners .register .form-container ,
-.add_parteners .register_ar .form-container{
+.add_parteners .register1 .form-container ,
+.add_parteners .register1_ar .form-container{
     background-color: #22594e;
     width: 100%;
     text-align: center;
@@ -135,22 +135,22 @@
     width: 27%;
     height: 100%;
 }
-.register .body,
-.register_ar .body{
+.register1 .body,
+.register1_ar .body{
     overflow: scroll;
     height: 350px;
 }
- .register .body::-webkit-scrollbar ,
- .register_ar .body::-webkit-scrollbar {
+ .register1 .body::-webkit-scrollbar ,
+ .register1_ar .body::-webkit-scrollbar {
     display: none;
   }
-  .register .body,
-  .register_ar .body{
+  .register1 .body,
+  .register1_ar .body{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
-  .add_parteners .register .form-container .input_ ,
-  .add_parteners .register_ar .form-container .input_{
+  .add_parteners .register1 .form-container .input_ ,
+  .add_parteners .register1_ar .form-container .input_{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -160,8 +160,8 @@
     border-radius: 15px;
     padding: 0px 10px;
   }
-.add_parteners .register .form-container .input_ input ,
-.add_parteners .register_ar .form-container .input_ input{
+.add_parteners .register1 .form-container .input_ input ,
+.add_parteners .register1_ar .form-container .input_ input{
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -171,17 +171,17 @@
     font-size: 20px;
 }
 
-.add_parteners .register_ar .form-container .input_ input{
+.add_parteners .register1_ar .form-container .input_ input{
     text-align: right;
 }
 
-.add_parteners .register .form-container .input_ input:focus ,
-.add_parteners .register_ar .form-container .input_ input:focus{
+.add_parteners .register1 .form-container .input_ input:focus ,
+.add_parteners .register1_ar .form-container .input_ input:focus{
     outline: none;
 }
 
 
-.add_parteners .register_ar .form-container h3{
+.add_parteners .register1_ar .form-container h3{
     font-family: 'Readex Pro', sans-serif;
 }
 .add_parteners .form-container .footer button{
@@ -204,8 +204,8 @@
     .add_parteners .background2 img , .add_parteners .background2_ar img{
         display: none;
     }
-    .add_parteners .register ,
-    .add_parteners .register_ar{
+    .add_parteners .register1 ,
+    .add_parteners .register1_ar{
         position: relative;
         left: 50%;
         transform: translate(-50%);
@@ -217,8 +217,8 @@
     .add_parteners header .back_ar{
         display: none;
     }
-    .add_parteners .register ,
-    .add_parteners .register_ar{
+    .add_parteners .register1 ,
+    .add_parteners .register1_ar{
         width: 500px;
         position: relative;
         left: 50%;
@@ -227,71 +227,71 @@
 }
 
 @media only screen and (max-width:550px){
-    .add_parteners .register ,
-    .add_parteners .register_ar{
+    .add_parteners .register1 ,
+    .add_parteners .register1_ar{
         width: 450px;
         position: relative;
         left: 50%;
         transform: translate(-50%);
     }
-    .add_parteners .register .form-container ,
-    .add_parteners .register_ar .form-container{
+    .add_parteners .register1 .form-container ,
+    .add_parteners .register1_ar .form-container{
         width: 100%;
         border-radius: 40px;
     }
-    .add_parteners .register .form-container .input_ ,
-    .add_parteners .register_ar .form-container .input_{
+    .add_parteners .register1 .form-container .input_ ,
+    .add_parteners .register1_ar .form-container .input_{
         width: 90%;
     }
 }
 
 
 @media only screen and (max-width:480px){
-    .add_parteners .register ,
-    .add_parteners .register_ar{
+    .add_parteners .register1 ,
+    .add_parteners .register1_ar{
         width: 380px;
         position: relative;
         left: 50%;
         transform: translate(-50%);
     }
-    .add_parteners .register .form-container ,
-    .add_parteners .register_ar .form-container{
+    .add_parteners .register1 .form-container ,
+    .add_parteners .register1_ar .form-container{
         width: 100%;
         border-radius: 35px;
     }
-    .add_parteners .register .form-container .input_ ,
-    .add_parteners .register_ar .form-container .input_{
+    .add_parteners .register1 .form-container .input_ ,
+    .add_parteners .register1_ar .form-container .input_{
         width: 90%;
     }
 }
 
 @media only screen and (max-width:420px){
-    .add_parteners .register ,
-    .add_parteners .register_ar{
+    .add_parteners .register1 ,
+    .add_parteners .register1_ar{
         width: 340px;
         position: relative;
         left: 50%;
         transform: translate(-50%);
     }
-    .add_parteners .register .form-container ,
-    .add_parteners .register_ar .form-container{
+    .add_parteners .register1 .form-container ,
+    .add_parteners .register1_ar .form-container{
         width: 100%;
         border-radius: 30px;
     }
-    .add_parteners .register .form-container .input_ ,
-    .add_parteners .register_ar .form-container .input_{
+    .add_parteners .register1 .form-container .input_ ,
+    .add_parteners .register1_ar .form-container .input_{
         width: 96%;
     }
     .add_parteners .form-container .footer button{
         width: 110px;
         font-size: 16px;
     }
-    .add_parteners .register .form-container .input_ input ,
-    .add_parteners .register_ar .form-container .input_ input{
+    .add_parteners .register1 .form-container .input_ input ,
+    .add_parteners .register1_ar .form-container .input_ input{
         font-size: 16px;
     }
-    .add_parteners .register header .text,
-    .add_parteners .register_ar header .text{
+    .add_parteners .register1 header .text,
+    .add_parteners .register1_ar header .text{
         font-size: 20px;
     }
 }

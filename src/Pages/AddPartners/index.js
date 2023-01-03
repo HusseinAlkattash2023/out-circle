@@ -13,49 +13,56 @@ const AddPartners = () => {
   const navigate = useNavigate();
   const [partnersInfo, setPartnersInfo] = useState([]);
   const number_of_partners = localStorage.getItem("number_partners");
-  const company_id = localStorage.getItem("company_id");
-  const [formErrors , setFormErrors] = useState({});
-
-  const [data, setData] = useState({
-    full_name: "",
-    birthday: "",
-    email: "",
-    phone_number: "",
-    whatsapp_number: "",
-    land_phone_extension: "",
-    participation_rate: "",
-  });
-
-  const validate =()=>{
-    const errors ={};
-    if(!data.full_name){
-      errors.full_name = "Please enter this field"
-    }
-    return errors;
-  }
+  let company_id = localStorage.getItem("company_id");
+  const [dataFromChild, setDataFromChild] = useState();
+  const [formErrors, setFormErrors] = useState({});
 
 
-  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
   
 
+  const validate = (values) => {
+    const errors = {};
+    if (!values.full_name) {
+      errors.full_name = "Please enter this field";
+    }
+    if (!values.birthday) {
+      errors.birthday = "Please enter this field";
+    }
+    if (!values.participation_rate) {
+      errors.participation_rate = "Please enter this field";
+    }
+    return errors;
+  };
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      Axios.post(`${BASE_API_URL}/api/partners/add-partners?company_id=${company_id}` , {
-        partners_info: partnersInfo,
-    })
-    .then(() => {
-      toast.success("Partner information has been added successfully")
-      setTimeout(() => {
-        navigate("/login")
-      }, 2000);
-    })
-    .catch(err => console.log(err));
-    
+
+    setFormErrors(validate(dataFromChild));
+
+    const errors = Object.values(validate(dataFromChild));
+    if (errors.length === 0) {
+      Axios.post(
+        `${BASE_API_URL}/api/partners/add-partners?company_id=${company_id}`,
+        {
+          partners_info: partnersInfo,
+        }
+      )
+        .then(() => {
+          toast.success("Partner information has been added successfully");
+          setTimeout(() => {
+            navigate("/login");
+          }, 2000);
+        })
+        .catch((err) => console.log(err));
+    }
   };
   return (
     <div className="add_parteners">
-      <div><Toaster/></div>
+      <div>
+        <Toaster />
+      </div>
       <header>
         <Link to="/register">
           <span>Back</span>
@@ -77,9 +84,8 @@ const AddPartners = () => {
                 arr.push(
                   <div key={i}>
                     <Partner
+                      setDataFromChild={setDataFromChild}
                       formErrors={formErrors}
-                      setData={setData}
-                      data={data}
                       num={i}
                       setPartnersInfo={setPartnersInfo}
                       partnersInfo={partnersInfo}

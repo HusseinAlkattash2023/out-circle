@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
+import { useRef , useState } from "react";
 
-function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
-  const ref1 = useRef();
+function PartnerAr({ num, setPartnersInfo, partnersInfo  , formErrors , setDataFromChild}) {
+
   const [data, setData] = useState({
     full_name: "",
     birthday: "",
@@ -12,6 +12,10 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
     participation_rate: "",
   });
 
+  setDataFromChild(data);
+
+  const ref1 = useRef();
+
   return (
     <div className="my-4">
       <h3
@@ -19,7 +23,7 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
         style={{ color: "#fff", borderBottom: "2px solid #fff" }}
       >
         {" "}
-        معلومات الشريك({num + 1})
+        Information Partner({num + 1})
       </h3>
       <div className="my-3 input_">
         <input
@@ -31,8 +35,9 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
             setPartnersInfo(partnersInfoList);
           }}
           type="text"
-          placeholder="اسم الشرك الكامل"
-        />
+          placeholder="اسم الشريك الكامل"
+        /><br/>
+        {formErrors.full_name && (<span className="error" style={{ color: "red" }}>{formErrors.full_name}</span>)}
       </div>
       <div className="my-3 input_">
         <input
@@ -47,9 +52,10 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
           ref={ref1}
           onFocus={() => (ref1.current.type = "date")}
           onBlur={() => (ref1.current.type = "text")}
-          placeholder="المواليد"
+          placeholder="مواليد الشريك"
           type="text"
-        />
+        /><br/>
+        {formErrors.birthday && (<span className="error" style={{ color: "red" }}>{formErrors.birthday}</span>)}
       </div>
       <div className="my-3 input_">
         <input
@@ -61,7 +67,7 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
             setPartnersInfo(partnersInfoList);
           }}
           type="number"
-          placeholder="رقم المويابل الشخصي"
+          placeholder="رقم الموبايل الشخصي"
         />
       </div>
       <div className="my-3 input_">
@@ -106,7 +112,7 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
             setPartnersInfo(partnersInfoList);
           }}
           type="email"
-          placeholder="البريد الألكتروني"
+          placeholder="البريد الإلكتروني الشخصي"
         />
       </div>
       <div className="my-3 input_">
@@ -119,8 +125,9 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo}) {
             setPartnersInfo(partnersInfoList);
           }}
           type="number"
-          placeholder="معدل التشاركية"
-        />
+          placeholder="معدل المشاركة"
+        /><br/>
+        {formErrors.participation_rate && (<span className="error" style={{ color: "red" }}>{formErrors.participation_rate}</span>)}
       </div>
     </div>
   );
