@@ -57,15 +57,15 @@ function Register_ar() {
               </Link>
             </div>
             <div className="four">
-              <Link to="/register-handicraft-ar" style={{position:"relative" , right:"14px"}}>
-                  <img src={circle4} alt="" width="220px" className='_circle'/>
-                  <img src={circleHover4} alt="" width="220px" className='_circlehover'/>
+              <Link to="/register-individuals-ar" style={{position:"relative" , right:"14px"}}>
+                  <img src={circle5} alt="" width="220px" className='_circle'/>
+                  <img src={circleHover5} alt="" width="220px" className='_circlehover'/>
               </Link>
             </div>
             <div className="fife"> 
-              <Link to="/register-individuals-ar" style={{position:"relative" , left:"14px"}}>
-                  <img src={circle5} alt="" width="220px" className='_circle'/>
-                  <img src={circleHover5} alt="" width="220px" className='_circlehover'/>
+              <Link to="/register-handicraft-ar" style={{position:"relative" , left:"14px"}}>
+                  <img src={circle4} alt="" width="220px" className='_circle'/>
+                  <img src={circleHover4} alt="" width="220px" className='_circlehover'/>
               </Link>
             </div>
           </div>

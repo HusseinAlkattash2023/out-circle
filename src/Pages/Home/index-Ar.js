@@ -111,8 +111,7 @@ function HomeAr() {
 
 
   const navigate =  useNavigate();
-
-
+  
   return (
       <div className='home'>
       {isShowWelcomeMessageAr === "yes" && <div className="welcome_"><WelcomeMessage/></div>}

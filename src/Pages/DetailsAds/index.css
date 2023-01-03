@@ -23,7 +23,10 @@
 .rectangle .image{
     width: 500px;
 }
-
+.rectangle video{
+    width: 500px;
+    height: 400px;
+}
 
 /*-----------------------------*/
 @media only screen and (max-width: 1120px){
@@ -47,14 +50,23 @@
     .rectangle .image{
         width: 400px;
     }
+    .rectangle video{
+        width: 400px;
+    }
 }
 @media only screen and (max-width: 520px){
     .rectangle .image{
         width: 300px;
     }
+    .rectangle video{
+        width: 300px;
+    }
 }
 @media only screen and (max-width: 400px){
     .rectangle .image{
+        width: 260px;
+    }
+    .rectangle video{
         width: 260px;
     }
     .rectangle{

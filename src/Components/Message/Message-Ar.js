@@ -30,6 +30,7 @@ const MessageAr = ({
   text6,
   text7,
   change_route,
+  user
 }) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   useEffect(() => {
@@ -50,6 +51,7 @@ const MessageAr = ({
       gmail={gmail}
       admin={admin}
       change_route={change_route}
+      user={user}
     />
   ) : (
     <Message2
@@ -65,16 +67,17 @@ const MessageAr = ({
       text6={text6}
       text7={text7}
       change_route={change_route}
+      user={user}
     />
   );
 };
 
 export default MessageAr;
 
-const Message1 = ({ text, image, gmail, admin, change_route }) => {
+const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
   const navigate = useNavigate();
 
-  const user_ = localStorage.getItem("user");
+  const user_ = localStorage.getItem(`${user}`);
   const user_obj = JSON.parse(user_);
   const data = user_
     ? localStorage.getItem("user")
@@ -256,10 +259,11 @@ const Message2 = ({
   text6,
   text7,
   change_route,
+  user
 }) => {
   const navigate = useNavigate();
 
-  const user_ = localStorage.getItem("user");
+  const user_ = localStorage.getItem(`${user}`);
   const user_obj = JSON.parse(user_);
   const data = user_
     ? localStorage.getItem("user")

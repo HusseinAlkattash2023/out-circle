@@ -47,7 +47,7 @@ const DetailsAds = () => {
                         src={`${BASE_API_URL}/${photos[i]}`}
                         alt=""
                       />
-                      <video width="320" height="240" autoplay>
+                      <video autoplay>
                         <source
                           src={`${BASE_API_URL}/${photos[i]}`}
                           type="video/mp4"

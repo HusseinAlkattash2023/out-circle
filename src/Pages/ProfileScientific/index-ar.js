@@ -21,9 +21,9 @@ const ProfileScientificAr = () => {
 
     const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
     
-    const items = localStorage.getItem("user")
-    const obj = JSON.parse(items);
-    const user_id = obj._id;
+    let items = localStorage.getItem("user")
+    let obj = JSON.parse(items);
+    let user_id = obj._id;
 
   useEffect(() => {
     Axios.get(
@@ -118,19 +118,19 @@ const ProfileScientificAr = () => {
           <form onSubmit={handleSubmit}>
             <div className="bar">
               <div className="information">
-                <input type="text" value={userInfo.user_name} placeholder="اسم المستخدم" />
+                <input disabled type="text" defaultValue={userInfo.user_name} placeholder="اسم المستخدم" />
               </div>
               <div className="information">
                 <div onClick={ChangePassword} style={{cursor:"pointer"}}>
                     <img src={update} alt="" />
                 </div>
-                <input type="password" value={"**********"} placeholder="كلمة المرور" />
+                <input disabled type="password" defaultValue={"**********"} placeholder="كلمة المرور" />
               </div>
               <div className="information">
-                <input type="text" value={userInfo.full_name} placeholder="الاسم الكامل"/>
+                <input disabled type="text" defaultValue={userInfo.full_name} placeholder="الاسم الكامل"/>
               </div>
               <div className="information">
-                <input type="text" value={userInfo.birthday} placeholder="المواليد" />
+                <input disabled type="text" defaultValue={userInfo.birthday} placeholder="المواليد" />
               </div>
               <div className="information">
                 <div>

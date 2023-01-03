@@ -19,9 +19,9 @@ const ProfileScientific = () => {
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
-  const items = localStorage.getItem("user");
-  const obj = JSON.parse(items);
-  const user_id = obj._id;
+  let items = localStorage.getItem("user");
+  let obj = JSON.parse(items);
+  let user_id = obj._id;
 
   const navigate = useNavigate();
   const ChangePassword = ()=> {
@@ -119,15 +119,17 @@ const ProfileScientific = () => {
             <div className="bar">
               <div className="information">
                 <input
+                  disabled
                   type="text"
-                  value={userInfo.user_name}
+                  defaultValue={userInfo.user_name}
                   placeholder="User name"
                 />
               </div>
               <div className="information">
                 <input
+                  disabled
                   type="password"
-                  value={"**********"}
+                  defaultValue={"**********"}
                   placeholder="Password"
                 />
                 <div onClick={ChangePassword} style={{cursor:"pointer"}}>
@@ -136,13 +138,14 @@ const ProfileScientific = () => {
               </div>
               <div className="information">
                 <input
+                  disabled
                   type="text"
-                  value={userInfo.full_name}
+                  defaultValue={userInfo.full_name}
                   placeholder="Full Name"
                 />
               </div>
               <div className="information">
-                <input type="text" value={userInfo.birthday} />
+                <input type="text" defaultValue={userInfo.birthday} disabled/>
               </div>
               <div className="information">
                 <input

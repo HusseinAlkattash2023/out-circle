@@ -118,6 +118,17 @@
     left: 100px;
 }
 
+ 
+.notification .rectangle::-webkit-scrollbar ,
+.notification .rectangle_ar::-webkit-scrollbar {
+    display: none;
+  }
+  .notification .rectangle ,
+  .notification .rectangle_ar{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 
 
 /* ============= add responsive ===========*/

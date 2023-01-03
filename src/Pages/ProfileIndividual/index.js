@@ -25,9 +25,9 @@ const ProfileIndividual = () => {
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
-  const items = localStorage.getItem("user")
-  const obj = JSON.parse(items);
-  const user_id = obj._id;
+  let items = localStorage.getItem("user")
+  let obj = JSON.parse(items);
+  let user_id = obj._id;
 
   const data = [
     {

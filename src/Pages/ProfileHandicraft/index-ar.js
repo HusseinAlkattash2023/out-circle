@@ -21,9 +21,9 @@ const ProfileHandicraftAr = () => {
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
-  const items = localStorage.getItem("user")
-  const obj = JSON.parse(items);
-  const user_id = obj._id;
+  let items = localStorage.getItem("user")
+  let obj = JSON.parse(items);
+  let user_id = obj._id;
 
   useEffect(() => {
     Axios.get(
@@ -93,7 +93,7 @@ const ProfileHandicraftAr = () => {
     const formData = new FormData();
     data.map((el) => formData.append(el.key, el.value));
     Axios.put(
-      `${BASE_API_URL}/api/craftsmen/update-craftsman-user-info/63a6fadaab86777d17f87dd6`,
+      `${BASE_API_URL}/api/craftsmen/update-craftsman-user-info/${user_id}`,
       formData
     )
       .then((res) => {
@@ -225,19 +225,14 @@ const ProfileHandicraftAr = () => {
                 />
               </div>
               <div className="information">
-                <div>
-                    <img src={update} alt="" />
-                </div>
                 <input
+                  disabled
                   placeholder="تاريخ بدء العمل الفعلي"
                   type="text"
                   ref={ref}
                   defaultValue={userInfo.work_start_date}
                   onFocus={() => (ref.current.type = "date")}
                   onBlur={() => (ref.current.type = "text")}
-                  onChange={(e) => {
-                    setUserInfo({ ...userInfo, work_start_date: e.target.value });
-                  }}
                 />
               </div>
               <div className="information">
@@ -250,22 +245,6 @@ const ProfileHandicraftAr = () => {
                   defaultValue={userInfo.work_address}
                   onChange={(e) => {
                     setUserInfo({ ...userInfo, work_address: e.target.value });
-                  }}
-                />
-              </div>
-              <div className="information">
-                <div>
-                    <img src={update} alt="" />
-                </div>
-                <input
-                  placeholder="رقم الهاتف الأرصي" 
-                  type="text"
-                  defaultValue={userInfo.landline_number}
-                  onChange={(e) => {
-                    setUserInfo({
-                      ...userInfo,
-                      landline_number: e.target.value,
-                    });
                   }}
                 />
               </div>

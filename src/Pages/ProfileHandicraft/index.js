@@ -26,9 +26,9 @@ const ProfileHandicraft = () => {
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
-  const items = localStorage.getItem("user")
-  const obj = JSON.parse(items);
-  const user_id = obj._id;
+  let items = localStorage.getItem("user")
+  let obj = JSON.parse(items);
+  let user_id = obj._id;
 
   useEffect(() => {
     Axios.get(
@@ -228,15 +228,13 @@ const ProfileHandicraft = () => {
               </div>
               <div className="information">
                 <input
+                  disabled
                   placeholder="Actaul start date"
                   type="text"
                   ref={ref}
                   defaultValue={userInfo.work_start_date}
                   onFocus={() => (ref.current.type = "date")}
                   onBlur={() => (ref.current.type = "text")}
-                  onChange={(e) => {
-                    setUserInfo({ ...userInfo, work_start_date: e.target.value });
-                  }}
                 />
                 <div>
                   <img src={update} alt="" />
@@ -249,22 +247,6 @@ const ProfileHandicraft = () => {
                   defaultValue={userInfo.work_address}
                   onChange={(e) => {
                     setUserInfo({ ...userInfo, work_address: e.target.value });
-                  }}
-                />
-                <div>
-                  <img src={update} alt="" />
-                </div>
-              </div>
-              <div className="information">
-                <input
-                  placeholder="Landline number"
-                  type="text"
-                  defaultValue={userInfo.landline_number}
-                  onChange={(e) => {
-                    setUserInfo({
-                      ...userInfo,
-                      landline_number: e.target.value,
-                    });
                   }}
                 />
                 <div>

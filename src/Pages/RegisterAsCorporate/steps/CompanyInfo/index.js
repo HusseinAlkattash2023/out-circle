@@ -53,7 +53,7 @@ const CompanyInfo = ({data , setData , setNum , num , formErrors}) => {
             ref={ref1}
             onFocus={() => (ref1.current.type = "date")}
             onBlur={() => (ref1.current.type = "text")}
-            placeholder="Company record history" 
+            placeholder="Company record date" 
             type="text"
             value={data.companyDate}
             onChange = {(e) => {

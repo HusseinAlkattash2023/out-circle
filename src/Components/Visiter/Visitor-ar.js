@@ -53,7 +53,7 @@ const Visiter = () => {
 
 
     const onSubmit = ()=> {
-        localStorage.setItem("user", JSON.stringify({ ...data }));
+        localStorage.setItem("visitor", JSON.stringify({ ...data }));
         toast.success("يمكنك الأن إرسال رسالة");
         setTimeout(() => {
             navigate(`/${change_route}`)
