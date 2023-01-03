@@ -265,6 +265,22 @@ const ProfileHandicraftAr = () => {
                 />
               </div>
               <div className="information">
+                <input
+                  placeholder="رقم الهاتف الأرضي"
+                  type="number"
+                  defaultValue={userInfo.landline_number}
+                  onChange={(e) => {
+                    setUserInfo({
+                      ...userInfo,
+                      landline_number: e.target.value,
+                    });
+                  }}
+                />
+                <div>
+                  <img src={update} alt="" />
+                </div>
+              </div>
+              <div className="information">
                 <div>
                     <img src={update} alt="" />
                 </div>

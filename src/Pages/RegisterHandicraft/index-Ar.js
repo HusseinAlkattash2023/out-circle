@@ -47,6 +47,7 @@ function RegisterHandicraftAr() {
     start_date: "",
     work_address: "",
     whatsapp_number: "",
+    phone_number: ""
   });
   const [num1, setNum1] = useState("");
   const [file1, setFile1] = useState();
@@ -372,6 +373,17 @@ function RegisterHandicraftAr() {
                 enableSearchField
               />
               {formError.num1 && (<span className="error" style={{ color: "red" }}>{formError.num1}</span>)}
+            </div>
+            <div className="my-3 input_">
+              <input
+                value={data.phone_number}
+                onChange={(e) => {
+                  setData({ ...data, phone_number: e.target.value });
+                }}
+                className="input"
+                placeholder="الهاتف الأرضي"
+                type="number"
+              />
             </div>
             <div className="my-3 input_">
               <input

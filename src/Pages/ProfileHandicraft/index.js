@@ -271,8 +271,24 @@ const ProfileHandicraft = () => {
               </div>
               <div className="information">
                 <input
+                  placeholder="Phone number"
+                  type="number"
+                  defaultValue={userInfo.landline_number}
+                  onChange={(e) => {
+                    setUserInfo({
+                      ...userInfo,
+                      landline_number: e.target.value,
+                    });
+                  }}
+                />
+                <div>
+                  <img src={update} alt="" />
+                </div>
+              </div>
+              <div className="information">
+                <input
                   placeholder="whatsapp number"
-                  type="text"
+                  type="number"
                   defaultValue={userInfo.whatsapp_number}
                   onChange={(e) => {
                     setUserInfo({

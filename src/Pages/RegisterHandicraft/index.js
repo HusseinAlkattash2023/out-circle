@@ -49,6 +49,7 @@ function RegisterHandicraft() {
     start_date: "",
     work_address: "",
     whatsapp_number: "",
+    phone_number: ""
   });
 
   const [num1, setNum1] = useState("");
@@ -386,6 +387,17 @@ function RegisterHandicraft() {
                 }}
                 className="input"
                 placeholder="Whatsapp number"
+                type="number"
+              />
+            </div>
+            <div className="my-3 input_">
+              <input
+                value={data.phone_number}
+                onChange={(e) => {
+                  setData({ ...data, phone_number: e.target.value });
+                }}
+                className="input"
+                placeholder="Phone number"
                 type="number"
               />
             </div>
