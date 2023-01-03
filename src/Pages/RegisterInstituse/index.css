@@ -193,7 +193,7 @@
 
 .register2 .body ,
 .register2_ar .body{
-    overflow: scroll;
+    overflow-y: scroll;
     height: 350px;
 }
  .register2 .body::-webkit-scrollbar ,

@@ -205,6 +205,18 @@
     opacity: 0.68;
 }
 
+.profile_corporate section .body{
+    overflow-y: scroll;
+    height: 350px;
+}
+.profile_corporate section .body::-webkit-scrollbar {
+    display: none;
+  }
+  .profile_corporate section .body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
 /*==============----------------------*/
 @media only screen and (max-width: 1150px){
     .profile_corporate section{

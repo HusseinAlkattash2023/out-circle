@@ -750,10 +750,10 @@
         position: absolute;
         top: 150px;
         left:-10px;
-        font-size: 14px;
+        font-size: 13.5px;
     }
     .message2 .content form label p{
-        font-size: 15px;
+        font-size: 13px;
     }
     .message2 .content_en form label img{
         position: relative;

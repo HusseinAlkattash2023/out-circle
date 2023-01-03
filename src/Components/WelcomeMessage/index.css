@@ -54,6 +54,18 @@
     cursor: pointer;
 }
 
+
+.welcome::-webkit-scrollbar ,
+.welcome2::-webkit-scrollbar {
+   display: none;
+ }
+ .welcome,
+ .welcome2{
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
+
+
 @font-face {
     font-family:book;
     src: url("../../Assets/fonts/Book\ Antiqua\ Font.ttf");

@@ -231,7 +231,7 @@
 }
 .register_individuals .body .bar,
 .register_individuals .body_ar .bar{
-    overflow: scroll;
+    overflow-y: scroll;
     height: 350px;
 }
 .register_individuals .body .bar::-webkit-scrollbar,

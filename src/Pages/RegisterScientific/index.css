@@ -240,7 +240,7 @@ cursor: pointer;
 }
 .scientific .register3 .bar ,
 .scientific .register3_ar .bar{
-    overflow: scroll;
+    overflow-y: scroll;
     height: 350px;
 }
 .scientific .register3 .bar::-webkit-scrollbar ,
