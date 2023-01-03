@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
+import './index.css';
 
 const WelcomeVisitor = () => {
-  const [isShowWelcomeMessage, setShowWelcomeMessage] = useState("yes");
+  const [isShowWelcomeVisitor_, setShowWelcomeVisitor] = useState("yes");
 
   const handleShowWelcome = () => {
-    localStorage.setItem("showWelcomeMessage", "no");
-    setShowWelcomeMessage("no");
+    localStorage.setItem("showWelcomeVisitor", "no");
+    setShowWelcomeVisitor("no");
   };
 
   return (
-    isShowWelcomeMessage === "yes" && (
+    isShowWelcomeVisitor_ === "yes" && (
       <div className="welcome">
         <span className="icon" onClick={handleShowWelcome}>
           <VscChromeClose />

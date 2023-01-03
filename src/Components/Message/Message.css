@@ -486,6 +486,12 @@
     top: 100px;
     left: 5px;
 }
+.audio_cilp{
+    position: absolute;
+    top: 180px;
+    color:#0a382b;
+    left: 26px;
+}
 
 .message2 .content_en .audio_ar{
     position: absolute;
@@ -744,6 +750,7 @@
         position: absolute;
         top: 150px;
         left:-10px;
+        font-size: 14px;
     }
     .message2 .content form label p{
         font-size: 15px;

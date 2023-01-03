@@ -25,6 +25,16 @@ const Visiter = () => {
     whatsapp_number: "",
   });
 
+  const [isShowWelcomeVisitor, setShowWelcomeVisitor] = useState("yes");
+  useEffect(
+    ()=> {
+      let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitor");
+    if (!showWelcomeMessageTemp) {
+      localStorage.setItem("showWelcomeVisitor", "yes");
+    } else {
+      setShowWelcomeVisitor(localStorage.getItem("showWelcomeVisitor"));
+    }
+    },[])
   const navigate = useNavigate();
 
   const change_route = localStorage.getItem("change_route");
@@ -66,7 +76,11 @@ const Visiter = () => {
         <span>Back</span>
         <img src={back} alt="" />
       </Link>
-      <div><WelcomeVisitor/></div>
+      {isShowWelcomeVisitor === "yes" && (
+        <div className="welcome_">
+          <WelcomeVisitor />
+        </div>
+      )}
       <div className="section1">
         <header>
           <span className="icon">

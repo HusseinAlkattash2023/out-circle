@@ -92,12 +92,18 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
     const url = URL.createObjectURL(blob);
     const audio = document.createElement("audio");
     audio.src = url;
-    setValue3(audio.src);
+    setValue3(url);
+    ConfirmAudio();
     audio.controls = true;
     document.body.appendChild(audio);
     const nest = document.body.appendChild(audio);
     nest.className = "sss";
   };
+
+
+  const ConfirmAudio = () => {
+    value3 && toast.success("تم تحميل مقطع صوتي بنجاح")
+  }
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
@@ -345,11 +351,16 @@ const Message2 = ({
     const audio = document.createElement("audio");
     audio.src = url;
     setValue3(audio.src);
+    ConfirmAudio();
     audio.controls = true;
     document.body.appendChild(audio);
     const nest = document.body.appendChild(audio);
     nest.className = "sss";
   };
+
+  const ConfirmAudio = () => {
+    value3 && toast.success("تم تحميل مقطع صوتي بنجاح")
+  }
 
   const visitorInformation = () => {
     navigate("/visitor-ar");

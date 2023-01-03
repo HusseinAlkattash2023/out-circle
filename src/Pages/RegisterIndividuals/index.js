@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./index.css";
 import { Link, useNavigate } from "react-router-dom";
-import ReactPhoneInput , { isValidPhoneNumber } from "react-phone-input-2";
+import ReactPhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import back from "../../Assets/images/back.png";
 import { BsPersonPlus } from "react-icons/bs";
@@ -27,12 +27,7 @@ const schema = yup.object({
   full_name: yup.string().required("Please enter your Full name"),
   current_city: yup.string().required("Please enter your current city"),
   current_address: yup.string().required("Please enter your current address"),
-  current_work: yup.string().required("Please enter your current work"),
-  experience: yup
-    .string()
-    .required("Please enter your practical experience details"),
-  skills: yup.string().required("Please enter your languages skills"),
-  it_skills: yup.string().required("Please enter your IT skills"),
+  current_work: yup.string().required("Please enter your current work")
 });
 
 function RegisterIndividuals() {
@@ -462,7 +457,6 @@ function RegisterIndividuals() {
             </div>
             <div className="my-3 input_">
               <input
-                {...register("experience")}
                 className="input"
                 value={data.experience}
                 onChange={(e) => {
@@ -471,12 +465,9 @@ function RegisterIndividuals() {
                 placeholder="Detailed practical experience"
                 type="text"
               />
-              <br />
-              <span style={{ color: "red" }}>{errors.experience?.message}</span>
             </div>
             <div className="my-3 input_">
               <input
-                {...register("skills")}
                 className="input"
                 value={data.skills}
                 onChange={(e) => {
@@ -485,12 +476,9 @@ function RegisterIndividuals() {
                 placeholder="Languages skills"
                 type="text"
               />
-              <br />
-              <span style={{ color: "red" }}>{errors.skills?.message}</span>
             </div>
             <div className="my-3 input_">
               <input
-                {...register("it_skills")}
                 className="input"
                 value={data.it_skills}
                 onChange={(e) => {
@@ -499,8 +487,6 @@ function RegisterIndividuals() {
                 placeholder="IT skills"
                 type="text"
               />
-              <br />
-              <span style={{ color: "red" }}>{errors.it_skills?.message}</span>
             </div>
             <div className="my-3 input_1">
               <label htmlFor="file1">

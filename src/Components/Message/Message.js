@@ -85,6 +85,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
     const audio = document.createElement("audio");
     audio.src = url;
     setValue3(audio.src);
+    ConfirmAudio();
     audio.controls = true;
     document.body.appendChild(audio);
     const nest = document.body.appendChild(audio);
@@ -117,6 +118,12 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
       value: obj ? obj.whatsapp_number : "",
     },
   ];
+
+  const ConfirmAudio = () => {
+    value3 && toast.success("Audio clip uploaded successfully")
+  }
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const audioBlob = await fetch(value3).then((r) => r.blob());
@@ -262,11 +269,16 @@ const Message2 = ({
     const audio = document.createElement("audio");
     audio.src = url;
     setValue3(url);
+    ConfirmAudio();
     audio.controls = true;
     document.body.appendChild(audio);
     const nest = document.body.appendChild(audio);
     nest.className = "sss";
   };
+
+  const ConfirmAudio = () => {
+    value3 && toast.success("Audio clip uploaded successfully")
+  }
 
   const data_ = [
     {

@@ -1,0 +1,110 @@
+.welcome{
+    background-color: #CDEBC0;
+    opacity: 0.90;
+    width: 50%;
+    height: 360px;
+    position: absolute;
+    z-index: 100000;
+    text-align: left;
+    left:60%;
+    transform: translate(-50%);
+    top:100px;
+    padding:30px 50px;
+    overflow-y: scroll;
+    border: 1px solid #707070;
+}
+
+.welcome2{
+    background-color: #CDEBC0;
+    opacity: 0.90;
+    width: 50%;
+    height: 360px;
+    position: absolute;
+    z-index: 100000;
+    text-align: center;
+    left: 40%;
+    transform: translate(-50%);
+    top:100px;
+    padding:30px 50px;
+    overflow-y: scroll;
+    border: 1px solid #707070;
+}
+
+.welcome .bar p{
+    font-family: book;
+    font-size: 23px;
+}
+.welcome2 .bar{
+    line-height: 36px;
+}
+.welcome2 .bar .circle_{
+    font-size: 30px;
+    margin: 20px auto;
+}
+.welcome2 .bar p{
+    font-size: 23px;
+    font-family: 'El Messiri', sans-serif;
+    margin-bottom: 25px;
+}
+
+.welcome .icon ,
+.welcome2 .icon{
+    position: absolute;
+    font-size: 30px;
+    right: 10px;
+    top:5px;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family:book;
+    src: url("../../Assets/fonts/Book\ Antiqua\ Font.ttf");
+}
+
+
+@media only screen and (max-width: 910px){
+    .welcome{
+        background-color: #CDEBC0;
+        opacity: 0.90;
+        width:70%;
+        left:50%;
+        transform: translate(-50%);
+        height: 430px;
+    }
+    .welcome2{
+        background-color: #CDEBC0;
+        opacity: 0.90;
+        width:70%;
+        left:50%;
+        transform: translate(-50%);
+        height: 430px;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    .welcome{
+        background-color: #CDEBC0;
+        opacity: 0.90;
+        width:80%;
+        left:50%;
+        transform: translate(-50%);
+        height: 430px;
+    }
+    .welcome2{
+        background-color: #CDEBC0;
+        opacity: 0.90;
+        width:80%;
+        left:50%;
+        transform: translate(-50%);
+        height: 450px;
+    }
+    .welcome .bar p{
+        font-family: book;
+        font-size: 18px;
+    }
+    .welcome2 .bar p{
+        font-family: 'El Messiri', sans-serif;
+        font-size: 18px;
+    }
+}

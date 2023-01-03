@@ -12,6 +12,7 @@ import image3 from "../../Assets/images/ar_photo/scientific.png";
 import image4 from "../../Assets/images/ar_photo/handicraft.png";
 import image5 from "../../Assets/images/ar_photo/Mask Group -6.png";
 import toast, { Toaster } from "react-hot-toast";
+import WelcomeVisitorAr from "../WelcomeVisitor/index-ar"
 
 const schema = yup
   .object({
@@ -19,6 +20,7 @@ const schema = yup
   })
 
 
+  
 const Visiter = () => {
 
     const [ data , setData ] = useState({
@@ -26,6 +28,17 @@ const Visiter = () => {
         phone_number:"",
         whatsapp_number:""
     })
+
+    const [isShowWelcomeVisitorAr, setShowWelcomeVisitorAr] = useState("yes");
+
+    useEffect(()=> {
+      let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitorAr");
+    if(!showWelcomeMessageTemp) {
+      localStorage.setItem("showWelcomeVisitorAr", "yes");
+    } else {
+      setShowWelcomeVisitorAr(localStorage.getItem("showWelcomeVisitorAr"));
+    }
+    } , [])
     
     const navigate = useNavigate();
 
@@ -65,6 +78,11 @@ const Visiter = () => {
             <span>رجوع</span>
             <img src={back} alt=""/>
         </Link>
+        {isShowWelcomeVisitorAr === "yes" && (
+        <div className="welcome_">
+          <WelcomeVisitorAr/>
+        </div>
+      )}
         <div className='section1_ar'>
             <header>
                 <span className='icon'><BsPersonPlus/></span>

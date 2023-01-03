@@ -25,9 +25,6 @@ const schema = yup.object({
     current_city:yup.string().required("من فضلك إدخل مدينتك الحالية"),
     current_address:yup.string().required("من فضلك إدخل عنوانك الحالي"),
     current_work:yup.string().required("من فضلك أدخل عملك الحالي"),
-    experience:yup.string().required("من فضلك إدخل تفاصيل خبرتك العملية"),
-    skills:yup.string().required("من فضلك إدخل مهاراتك اللغوية"),
-    it_skills:yup.string().required("من فضلك إدخل المهارات التكنولوجية الخاصة بك"),
   }).required();
 
 function RegisterIndividualsAr() {
@@ -417,7 +414,6 @@ function RegisterIndividualsAr() {
             </div>
             <div className="my-3 input_">
               <input
-                {...register("experience")}
                 className="input"
                 value={data.experience}
                 onChange={(e) => {
@@ -426,11 +422,9 @@ function RegisterIndividualsAr() {
                 placeholder="تفاصيل الخبرات العملية"
                 type="text"
               />
-              <span style={{color:"red"}}>{errors.experience?.message}</span> 
             </div>
             <div className="my-3 input_">
               <input
-                {...register("skills")}
                 className="input"
                 value={data.skills}
                 onChange={(e) => {
@@ -439,11 +433,9 @@ function RegisterIndividualsAr() {
                 placeholder="المهارات اللغوية"
                 type="text"
               />
-              <span style={{color:"red"}}>{errors.skills?.message}</span>
             </div>
             <div className="my-3 input_">
               <input
-                {...register("it_skills")}
                 className="input"
                 value={data.it_skills}
                 onChange={(e) => {
@@ -452,7 +444,6 @@ function RegisterIndividualsAr() {
                 placeholder="المهارات التقنية"
                 type="text"
               />
-              <span style={{color:"red"}}>{errors.it_skills?.message}</span>
             </div>
             <div className="my-3 input_1">
               <label htmlFor="file1">
