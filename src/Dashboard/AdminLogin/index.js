@@ -13,6 +13,9 @@ const AdminLogin = () => {
   const BASE_API_URL = useSelector(state => state.BASE_API_URL);
 
   const navigate = useNavigate();
+  const ChangeRoute = ()=> {
+    navigate('/forget-password')
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +50,7 @@ const AdminLogin = () => {
             Login
           </button>
         </form>
-        <button  className="btn btn-success">
+        <button  className="btn btn-success" onClick={ChangeRoute}>
           Forget Password
         </button>
         {errorMessage && <p className="alert alert-danger">{errorMessage}</p>}

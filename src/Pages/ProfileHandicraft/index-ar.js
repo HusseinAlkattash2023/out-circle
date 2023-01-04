@@ -197,7 +197,7 @@ const ProfileHandicraftAr = () => {
                   <img src={update} alt="" />
                 </div>
                 <input
-                  placeholder="الشهادة المهنية" 
+                  placeholder="الشهادة العلمية" 
                   type="text"
                   defaultValue={userInfo.scientific_certificate}
                   onChange={(e) => {

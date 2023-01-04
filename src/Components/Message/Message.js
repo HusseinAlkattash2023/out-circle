@@ -129,6 +129,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const audioBlob = await fetch(value3).then((r) => r.blob());
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
     data_.push({
@@ -147,7 +148,10 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
     if(!obj){
       toast.error("Please click on the green rectangle to complete your information to complete sending the request")
     }else{
-      Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
+      if(!value1 && !value2 && !value3){
+        toast.error("Please  write any message")
+      }else{
+        Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
       .then((res) => {
         if (typeof res.data === "object") {
           toast.success("Your message was sent successfully");
@@ -160,6 +164,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
       .catch((err) => {
         console.log(err);
       });
+      }
     }
 
   };
@@ -186,7 +191,6 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
         </div>
         <form onSubmit={handleSubmit}>
           <textarea
-            required
             value={value1}
             onChange={handleChange}
             placeholder="Write message here..."
@@ -346,19 +350,22 @@ const Message2 = ({
     if(!obj){
       toast.error("Please click on the green rectangle to complete your information to complete sending the request")
     }else{
-      Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
-      .then((res) => {
-        if (typeof res.data === "object") {
-          toast.success("Your message was sent successfully");
-          localStorage.removeItem("visitor");
-          setValue1("")
-          setValue2()
-          setValue3()
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      if(!value1 && !value2 && !value3){
+        toast.error("Please  write any message")
+      }else{
+        Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
+        .then((res) => {
+          if (typeof res.data === "object") {
+            toast.success("Your message was sent successfully");
+            localStorage.removeItem("visitor");
+            setValue1("")
+            setValue2()
+            setValue3()
+          }
+        }).catch((err) => {
+          console.log(err);
+        });
+      }
     }
   };
 
@@ -404,7 +411,6 @@ const Message2 = ({
         </div>
         <form onSubmit={handleSubmit}>
           <textarea
-            required
             value={value1}
             onChange={handleChange}
             className="textarea"

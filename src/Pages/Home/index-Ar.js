@@ -252,14 +252,6 @@ function HomeAr() {
               </a>
             </li>
           </ul>
-            <div className='ms-4'>
-            <Link to="" className='me-1'>
-              <img src={googlePlay} alt=""/>
-            </Link>
-            <Link to="" className='ms-1'>
-              <img src={appStore} alt=""/>
-            </Link>
-            </div>
           </div>
         </footer>
     </div>

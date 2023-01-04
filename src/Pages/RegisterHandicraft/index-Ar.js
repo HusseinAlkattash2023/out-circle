@@ -317,7 +317,7 @@ function RegisterHandicraftAr() {
                   setData({ ...data, scientific_certificate: e.target.value });
                 }}
                 className="input"
-                placeholder="الشهادة المهنية"
+                placeholder="الشهادة العلمية"
                 type="text"
               ></textarea>
             </div>

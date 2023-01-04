@@ -125,7 +125,7 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo  , formErrors , setDataF
             setPartnersInfo(partnersInfoList);
           }}
           type="number"
-          placeholder="معدل المشاركة"
+          placeholder="نسبة المشاركة"
         /><br/>
         {formErrors.participation_rate && (<span className="error" style={{ color: "red" }}>{formErrors.participation_rate}</span>)}
       </div>

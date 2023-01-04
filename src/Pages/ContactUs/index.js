@@ -61,14 +61,14 @@ function ContactUs() {
               <a href="https://t.me/+963946332211" target="_blank" className='mx-1' rel="noreferrer"><img src={telegram} alt="" width="40px"/></a>
               <a href="mailto:Management.outcircle@gmail.com" className='ms-1' target="_blank" rel="noreferrer"><img src={Email} alt="" width="40px"/></a>
           </div>
-          <p className='text-center mt-2'>---------------------------------</p>
+          {/* <p className='text-center mt-2'>---------------------------------</p>
           <div className='text-center apps'>
             <p>Apps</p>
             <div className='text-center'>
               <a className='me-3'><img src={googlePlay} alt="" width="100px"/></a>
               <a className='ms-3'><img src={appStore} alt="" width="100px"/></a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
