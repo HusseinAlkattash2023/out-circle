@@ -1,10 +1,9 @@
 import { createStore } from "redux";
 
 const initState = {
-    BASE_API_URL: "http://localhost:8000",
+    BASE_API_URL: "https://out-circle2023.cleverapps.io",
     userInfo: localStorage.getItem("user-info")
 }
-//BASE_API_URL: "https://out-circle2023.cleverapps.io",
 const rootReducer = (state = initState, action) => {
 
     if (action.type === "setUserInfo") {
