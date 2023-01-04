@@ -60,7 +60,7 @@ const UpdatePartnersAr = () => {
           <span className="icon">
             <BsPersonPlus />
           </span>
-          <span className="text">تعديل الشركاء</span>
+          <span className="text">بيانات الشركاء</span>
         </header>
         <form className="form-container">
           <div className="body">

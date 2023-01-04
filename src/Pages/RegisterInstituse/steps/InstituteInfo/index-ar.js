@@ -169,7 +169,8 @@ const InstituteInfoAr = ({ setFile1, data, setData, formErrors }) => {
             id="file1"
             placeholder="Upload file"
             type="file"
-            onChange={(e) => setFile1(e.target.files[0])}
+            onChange={(e) => setFile1(e.target.files)}
+            multiple
           />
         </div>
         {formErrors.file1 && (

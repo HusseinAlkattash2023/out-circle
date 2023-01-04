@@ -164,12 +164,13 @@ const InstituteInfo = ({ data, setData, file1, setFile1 , formErrors}) => {
           </label>
           <input
             required
-            onChange={(e) => setFile1(e.target.files[0])}
+            onChange={(e) => setFile1(e.target.files)}
             className="input"
             name="uploadFile"
             id="file2"
             placeholder="Upload file"
             type="file"
+            multiple
           />
         </div>
         {formErrors.file1 && (

@@ -175,13 +175,15 @@ const CompanyInfoAr = ({ data , setData , num , setNum , formErrors }) => {
                     <input
                     required
                     onChange = {(e)=>{
-                      setData({...data , file_record:e.target.files[0]})
+                      setData({...data , file_record:e.target.files})
                     }}
                     className='input text-light' 
                     name='uploadFile' 
                     id="file2" 
                     placeholder="Upload file" 
-                    type="file"/>                     
+                    type="file"
+                    multiple
+                    />                     
         </div>
         {formErrors.file_record && (<span className="error" style={{ color: "red" }}>{formErrors.file_record}</span>)}
         <div className='my-3 input_1'>
@@ -192,13 +194,15 @@ const CompanyInfoAr = ({ data , setData , num , setNum , formErrors }) => {
             <input 
             required
               onChange = {(e)=>{
-                setData({...data , establContract:e.target.files[0]})
+                setData({...data , establContract:e.target.files})
               }}
                 className='input text-light' 
                 name='uploadFile' 
                 id="file2" 
                 placeholder="Upload file" 
-                type="file"/>                     
+                type="file"
+                multiple
+                />                     
         </div>
         {formErrors.establContract && (<span className="error" style={{ color: "red" }}>{formErrors.establContract}</span>)}
     </div>

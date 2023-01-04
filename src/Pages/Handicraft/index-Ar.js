@@ -61,7 +61,7 @@ function Handicraft_ar() {
             <span>تسجيل الخروج</span>
             <img src={logout} alt="" />
           </Link>
-          <Link to="/">
+          <Link to="/" className="home_">
             <span>الصفحة الرئيسية</span>
             <img src={home} alt="" />
           </Link>

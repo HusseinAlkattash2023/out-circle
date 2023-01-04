@@ -45,7 +45,7 @@ function Institute_ar() {
           </header>
         </div>
       ) : (
-        <header className="header1_ar">
+        <header className="header1">
           <Link to="/profile-institute-ar" className="my-2">
             <span>الملف الشخصي</span>
             <img src={profile} alt="" />

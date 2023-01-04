@@ -134,11 +134,7 @@ function RegisterScientific() {
     {
       key: "work_start_date",
       value: data.start_date,
-    },
-    {
-      key: "file_src",
-      value: file1,
-    },
+    }
   ];
 
   const onSubmit = () => {
@@ -149,7 +145,7 @@ function RegisterScientific() {
     data_.map((item) => formData.append(item.key, item.value));
 
     for (let i = 0; i < file1.length; i++) {
-      formData.append("file2" + i, file1[i]);
+      formData.append("file1" + i, file1[i]);
     }
 
     const errors = Object.values(validate(num));

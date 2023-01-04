@@ -116,11 +116,7 @@ function RegisterInstituse() {
     {
       key: "land_phone_extension",
       value: data.landline_number,
-    },
-    {
-      key: "user_file",
-      value: file1,
-    },
+    }
   ];
 
   //--------------add validation ----------
@@ -198,6 +194,11 @@ function RegisterInstituse() {
     } else {
       const formData = new FormData();
       data_.map((item) => formData.append(item.key, item.value));
+
+      if (file1) {
+        for (let i = 0; i < file1.length; i++) {
+            formData.append("file1" + i, file1[i]);
+        }}
 
       const errors = Object.values(validate(data));
 

@@ -163,12 +163,9 @@ function RegisterIndividuals() {
     {
       key: "technical_skills",
       value: data.it_skills,
-    },
-    {
-      key: "file1",
-      value: file1,
-    },
+    }
   ];
+
   const onSubmit = () => {
 
     setFormError(validate(num1));
@@ -183,6 +180,14 @@ function RegisterIndividuals() {
         formData.append("file2" + i, file2[i]);
       }
     }
+
+    if (file1) {
+      for (let i = 0; i < file1.length; i++) {
+        formData.append("file1" + i, file1[i]);
+      }
+    }
+
+
     
     if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/individuals/add-new-user`, formData)
@@ -497,7 +502,8 @@ function RegisterIndividuals() {
                 className="input text-light"
                 id="file1"
                 type="file"
-                onChange={(e) => setFile1(e.target.files[0])}
+                onChange={(e) => setFile1(e.target.files)}
+                multiple
               />
             </div>
             <div className="my-3 input_1">

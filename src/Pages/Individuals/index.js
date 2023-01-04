@@ -53,7 +53,7 @@ function Individuals() {
           </header>
         </div>
       ) : (
-        <header className="header1">
+        <header className="header1_ar">
           <Link to="/profile-individual" className="my-2">
             <span>Profile</span>
             <img src={profile} alt="" />

@@ -96,9 +96,6 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
       key: "text",
       value: value1,
     },{
-      key: "file1",
-      value: value2,
-    },{
       key: "user_email",
       value: obj ? obj.email : "",
     },{
@@ -134,6 +131,13 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
+
+    if (value2) {
+      for (let i = 0; i < value2.length; i++) {
+        formData.append("file1" + i, value2[i]);
+      }
+    }
+
     if(!obj){
       toast.error("Please click on the green rectangle to complete your information to complete sending the request")
     }else{
@@ -191,11 +195,12 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
             </label>
             <input
               onChange={(e) => {
-                setValue2(e.target.files[0]);
+                setValue2(e.target.files);
               }}
               id="file"
               type="file"
               style={{ display: "none" }}
+              multiple
             />
           </div>
           <div className="audio">
@@ -286,14 +291,6 @@ const Message2 = ({
       value: value1,
     },
     {
-      key: "file1",
-      value: value2,
-    },
-    {
-      key: "file2",
-      value: value3,
-    },
-    {
       key: "user_email",
       value: obj ? obj.email : "",
     },
@@ -326,6 +323,13 @@ const Message2 = ({
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
+
+    if (value2) {
+      for (let i = 0; i < value2.length; i++) {
+        formData.append("file1" + i, value2[i]);
+      }
+    }
+
     if(!obj){
       toast.error("Please click on the green rectangle to complete your information to complete sending the request")
     }else{
@@ -403,10 +407,11 @@ const Message2 = ({
               <img src={uploade} alt="" width="40px" />
             </label>
             <input
-              onChange={(e) => setValue2(e.target.files[0])}
+              onChange={(e) => setValue2(e.target.files)}
               id="file"
               type="file"
               style={{ display: "none" }}
+              multiple
             />
           </div>
           <div className="audio_ar">

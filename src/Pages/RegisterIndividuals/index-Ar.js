@@ -140,9 +140,6 @@ function RegisterIndividualsAr() {
     },{
       key:"technical_skills",
       value:data.it_skills
-    },{
-      key:"file1",
-      value:file1
     }
   ]
   const onSubmit =() => {
@@ -159,9 +156,13 @@ function RegisterIndividualsAr() {
     if (file2) {
       for (let i = 0; i < file2.length; i++) {
           formData.append("file2" + i, file2[i]);
-      }
-  }
+      }}
     
+  if (file1) {
+    for (let i = 0; i < file1.length; i++) {
+        formData.append("file1" + i, file1[i]);
+    }}
+
     if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/individuals/add-new-user`, formData)
       .then((res) => {
@@ -450,7 +451,7 @@ function RegisterIndividualsAr() {
                 <p>تحميل الشهادة العلمية الأخيرة</p>
                 <img src={file} alt="" width="30" />
               </label>
-              <input className="input text-light" id="file1" type="file" onChange={(e) => setFile1(e.target.files[0])}/>
+              <input multiple className="input text-light" id="file1" type="file" onChange={(e) => setFile1(e.target.files)}/>
             </div>
             <div className="my-3 input_1">
               <label htmlFor="file2">

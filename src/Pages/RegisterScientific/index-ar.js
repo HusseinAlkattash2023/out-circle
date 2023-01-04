@@ -132,11 +132,7 @@ function RegisterScientificAr() {
     {
       key: "work_start_date",
       value: data.start_date,
-    },
-    {
-      key: "file_src",
-      value: file1,
-    },
+    }
   ];
 
   const onSubmit = () => {
@@ -147,6 +143,10 @@ function RegisterScientificAr() {
     data_.map((item) => formData.append(item.key, item.value));
 
     const errors = Object.values(validate(num));
+
+    for (let i = 0; i < file1.length; i++) {
+      formData.append("file1" + i, file1[i]);
+    }
 
     if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/scientific-careers/add-new-user`, formData)
@@ -384,12 +384,13 @@ function RegisterScientificAr() {
                 <img src={file} alt="" width="30" />
               </label>
               <input
-                onChange={(e) => setFile1(e.target.files[0])}
+                onChange={(e) => setFile1(e.target.files)}
                 className="input text-light"
                 name="uploadFile"
                 id="file2"
                 type="file"
                 required
+                multiple
               />
             </div>
           </div>

@@ -141,11 +141,7 @@ function RegisterHandicraftAr() {
     {
       key: "work_start_date",
       value: data.start_date,
-    },
-    {
-      key: "file1",
-      value: file1,
-    },
+    }
   ];
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
@@ -165,6 +161,12 @@ function RegisterHandicraftAr() {
             formData.append("file2" + i, file2[i]);
         }
     }
+
+    if (file1) {
+      for (let i = 0; i < file1.length; i++) {
+          formData.append("file1" + i, file1[i]);
+      }
+  }
 
     if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/craftsmen/add-new-user`, formData)
@@ -420,12 +422,13 @@ function RegisterHandicraftAr() {
                 <img src={file} alt="" width="30" />
               </label>
               <input
-                onChange={(e) => setFile1(e.target.files[0])}
+                onChange={(e) => setFile1(e.target.files)}
                 className="input text-light"
                 name="uploadFile"
                 id="file2"
                 placeholder="Upload file"
                 type="file"
+                multiple
               />
             </div>
             <div className="my-3 input_1">

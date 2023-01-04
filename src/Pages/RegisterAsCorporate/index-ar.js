@@ -109,15 +109,7 @@ function RegisterCorporateAr() {
     {
       key: "password",
       value: data.password,
-    },
-    {
-      key: "file1",
-      value: data.file_record,
-    },
-    {
-      key: "file2",
-      value: data.establContract,
-    },
+    }
   ];
 
   //--------------add validation ----------
@@ -213,6 +205,17 @@ function RegisterCorporateAr() {
     } else {
       const formData = new FormData();
       data_.map((item) => formData.append(item.key, item.value));
+
+      if (data.file_record) {
+        for (let i = 0; i < data.file_record.length; i++) {
+            formData.append("file1" + i, data.file_record[i]);
+        }}
+
+        if (data.establContract) {
+          for (let i = 0; i < data.establContract.length; i++) {
+              formData.append("file1" + i, data.establContract[i]);
+          }}
+
       const errors = Object.values(validate(data));
       if (errors.length === 0) {
         Axios.post(`${BASE_API_URL}/api/companies/add-new-user`, formData)

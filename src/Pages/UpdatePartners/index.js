@@ -60,7 +60,7 @@ const UpdatePartners = () => {
           <span className="icon">
             <BsPersonPlus />
           </span>
-          <span className="text">Update partners</span>
+          <span className="text">Partners Profile</span>
         </header>
         <form className="form-container">
           <div className="body">
