@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const DeleteNews = () => {
+  const navigate = useNavigate();
   const [newsInfo, setNewsInfo] = useState([]);
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -10,6 +12,11 @@ const DeleteNews = () => {
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   useEffect(() => {
+
+    if (!localStorage.getItem("admin_login")) {
+      navigate("/dashboard/admin/login");
+    }
+
     Axios.get(`${BASE_API_URL}/api/news/all-news`)
       .then((res) => {
         let data = res.data;

@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom';
 
 const IndividualsManagment = () => {
+
+    const navigate = useNavigate();
 
     const BASE_API_URL = useSelector(state => state.BASE_API_URL);
 
     const [individualsInfoList, setIndividualsInfoList] = useState([]);
 
     useEffect(() => {
+        if (!localStorage.getItem("admin_login")) {
+            navigate("/dashboard/admin/login");
+        }
         axios.get(`${BASE_API_URL}/api/individuals/all-individuals-users-info`)
             .then((res) => {
                 setIndividualsInfoList(res.data);

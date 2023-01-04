@@ -8,6 +8,11 @@ const AdminLogin = () => {
 
   const [password, setPassword] = useState("");
 
+  const data_ = {
+    email,
+    password
+  }
+
   const [errorMessage, setErrorMessage] = useState("");
 
   const BASE_API_URL = useSelector(state => state.BASE_API_URL);
@@ -24,7 +29,10 @@ const AdminLogin = () => {
         const data = res.data;
         if (typeof data === "string") {
           setErrorMessage(data);
-        } else navigate("/dashboard/admin/services");
+        } else{
+          navigate("/dashboard/admin/services");
+          localStorage.setItem("admin_login" ,JSON.stringify(data_));
+        }
     })
     .catch(err => console.log(err));
   };

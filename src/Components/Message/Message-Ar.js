@@ -151,7 +151,7 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
     data_.push({
       key: "file2",
-      value: audioFile,
+      value: value3 ? audioFile : null,
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
@@ -334,7 +334,7 @@ const Message2 = ({
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
     data_.push({
       key: "file2",
-      value: audioFile,
+      value:value3 ? audioFile : null,
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));

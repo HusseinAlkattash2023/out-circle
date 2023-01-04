@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link , useNavigate } from "react-router-dom";
 
 const UsersManagment = () => {
+
+    const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (!localStorage.getItem("admin_login")) {
+      navigate("/dashboard/admin/login");
+    }
+  }, [navigate]);
+  
     return (
         <div className="users-managment text-center">
             <div className="container">

@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import { useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom';
 
 const DeleteAds = () => {
+  const navigate = useNavigate();
+
   const [adsInfo, setAdsInfo] = useState([]);
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -10,6 +13,11 @@ const DeleteAds = () => {
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   useEffect(() => {
+    
+    if (!localStorage.getItem("admin_login")) {
+      navigate("/dashboard/admin/login");
+    }
+
     Axios.get(`${BASE_API_URL}/api/ads/all-ads`)
       .then((res) => {
         let data = res.data;

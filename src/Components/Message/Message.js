@@ -134,7 +134,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
     data_.push({
       key: "file2",
-      value: audioFile,
+      value: value3 ? audioFile : null,
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
@@ -148,9 +148,6 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
     if(!obj){
       toast.error("Please click on the green rectangle to complete your information to complete sending the request")
     }else{
-      if(!value1 && !value2 && !value3){
-        toast.error("Please  write any message")
-      }else{
         Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
       .then((res) => {
         if (typeof res.data === "object") {
@@ -164,7 +161,6 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
       .catch((err) => {
         console.log(err);
       });
-      }
     }
 
   };
@@ -336,7 +332,7 @@ const Message2 = ({
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
     data_.push({
       key: "file2",
-      value: audioFile,
+      value: value3 ? audioFile : null,
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
@@ -350,9 +346,6 @@ const Message2 = ({
     if(!obj){
       toast.error("Please click on the green rectangle to complete your information to complete sending the request")
     }else{
-      if(!value1 && !value2 && !value3){
-        toast.error("Please  write any message")
-      }else{
         Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
         .then((res) => {
           if (typeof res.data === "object") {
@@ -365,7 +358,6 @@ const Message2 = ({
         }).catch((err) => {
           console.log(err);
         });
-      }
     }
   };
 

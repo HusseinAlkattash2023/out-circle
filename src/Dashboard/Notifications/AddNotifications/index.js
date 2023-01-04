@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import Axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +12,12 @@ const AddNotification = () => {
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("admin_login")) {
+      navigate("/dashboard/admin/login");
+    }
+  }, [navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

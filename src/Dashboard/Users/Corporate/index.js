@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom';
 
 const CorporateManagment = () => {
+
+    const navigate = useNavigate();
 
     const BASE_API_URL = useSelector(state => state.BASE_API_URL);
 
     const [companiesInfoList, setCompaniesInfoList] = useState([]);
 
     useEffect(() => {
+        if (!localStorage.getItem("admin_login")) {
+            navigate("/dashboard/admin/login");
+          }
         axios.get(`${BASE_API_URL}/api/companies/all-compaines`)
             .then((res) => {
                 setCompaniesInfoList(res.data);
             })
             .catch(err => console.log(err));
-    }, [BASE_API_URL]);
+    }, [BASE_API_URL , navigate]);
 
     return (
         <div className="corporate-managment text-center">

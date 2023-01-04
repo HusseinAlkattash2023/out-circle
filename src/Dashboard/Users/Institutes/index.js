@@ -1,14 +1,22 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom';
 
 const InstitutesManagment = () => {
+
+    const navigate = useNavigate();
 
     const BASE_API_URL = useSelector(state => state.BASE_API_URL);
 
     const [institutesInfoList, setInstitutesInfoList] = useState([]);
 
     useEffect(() => {
+        
+        if (!localStorage.getItem("admin_login")) {
+            navigate("/dashboard/admin/login");
+        }
+
         axios.get(`${BASE_API_URL}/api/institutes/all-institutes-info`)
             .then((res) => {
                 setInstitutesInfoList(res.data);

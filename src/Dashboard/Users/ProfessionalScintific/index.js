@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom';
 
 const ProfessionalScintificManagment = () => {
 
+    const navigate = useNavigate();
     const BASE_API_URL = useSelector(state => state.BASE_API_URL);
 
     const [scientific_careers_Info_list, set_scientific_careers_Info_list] = useState([]);
 
     useEffect(() => {
+
+        if (!localStorage.getItem("admin_login")) {
+            navigate("/dashboard/admin/login");
+        }
+
         axios.get(`${BASE_API_URL}/api/scientific-careers/all-scientific-careers-users-info`)
             .then((res) => {
                 set_scientific_careers_Info_list(res.data);
             })
             .catch(err => console.log(err));
-    }, [BASE_API_URL]);
+    }, [BASE_API_URL , navigate]);
 
     return (
         <div className="scientific-careers-managment text-center">
