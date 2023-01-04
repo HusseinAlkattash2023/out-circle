@@ -46,20 +46,20 @@ function Handicraft() {
           </header>
         </div>
       ) : (
-        <header className="header1">
-          <Link to="/profile-handicraft">
+        <header className="header1_ar">
+          <Link to="/profile-handicraft" className="my-2">
             <span>Profile</span>
             <img src={profile} alt="" />
           </Link>
-          <Link to="/notifications">
+          <Link to="/notifications" className="my-2">
             <span>Notifications</span>
             <img src={notifications} alt="" />
           </Link>
-          <Link onClick={Logout} to="/">
+          <Link onClick={Logout} to="/" className="my-2">
             <span>Logout</span>
             <img src={logout} alt="" />
           </Link>
-          <Link to="/">
+          <Link to="/" className="my-2">
             <span>Home</span>
             <img src={home} alt="" />
           </Link>

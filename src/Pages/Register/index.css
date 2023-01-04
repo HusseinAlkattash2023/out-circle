@@ -49,8 +49,6 @@
     left: -150px;
     border-radius: 0px 20px 20px 0%;
     color: #fff;
-    /* opacity: 0;
-    visibility: hidden; */
     transition: all 0.5s ease;
     border-left: none;
     z-index: 1000;
@@ -371,13 +369,13 @@
     .register_ .formRegister .forms .four ,
     .register_ .formRegister_ar .forms .four{
     position:absolute;
-    bottom: 234px;
+    bottom: 240px;
     left: -83px;
 }
     .register_ .formRegister .forms .fife,
     .register_ .formRegister_ar .forms .fife{
     position:absolute;
-    bottom: 234px;
+    bottom: 240px;
     left: 50px;
 }
 }

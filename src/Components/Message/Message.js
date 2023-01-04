@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Message.css";
-import { useNavigate } from "react-router-dom";
+import { Link ,  useNavigate } from "react-router-dom";
 import uploade from "../../Assets/images/Group 375.png";
 import check from "../../Assets/images/check_box.png";
 import send_message from "../../Assets/images/sendMessage.png";
@@ -73,12 +73,18 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
   const data = user_ ? localStorage.getItem("user") : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
   
+  const localNotes = localStorage.getItem("notes");
   const navigate = useNavigate();
-  const [value1, setValue1] = useState("");
+  const [value1, setValue1] = useState(localNotes);
   const [value2, setValue2] = useState();
   const [value3, setValue3] = useState();
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  const handleChange = (e) => {
+    localStorage.setItem("notes" , e.target.value);
+    setValue1(e.target.value);
+  }
 
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
@@ -181,10 +187,9 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
           <textarea
             required
             value={value1}
-            onChange={(e) => {
-              setValue1(e.target.value);
-            }}
+            onChange={handleChange}
             placeholder="Write message here..."
+            
           ></textarea>
           <div className="upload">
             <label htmlFor="file">
@@ -261,13 +266,20 @@ const Message2 = ({
   const data = user_ ? localStorage.getItem("user") : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
 
-  const [value1, setValue1] = useState("");
+  const localNotes = localStorage.getItem("notes");
+  const [value1, setValue1] = useState(localNotes);
   const [value2, setValue2] = useState();
   const [value3, setValue3] = useState();
 
   const navigate = useNavigate();
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  const handleChange = (e) => {
+    localStorage.setItem("notes" , e.target.value);
+    setValue1(e.target.value);
+  }
+
 
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
@@ -338,15 +350,15 @@ const Message2 = ({
         if (typeof res.data === "object") {
           toast.success("Your message was sent successfully");
           localStorage.removeItem("visitor");
+          setValue1("")
+          setValue2()
+          setValue3()
         }
       })
       .catch((err) => {
         console.log(err);
       });
     }
-    setValue1("")
-    setValue2()
-    setValue3()
   };
 
   const visitorInformation = ()=> {
@@ -393,9 +405,7 @@ const Message2 = ({
           <textarea
             required
             value={value1}
-            onChange={(e) => {
-              setValue1(e.target.value);
-            }}
+            onChange={handleChange}
             className="textarea"
             placeholder="write your message here..."
           ></textarea>

@@ -47,6 +47,9 @@ const AdminLogin = () => {
             Login
           </button>
         </form>
+        <button  className="btn btn-success">
+          Forget Password
+        </button>
         {errorMessage && <p className="alert alert-danger">{errorMessage}</p>}
       </div>
     </div>

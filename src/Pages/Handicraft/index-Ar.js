@@ -48,7 +48,7 @@ function Handicraft_ar() {
           </header>
         </div>
       ) : (
-        <header className="header1_ar">
+        <header className="header1">
           <Link to="/profile-handicraft-ar" className="my-2">
             <span>الملف الشخصي</span>
             <img src={profile} alt="" />
@@ -61,7 +61,7 @@ function Handicraft_ar() {
             <span>تسجيل الخروج</span>
             <img src={logout} alt="" />
           </Link>
-          <Link to="/" className="home_">
+          <Link to="/" className="my-2" >
             <span>الصفحة الرئيسية</span>
             <img src={home} alt="" />
           </Link>

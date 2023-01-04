@@ -84,9 +84,16 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
     : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
 
-  const [value1, setValue1] = useState("");
+  const localNotes = localStorage.getItem("notes");
+  const [value1, setValue1] = useState(localNotes);
   const [value2, setValue2] = useState();
   const [value3, setValue3] = useState();
+
+  const handleChange = (e) => {
+    localStorage.setItem("notes" , e.target.value);
+    setValue1(e.target.value);
+  }
+
 
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
@@ -198,9 +205,7 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
         <form onSubmit={handleSubmit}>
           <textarea
             value={value1}
-            onChange={(e) => {
-              setValue1(e.target.value);
-            }}
+            onChange={handleChange}
             placeholder="...اكتب رسالتك هنا"
           ></textarea>
           <div className="upload">
@@ -279,11 +284,18 @@ const Message2 = ({
     : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
 
-  const [value1, setValue1] = useState("");
+  const localNotes = localStorage.getItem("notes");
+  const [value1, setValue1] = useState(localNotes);
   const [value2, setValue2] = useState();
   const [value3, setValue3] = useState();
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  const handleChange = (e) => {
+    localStorage.setItem("notes" , e.target.value);
+    setValue1(e.target.value);
+  }
+
 
   const data_ = [
     {
@@ -341,15 +353,15 @@ const Message2 = ({
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
             localStorage.removeItem("visitor");
+            setValue1("")
+            setValue2();
+            setValue3();
           }
         })
         .catch((err) => {
           console.log(err);
         });
     }
-    setValue1("")
-    setValue2();
-    setValue3();
   };
 
   const addAudioElement = (blob) => {
@@ -410,9 +422,7 @@ const Message2 = ({
         <form onSubmit={handleSubmit}>
           <textarea
             value={value1}
-            onChange={(e) => {
-              setValue1(e.target.value);
-            }}
+            onChange={handleChange}
             placeholder="...اكتب رسالتك هنا"
           ></textarea>
           <div className="upload">

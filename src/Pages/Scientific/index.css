@@ -82,25 +82,25 @@
 }
 .scientific_ .header1 a span{
     border: 2px solid white;
-    padding: 5px 100px 5px 10px;
+    padding: 5px 100px 10px 10px;
     position: relative;
-    right: -220px;
+    right: -230px;
     border-radius: 20px 0% 0% 20px;
     color: white;
     transition: all 0.6s ease;
     border-right: none;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 14px;
 }
 .scientific_ .header1_ar a span{
     border: 2px solid white;
-    padding: 5px 10px 10px 100px;
+    padding: 5px 10px 5px 100px;
     position: relative;
     left: -220px;
     border-radius: 0px 20px 20px 0px;
     color: white;
     transition: all 0.6s ease;
     border-left: none;
-    font-family: 'Readex Pro', sans-serif;
-    font-size: 14px;
 }
 
 .scientific_ .header1 a:hover span{

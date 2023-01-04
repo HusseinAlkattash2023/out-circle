@@ -299,14 +299,14 @@
     position: absolute;
     bottom:0px;
     height:100px;
-    width: 85%;
+    width: 75%;
     right: -10px;
 }
 .home footer .space_ar{
     position: absolute;
     bottom: 0px;
     height:100px;
-    width: 90%;
+    width: 100%;
     left: -200px;
 }
 .mySwiper{
