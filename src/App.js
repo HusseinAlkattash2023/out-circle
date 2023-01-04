@@ -209,7 +209,6 @@ const RegisterCorporateAr = lazy(() =>
 const AddPartners = lazy(() => import("./Pages/AddPartners/index.js"));
 const AddPartnersAr = lazy(() => import("./Pages/AddPartners/index-ar.js"));
 const AdminLogin = lazy(() => import("./Dashboard/AdminLogin/index.js"));
-const AdminRegister = lazy(() => import("./Dashboard/AdminRegister/index.js"));
 const Services = lazy(() => import("./Dashboard/Services/index.js"));
 const AdsManagment = lazy(() => 
   import("./Dashboard/Ads/AdsManagment/index.js")
@@ -243,10 +242,6 @@ function App() {
     {
       path: "/dashboard/admin/login",
       element: <AdminLogin />,
-    },
-    {
-      path: "/dashboard/admin/register",
-      element: <AdminRegister />,
     },
     {
       path: "/dashboard/admin/services",
