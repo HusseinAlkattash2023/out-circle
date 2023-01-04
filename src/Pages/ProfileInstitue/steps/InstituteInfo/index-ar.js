@@ -16,10 +16,10 @@ const InstituteInfoAr = ({ userInfo , setUserInfo , setFile1 , data , file1 }) =
             />
         </div>
         <div className='information'>
-            <input placeholder="رقم سجل المؤسسة"  type="number" defaultValue={userInfo.institute_record_number}/>
+            <input disabled placeholder="رقم سجل المؤسسة"  type="number" defaultValue={userInfo.institute_record_number}/>
         </div>
         <div className='information'>
-            <input placeholder="تاريخ سجل المؤسسة"  type="text" defaultValue={userInfo.institute_record_history}/>
+            <input disabled placeholder="تاريخ سجل المؤسسة"  type="text" defaultValue={userInfo.institute_record_history}/>
         </div>
         <div className='information'>
           <img src={update} alt=""/>
@@ -59,6 +59,7 @@ const InstituteInfoAr = ({ userInfo , setUserInfo , setFile1 , data , file1 }) =
         </div>
         <div className='information'>
           <input 
+          disabled
           placeholder="تاريخ بدء العمل الفعلي" 
           type="text" 
           defaultValue={userInfo.work_start_date}

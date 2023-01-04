@@ -31,7 +31,7 @@ const InstituteInfoAr = ({ setFile1, data, setData, formErrors }) => {
             placeholder="رقم سجل المؤسسة"
             type="number"
           /><br/>
-          {formErrors.record_numbere && (
+          {formErrors.record_number && (
             <span className="error" style={{ color: "red" }}>
               {formErrors.record_number}
             </span>
@@ -156,11 +156,6 @@ const InstituteInfoAr = ({ setFile1, data, setData, formErrors }) => {
             placeholder="تحويلة الهاتف الأرضي"
             type="number"
           /><br/>
-          {formErrors.landline_number && (
-            <span className="error" style={{ color: "red" }}>
-              {formErrors.landline_number}
-            </span>
-          )}
         </div>
         <div className="my-3 input_1">
           <label htmlFor="file1">

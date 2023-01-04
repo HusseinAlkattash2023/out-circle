@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect , useState } from 'react'
 import Circle from '../../Components/Circle/Circle'
 import './index.css'
 import {Link} from 'react-router-dom'
@@ -9,9 +9,24 @@ import profile from '../../Assets/images/profile.png'
 import image1 from '../../Assets/images/New folder/Group 427.png';
 import image2 from '../../Assets/images/New folder/Component 31 – 12.png';
 import home from '../../Assets/images/padlock.png';
+import WelcomeVisitor from '../../Components/WelcomeVisitor/index';
 
 
 function Institute() {
+
+
+  const [isShowWelcomeVisitor, setShowWelcomeVisitor] = useState("yes");
+
+  useEffect(
+    ()=> {
+      let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitor");
+    if (!showWelcomeMessageTemp) {
+      localStorage.setItem("showWelcomeVisitor", "yes");
+    } else {
+      setShowWelcomeVisitor(localStorage.getItem("showWelcomeVisitor"));
+    }
+    },[])
+
   const Logout = () => {
     localStorage.removeItem("user_institute");
     localStorage.removeItem("user");
@@ -22,12 +37,21 @@ function Institute() {
     <div className='institute'>
               {
                       !state ? (
+                    <div>
+                    <div>
+                    {isShowWelcomeVisitor === "yes" && (
+                    <div className="welcome_">
+                      <WelcomeVisitor />
+                    </div>
+                    )}
+                    </div>
                     <header className='header2'>
                     <Link to="/">
                         <span>Back</span>
                         <img src={back} alt=""/>
                     </Link>
                     </header>
+                    </div>
                     ):(
                         <header className='header1'>
                         <Link to="/profile-institute" className="my-2">

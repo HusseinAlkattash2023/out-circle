@@ -18,6 +18,7 @@ const InstituteInfo = ({ userInfo , setUserInfo , setFile1 , file1 }) => {
         </div>
         <div className='information'>
             <input 
+            disabled
             type="text" 
             defaultValue={userInfo.institute_record_number}
             placeholder="Institute record number"
@@ -25,6 +26,7 @@ const InstituteInfo = ({ userInfo , setUserInfo , setFile1 , file1 }) => {
         </div>
         <div className='information'>
             <input 
+            disabled
             type="text" 
             defaultValue={userInfo.institute_record_history}
             placeholder="Institute record date"
@@ -68,6 +70,7 @@ const InstituteInfo = ({ userInfo , setUserInfo , setFile1 , file1 }) => {
         </div>
         <div className='information'>
           <input 
+          disabled
           type="text" 
           defaultValue={userInfo.work_start_date}
           placeholder="Actual start date"

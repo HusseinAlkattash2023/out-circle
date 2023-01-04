@@ -12,7 +12,7 @@ const WelcomeMessageAr = () => {
 
   return (
     isShowWelcomeVisitorAr === "yes" && (
-      <div className="welcome2">
+      <div className="welcome_visitor_">
         <span className="icon" onClick={handleShowWelcome}>
           <VscChromeClose />
         </span>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Circle from "../../Components/Circle/Circle_ar";
 import "./index.css";
 import { Link } from "react-router-dom";
@@ -7,27 +8,45 @@ import notifications from "../../Assets/images/notification.png";
 import profile from "../../Assets/images/profile.png";
 import image from "../../Assets/images/Component 31 – 27.png";
 import image2 from "../../Assets/images/hover_ar/Component 31 – 27.png";
-import home from '../../Assets/images/padlock.png';
+import home from "../../Assets/images/padlock.png";
+import WelcomeVisitorAr from "../../Components/WelcomeVisitor/index-ar";
 
 function Handicraft_ar() {
-    
+  const [isShowWelcomeVisitorAr, setShowWelcomeVisitorAr] = useState("yes");
+
   const Logout = () => {
     localStorage.removeItem("user_handicraft");
     localStorage.removeItem("user");
     localStorage.removeItem("is-user-login");
   };
 
+  useEffect(() => {
+    let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitorAr");
+    if (!showWelcomeMessageTemp) {
+      localStorage.setItem("showWelcomeVisitorAr", "yes");
+    } else {
+      setShowWelcomeVisitorAr(localStorage.getItem("showWelcomeVisitorAr"));
+    }
+  }, []);
+
   const state = localStorage.getItem("user_handicraft");
 
   return (
     <div className="handicraft">
       {!state ? (
-        <header className="header2_ar">
-          <Link to="/ar">
-            <span>رجوع</span>
-            <img src={back} alt="" />
-          </Link>
-        </header>
+        <div>
+          {isShowWelcomeVisitorAr === "yes" && (
+            <div className="welcome_">
+              <WelcomeVisitorAr />
+            </div>
+          )}
+          <header className="header2_ar">
+            <Link to="/ar">
+              <span>رجوع</span>
+              <img src={back} alt="" />
+            </Link>
+          </header>
+        </div>
       ) : (
         <header className="header1_ar">
           <Link to="/profile-handicraft-ar" className="my-2">

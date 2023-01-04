@@ -162,7 +162,7 @@ function RegisterIndividualsAr() {
       }
   }
     
-    if(errors.length() === 0){
+    if(errors.length === 0){
     Axios.post(`${BASE_API_URL}/api/individuals/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;

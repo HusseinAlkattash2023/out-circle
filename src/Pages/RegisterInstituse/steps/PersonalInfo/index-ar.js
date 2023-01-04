@@ -112,11 +112,6 @@ const PartnerInfoAr = ({ num, setNum, setData, data, formErrors }) => {
           placeholder="البريد الألكتروني"
           type="email"
         /><br/>
-        {formErrors.email && (
-            <span className="error" style={{ color: "red" }}>
-                {formErrors.email}
-            </span>
-          )}
       </div>
     </div>
   );

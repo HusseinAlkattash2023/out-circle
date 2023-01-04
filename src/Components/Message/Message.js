@@ -268,7 +268,7 @@ const Message2 = ({
     const url = URL.createObjectURL(blob);
     const audio = document.createElement("audio");
     audio.src = url;
-    setValue3(url);
+    setValue3(audio.src);
     ConfirmAudio();
     audio.controls = true;
     document.body.appendChild(audio);
@@ -316,8 +316,14 @@ const Message2 = ({
       value: obj ? obj.whatsapp_number : "",
     },
   ];
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    const audioBlob = await fetch(value3).then((r) => r.blob());
+    const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
+    data_.push({
+      key: "file2",
+      value: audioFile,
+    });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
     if(!obj){

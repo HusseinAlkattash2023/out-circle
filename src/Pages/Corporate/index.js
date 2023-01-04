@@ -1,3 +1,4 @@
+import {useState , useEffect} from 'react';
 import Circle from '../../Components/Circle/Circle'
 import './index'
 import {Link} from 'react-router-dom';
@@ -9,10 +10,14 @@ import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
 import { FaUsers } from "react-icons/fa";
 import home from '../../Assets/images/padlock.png';
+import WelcomeVisitor from '../../Components/WelcomeVisitor/index';
 
 
 import './index.css'
 function Croporate() {
+
+    const [isShowWelcomeVisitor, setShowWelcomeVisitor] = useState("yes");
+
     const Logout = () => {
         localStorage.removeItem("user_corporate");
         localStorage.removeItem("user");
@@ -20,17 +25,34 @@ function Croporate() {
         localStorage.removeItem("company_id")
     };
 
+    useEffect(
+        ()=> {
+          let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitor");
+        if (!showWelcomeMessageTemp) {
+          localStorage.setItem("showWelcomeVisitor", "yes");
+        } else {
+          setShowWelcomeVisitor(localStorage.getItem("showWelcomeVisitor"));
+        }
+        },[])
+
     const state = localStorage.getItem("user_corporate")
   return (
     <div className='croporate'>
         {
                     !state ? (
-                    <header className='header2'>
-                    <Link to="/">
-                        <span>Back</span>
-                        <img src={back} alt=""/>
-                    </Link>
-                    </header>
+                        <div>
+                        {isShowWelcomeVisitor === "yes" && (
+                          <div className="welcome_">
+                            <WelcomeVisitor />
+                          </div>
+                        )}
+                        <header className="header2">
+                          <Link to="/">
+                            <span>Back</span>
+                            <img src={back} alt="" />
+                          </Link>
+                        </header>
+                      </div>
                     ):(
                         <header className='header1'>
                         <Link to="/profile-corporate" className="my-2">

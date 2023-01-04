@@ -188,10 +188,6 @@
     opacity: 0.8;
 }
 
-.visiter .welcome_{
-    position: relative;
-    z-index: 10000;
-}
 
 /*-----------------------*/
 @media only screen and (max-width: 1150px){

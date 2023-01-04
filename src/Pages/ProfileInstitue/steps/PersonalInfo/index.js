@@ -12,19 +12,19 @@ const PersonalInfo = ({ userInfo , setUserInfo }) => {
   return (
     <div>
         <div className='information'>
-              <input type="text" value={userInfo.user_name} placeholder="User name"/>
+              <input disabled type="text" defaultValue={userInfo.user_name} placeholder="User name"/>
         </div>
         <div className='information'>
-            <input type="password" value={"**********"} placeholder="password"/>
+            <input disabled type="password" defaultValue={"**********"} placeholder="password"/>
             <div onClick={ChangePassword} style={{cursor:"pointer"}}>
               <img src={update} alt=""/>
             </div>
         </div>
         <div className='information'>
-          <input type="text" value={userInfo.full_name} plaseholder="Full name"/>
+          <input disabled type="text" defaultValue={userInfo.full_name} plaseholder="Full name"/>
         </div>
         <div className='information'>
-          <input type="text" value={userInfo.birthday} placeholder="born date" />
+          <input disabled type="text" defaultValue={userInfo.birthday} placeholder="born date" />
         </div>
         <div className='information'>
             <input 

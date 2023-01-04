@@ -156,11 +156,6 @@ const InstituteInfo = ({ data, setData, file1, setFile1 , formErrors}) => {
             placeholder="Landline extention"
             type="number"
           /><br/>
-          {formErrors.landline_number && (
-            <span className="error" style={{ color: "red" }}>
-              {formErrors.landline_number}
-            </span>
-          )}
         </div>
         <div className="my-3 input_1">
           <label htmlFor="file2">

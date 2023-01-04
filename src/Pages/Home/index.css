@@ -389,10 +389,6 @@
 }
 
 
-.home .welcome_{
-    position: relative;
-    z-index: 10000;
-}
 
 /*------------ style sidebar --------*/
 .active .off{

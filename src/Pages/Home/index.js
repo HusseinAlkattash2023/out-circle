@@ -110,7 +110,7 @@ function Home() {
   return (
     <div className="home">
       {isShowWelcomeMessage === "yes" && (
-        <div className="welcome_">
+        <div>
           <WelcomeMessage />
         </div>
       )}

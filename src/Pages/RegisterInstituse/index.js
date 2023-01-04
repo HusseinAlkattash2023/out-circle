@@ -126,7 +126,7 @@ function RegisterInstituse() {
   //--------------add validation ----------
   const validate_ = (values)=> {
     const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    
     if(!values.username){
       errors.username = "Please enter your username";
     }
@@ -145,38 +145,13 @@ function RegisterInstituse() {
     if(!num){
       errors.num = "Please enter your mobile number";
     }
-    if(!values.email){
-      errors.email = "Please enter your email";
-    }else if (!regex.test(data.email)) {
-      errors.email = "Invalid email format";
-    }
     return errors;
   }
 
 
   const validate = (values) => {
     let errors = {};
-    if(!values.username){
-      errors.username = "Please enter your username";
-    }
-    if (values.password.length < 4) {
-      errors.password = "Password must contain at least 8 characters";
-    }
-    if (values.password !== values.confirm_password) {
-      errors.confirm_password = "Passwords do not match";
-    }
-    if(!values.full_name){
-      errors.full_name = "Please enter your full name";
-    }
-    if(!values.born_date){
-      errors.born_date = "Please enter your birthday";
-    }
-    if(!num){
-      errors.num = "Please enter your mobile number";
-    }
-    if(!values.email){
-      errors.email = "Please enter your email";
-    }
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if(!values.institute_name){
       errors.institute_name = "Please enter the institute name";
     }
@@ -200,9 +175,8 @@ function RegisterInstituse() {
     }
     if(!values.institute_email){
       errors.institute_email = "Please enter this field";
-    }
-    if(!values.landline_number){
-      errors.landline_number = "Please enter this field";
+    }else if (!regex.test(data.institute_email)) {
+      errors.institute_email = "Invalid email format";
     }
     if(!file1){
       errors.file1 = "Please upload institute record";

@@ -49,7 +49,7 @@ function Login_ar() {
                             navigate("/corporate-ar")
                         }, 3000);
                         break;
-                    case "institute":
+                    case "institutes":
                         localStorage.setItem("user_institute", JSON.stringify(data));
                         setTimeout(() => {
                             navigate("/institute-ar")
@@ -125,7 +125,7 @@ function Login_ar() {
                         <select name='user_type' value={formValues.user_type} onChange={handleChange}>
                         <option value="" hidden> نوع الحساب</option>
                         <option value="companies">شركة</option>
-                        <option value="institute">مؤسسة</option>
+                        <option value="institutes">مؤسسة</option>
                         <option value="scientific_careers">مهن علمية</option>
                         <option value="craftsmen">حرفيين</option>
                         <option value="individuals">أفراد</option>

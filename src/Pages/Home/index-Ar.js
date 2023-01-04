@@ -114,7 +114,7 @@ function HomeAr() {
   
   return (
       <div className='home'>
-      {isShowWelcomeMessageAr === "yes" && <div className="welcome_"><WelcomeMessage/></div>}
+      {isShowWelcomeMessageAr === "yes" && <div><WelcomeMessage/></div>}
       <img className='img2_ar' src={es} alt=""/>
       <header className='_header1'>
       <button className="Ar_" style={{borderRadius:"20px 0px 0px 20px" , width:"40px" , border:"2px solid #000"}} onClick={() => navigate("/ar")}>Ar</button>

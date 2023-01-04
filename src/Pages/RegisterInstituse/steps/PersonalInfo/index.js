@@ -115,11 +115,6 @@ const PartnerInfo = ({ num, setNum, data, setData, formErrors }) => {
             placeholder="E-mail address"
             type="email"
           /><br/>
-          {formErrors.email && (
-            <span className="error" style={{ color: "red" }}>
-              {formErrors.email}
-            </span>
-          )}
         </div>
       </form>
     </div>

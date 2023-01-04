@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Message.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import uploade from "../../Assets/images/Group 375.png";
 import check from "../../Assets/images/check_box.png";
 import send_message from "../../Assets/images/sendMessage.png";
@@ -92,7 +92,7 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
     const url = URL.createObjectURL(blob);
     const audio = document.createElement("audio");
     audio.src = url;
-    setValue3(url);
+    setValue3(audio.src);
     ConfirmAudio();
     audio.controls = true;
     document.body.appendChild(audio);
@@ -162,15 +162,15 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
             localStorage.removeItem("visitor");
+            setValue1("")
+            setValue2();
+            setValue3();
           }
         })
         .catch((err) => {
           console.log(err);
         });
     }
-    setValue1("")
-    setValue2();
-    setValue3();
   };
 
   const visitorInformation = () => {
@@ -194,7 +194,6 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
         </div>
         <form onSubmit={handleSubmit}>
           <textarea
-            required
             value={value1}
             onChange={(e) => {
               setValue1(e.target.value);
@@ -321,8 +320,14 @@ const Message2 = ({
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    const audioBlob = await fetch(value3).then((r) => r.blob());
+    const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
+    data_.push({
+      key: "file2",
+      value: audioFile,
+    });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
     if (!obj) {
@@ -403,7 +408,6 @@ const Message2 = ({
         </div>
         <form onSubmit={handleSubmit}>
           <textarea
-            required
             value={value1}
             onChange={(e) => {
               setValue1(e.target.value);

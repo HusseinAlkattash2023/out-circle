@@ -1,55 +1,70 @@
-import React from 'react'
-import Circle from '../../Components/Circle/Circle_ar'
-import './index.css'
-import {Link} from 'react-router-dom'
-import back from '../../Assets/images/back.png'
-import logout from '../../Assets/images/logout.png'
-import notifications from '../../Assets/images/notification.png';
-import profile from '../../Assets/images/profile.png'
-import image from '../../Assets/images/Component 31 – 25.png';
-import image2 from '../../Assets/images/hover_ar/Component 31 – 25.png';
-import home from '../../Assets/images/padlock.png';
-
+import { useEffect, useState } from "react";
+import Circle from "../../Components/Circle/Circle_ar";
+import "./index.css";
+import { Link } from "react-router-dom";
+import back from "../../Assets/images/back.png";
+import logout from "../../Assets/images/logout.png";
+import notifications from "../../Assets/images/notification.png";
+import profile from "../../Assets/images/profile.png";
+import image from "../../Assets/images/Component 31 – 25.png";
+import image2 from "../../Assets/images/hover_ar/Component 31 – 25.png";
+import home from "../../Assets/images/padlock.png";
+import WelcomeVisitorAr from "../../Components/WelcomeVisitor/index-ar";
 
 function Institute_ar() {
-    const Logout = () => {
-        localStorage.removeItem("user_institute");
-        localStorage.removeItem("user");
-        localStorage.removeItem("is-user-login");
-      };
-    const state = localStorage.getItem("user_institute");
-return (
-    <div className='institute'>
-            {
-                    !state ? (
-                    <header className='header2_ar'>
-                    <Link to="/ar">
-                        <span>رجوع</span>
-                        <img src={back} alt=""/>
-                    </Link>
-                    </header>
-                    ):(
-                        <header className='header1_ar'>
-                        <Link to="/profile-institute-ar" className="my-2">
-                            <span>الملف الشخصي</span>
-                            <img src={profile} alt=""/>
-                        </Link>
-                        <Link to="/notifications" className="my-2">
-                            <span>الإشعارات</span>
-                            <img src={notifications} alt=""/>
-                        </Link>
-                        <Link onClick={Logout} to="/ar" className="my-2">
-                            <span>تسجيل الخروج</span>
-                            <img src={logout} alt=""/>
-                        </Link>
-                        <Link to="/ar" className="my-2">
-                            <span>الصفحة الرئيسية</span>
-                            <img src={home} alt=""/>
-                        </Link>
-                    </header>
-                    )
-                }
-        <Circle 
+  const [isShowWelcomeVisitorAr, setShowWelcomeVisitorAr] = useState("yes");
+
+  useEffect(() => {
+    let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitorAr");
+    if (!showWelcomeMessageTemp) {
+      localStorage.setItem("showWelcomeVisitorAr", "yes");
+    } else {
+      setShowWelcomeVisitorAr(localStorage.getItem("showWelcomeVisitorAr"));
+    }
+  }, []);
+  const Logout = () => {
+    localStorage.removeItem("user_institute");
+    localStorage.removeItem("user");
+    localStorage.removeItem("is-user-login");
+  };
+  const state = localStorage.getItem("user_institute");
+  return (
+    <div className="institute">
+      {!state ? (
+        <div>
+          {isShowWelcomeVisitorAr === "yes" && (
+            <div className="welcome_">
+              <WelcomeVisitorAr />
+            </div>
+          )}
+          <header className="header2_ar">
+            <Link to="/ar">
+              <span>رجوع</span>
+              <img src={back} alt="" />
+            </Link>
+          </header>
+        </div>
+      ) : (
+        <header className="header1_ar">
+          <Link to="/profile-institute-ar" className="my-2">
+            <span>الملف الشخصي</span>
+            <img src={profile} alt="" />
+          </Link>
+          <Link to="/notifications" className="my-2">
+            <span>الإشعارات</span>
+            <img src={notifications} alt="" />
+          </Link>
+          <Link onClick={Logout} to="/ar" className="my-2">
+            <span>تسجيل الخروج</span>
+            <img src={logout} alt="" />
+          </Link>
+          <Link to="/ar" className="my-2">
+            <span>الصفحة الرئيسية</span>
+            <img src={home} alt="" />
+          </Link>
+        </header>
+      )}
+      <Circle
         circle={image}
         circle2={image2}
         demand1="institute/service1-ar"
@@ -68,9 +83,9 @@ return (
         service6="أفكار وخدمات إكساء وديكور للشركة"
         service7="تأمين موظفين مؤهلين"
         service8="الخدمات الإعلانية"
-        />
+      />
     </div>
-  )
+  );
 }
 
-export default Institute_ar
+export default Institute_ar;

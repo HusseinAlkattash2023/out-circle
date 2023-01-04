@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect , useState} from 'react';
 import Circle from '../../Components/Circle/Circle_ar';
 import './index.css';
 import {Link} from 'react-router-dom';
@@ -10,26 +10,47 @@ import notifications from '../../Assets/images/notification.png';
 import profile from '../../Assets/images/profile.png';
 import { FaUsers } from "react-icons/fa";
 import home from '../../Assets/images/padlock.png';
+import WelcomeVisitorAr from "../../Components/WelcomeVisitor/index-ar";
 
 
 function Croporate_ar() {
+
+    const [isShowWelcomeVisitorAr, setShowWelcomeVisitorAr] = useState("yes");
+
     const Logout = () => {
         localStorage.removeItem("user_corporate");
         localStorage.removeItem("user");
         localStorage.removeItem("is-user-login");
         localStorage.removeItem("company_id");
     };
+
+    useEffect(()=> {
+        let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitorAr");
+      if(!showWelcomeMessageTemp) {
+        localStorage.setItem("showWelcomeVisitorAr", "yes");
+      } else {
+        setShowWelcomeVisitorAr(localStorage.getItem("showWelcomeVisitorAr"));
+      }
+      } , []);
+
     const state = localStorage.getItem("user_corporate")
   return (
     <div className='croporate'>
             {
                     !state ? (
-                    <header className='header2_ar'>
-                    <Link to="/ar">
-                        <span>رجوع</span>
-                        <img src={back} alt=""/>
-                    </Link>
-                    </header>
+                        <div>
+                        {isShowWelcomeVisitorAr === "yes" && (
+                          <div className="welcome_">
+                            <WelcomeVisitorAr />
+                          </div>
+                        )}
+                        <header className="header2_ar">
+                          <Link to="/ar">
+                            <span>رجوع</span>
+                            <img src={back} alt="" />
+                          </Link>
+                        </header>
+                      </div>
                     ):(
                         <header className='header1_ar'>
                         <Link to="/profile-corporate-ar" className="my-2">

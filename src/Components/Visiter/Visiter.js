@@ -12,7 +12,7 @@ import image2 from "../../Assets/images/Mask Group -2.png";
 import image3 from "../../Assets/images/Mask Group -3.png";
 import image4 from "../../Assets/images/Mask Group -4.png";
 import image5 from "../../Assets/images/Mask Group -5.png";
-import WelcomeVisitor from '../WelcomeVisitor/index';
+
 
 const schema = yup.object({
   email: yup.string().email().required("Please Enter your Email"),
@@ -25,16 +25,6 @@ const Visiter = () => {
     whatsapp_number: "",
   });
 
-  const [isShowWelcomeVisitor, setShowWelcomeVisitor] = useState("yes");
-  useEffect(
-    ()=> {
-      let showWelcomeMessageTemp = localStorage.getItem("showWelcomeVisitor");
-    if (!showWelcomeMessageTemp) {
-      localStorage.setItem("showWelcomeVisitor", "yes");
-    } else {
-      setShowWelcomeVisitor(localStorage.getItem("showWelcomeVisitor"));
-    }
-    },[])
   const navigate = useNavigate();
 
   const change_route = localStorage.getItem("change_route");
@@ -76,11 +66,6 @@ const Visiter = () => {
         <span>Back</span>
         <img src={back} alt="" />
       </Link>
-      {isShowWelcomeVisitor === "yes" && (
-        <div className="welcome_">
-          <WelcomeVisitor />
-        </div>
-      )}
       <div className="section1">
         <header>
           <span className="icon">

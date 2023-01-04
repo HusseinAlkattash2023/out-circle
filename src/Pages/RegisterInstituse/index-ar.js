@@ -114,7 +114,6 @@ function RegisterInstituse() {
 
    const validate_ = (values)=> {
     const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if(!values.username){
       errors.username = "من فضلك أدخل اسم المستخدم";
     }
@@ -132,38 +131,13 @@ function RegisterInstituse() {
     }
     if(!num){
       errors.num = "من فضلك أدخل رقم الموبايل";
-    }
-    if(!values.email){
-      errors.email = "من فضلك أدخل إيميلك";
-    }else if (!regex.test(data.email)) {
-      errors.email = "تنسيق بريد إلكتروني غير صالح";
     }
     return errors;
   }
 
    const validate = (values) => {
     let errors = {};
-    if(!values.username){
-      errors.username = "من فضلك أدخل اسم المستخدم";
-    }
-    if (values.password.length < 8) {
-      errors.password = "كلمة السر يجب أن تحوي على الأقل 8 محارف";
-    }
-    if (values.password !== values.confirm_password) {
-      errors.confirm_password = "يجب أن تتطابق كلمات المرور";
-    }
-    if(!values.full_name){
-      errors.full_name = "من فضلك أدخل اسمك الكامل";
-    }
-    if(!values.born_date){
-      errors.born_date = "من فضلك أدخل المواليد";
-    }
-    if(!num){
-      errors.num = "من فضلك أدخل رقم الموبايل";
-    }
-    if(!values.email){
-      errors.email = "من فضلك أدخل إيميلك";
-    }
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if(!values.institute_name){
       errors.institute_name = "من فضلك أدخل اسم المؤسسة";
     }
@@ -187,9 +161,8 @@ function RegisterInstituse() {
     }
     if(!values.institute_email){
       errors.institute_email = "من فضلك ادخل هذا الحقل";
-    }
-    if(!values.landline_number){
-      errors.landline_number = "من فضلك ادخل هذا الحقل";
+    }else if (!regex.test(data.institute_email)) {
+      errors.institute_email = "تنسيق البريد الإلكتروني غير صالح";
     }
     if(!file1){
       errors.file1 = "الرجاء تحميل سجل الشركة";
