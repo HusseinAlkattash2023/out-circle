@@ -414,6 +414,14 @@
     font-family: changa;
     font-size: 20px;
 }
+.sidebar .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-right: 35px;
+}
 .sidebar .icons ul{
     display: flex;
     list-style-type: none;
