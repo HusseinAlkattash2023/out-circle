@@ -108,6 +108,7 @@ const ProfileIndividual = () => {
     },
   ];
 
+
   useEffect(() => {
     Axios.get(
       `${BASE_API_URL}/api/individuals/individual-user-info/${user_id}`
