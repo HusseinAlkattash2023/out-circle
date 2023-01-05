@@ -23,6 +23,7 @@ function Croporate() {
         localStorage.removeItem("user");
         localStorage.removeItem("is-user-login");
         localStorage.removeItem("company_id")
+        localStorage.removeItem("number_partners");
     };
 
     useEffect(

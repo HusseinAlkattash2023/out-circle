@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState  , useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import back from "../../Assets/images/back.png";
 import corporate from "../../Assets/images/Mask Group -1.png";
@@ -19,6 +19,12 @@ const AddPartners = () => {
 
 
   
+  useEffect(()=> {
+    if(!localStorage.getItem("number_partners")){
+      navigate("/")
+    }
+  } , [navigate])
+
 
   const validate = (values) => {
     const errors = {};
