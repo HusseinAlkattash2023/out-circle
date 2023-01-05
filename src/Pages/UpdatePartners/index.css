@@ -189,7 +189,7 @@
     width: 60%;
 }
 
-.add_parteners .form-container .footer button{
+.add_parteners .form-container .footer .button_update{
     border: none;
     background-color: black;
     color: white;
@@ -201,7 +201,16 @@
     margin-top: 20px;
     font-family: 'Readex Pro', sans-serif;
     font-weight: 500;
-    width: 150px;
+}
+
+.add_parteners .form-container .footer .button_add{
+    border:2px solid #000; 
+    color:#000 ;
+    padding: 8px 0; 
+    background-color: #1fb98d;
+    border-radius: 25px;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 500;
 }
 
 
@@ -287,8 +296,8 @@
     .add_parteners .register1_ar .form-container .input_{
         width: 96%;
     }
-    .add_parteners .form-container .footer button{
-        width: 110px;
+    .add_parteners .form-container .footer .button_update ,
+    .add_parteners .form-container .footer .button_add{
         font-size: 16px;
     }
     .add_parteners .register1 .form-container .input_ input ,

@@ -94,7 +94,7 @@ const InstituteInfoAr = ({ userInfo , setUserInfo , setFile1 , data , file1 }) =
         </div>
         <div className='information'>
           <label htmlFor="file" className="d-flex align-items-center">
-            { !file1 ? <p>Upload updated institute record</p> : <p>Your file has been uploaded successfully</p>}
+            { !file1 ? <p>تحميل ملف سجل الشركة المحدث</p> : <p>تم تحميل الملف بنجاح</p>}
             <img src={file} alt=""/>
           </label>
           <input type="file" id="file" style={{display:"none"}} onChange={(e)=> setFile1(e.target.files[0])}/>

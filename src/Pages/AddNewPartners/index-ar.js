@@ -1,28 +1,27 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link  , useNavigate } from "react-router-dom";
 import back from "../../Assets/images/back.png";
 import corporate from "../../Assets/images/ar_photo/corporate.png";
 import "./index.css";
 import { BsPersonPlus } from "react-icons/bs";
 import Axios from "axios";
-import Partner from "../../Components/PartnerInfo/index-ar";
+import PartnerAr from "../../Components/PartnerInfo/index-ar";
 import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
-const AddPartnersAr = () => {
+const AddNewPartnersAr = () => {
+
   const navigate = useNavigate();
   const [partnersInfo, setPartnersInfo] = useState([]);
-  let number_of_partners = localStorage.getItem("number_partners");
   let company_id = localStorage.getItem("company_id");
-  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
-
-  const [formErrors, setFormErrors] = useState({});
   const [dataFromChild, setDataFromChild] = useState();
-
+  const [formErrors, setFormErrors] = useState({});
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+  const [number_of_new_partners, set_number_of_new_partners] = useState(0);
   const validate = (values) => {
     const errors = {};
     if (!values.full_name) {
-      errors.full_name = "من فضلك ادخل هذا الحقل";
+      errors.full_name = "من فضلك أدخل هذا الحقل";
     }
     if (!values.birthday) {
       errors.birthday = "من فضلك أدخل هذا الحقل";
@@ -34,30 +33,33 @@ const AddPartnersAr = () => {
   };
 
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     setFormErrors(validate(dataFromChild));
 
     const errors = Object.values(validate(dataFromChild));
-
     if (errors.length === 0) {
-      Axios.post(`${BASE_API_URL}/api/partners/add-partners?company_id=${company_id}` , {
-        partners_info: partnersInfo,
-    })
-    .then(() => {
-      toast.success("تم إضافة معلومات الشركاء بنجاح")
-      setTimeout(() => {
-        navigate("/login-ar")
-      }, 2000);
-    })
-    .catch(err => console.log(err));
-  }
+      Axios.post(
+        `${BASE_API_URL}/api/partners/add-new-partners?company_id=${company_id}&number_of_new_partners=${number_of_new_partners}`,
+        {
+          partners_info: partnersInfo,
+        }
+      )
+        .then(() => {
+          toast.success("تم إضاقة بيانات الشركاء بنجاح");
+          setTimeout(() => {
+            navigate("/corporate-ar")
+          }, 2000);
+        })
+        .catch((err) => console.log(err));
+    }
   };
   return (
     <div className="add_parteners">
-      <div><Toaster/></div>
+      <div>
+        <Toaster />
+      </div>
       <header>
         <Link to="/register" className="back_ar">
           <span>رجوع</span>
@@ -69,18 +71,21 @@ const AddPartnersAr = () => {
           <span className="icon">
             <BsPersonPlus />
           </span>
-          <span className="text">add partners</span>
+          <span className="text">إضافة شركاء جدد</span>
         </header>
         <form className="form-container">
+          <div className="my-3 input_">
+            <input type="number" placeholder="أدخل عدد الشركاء الجدد" onChange={(e) => set_number_of_new_partners(e.target.value)} />
+          </div>
           <div className="body">
             {(() => {
               const arr = [];
-              for (let i = 0; i < number_of_partners; i++) {
+              for (let i = 0; i < number_of_new_partners; i++) {
                 arr.push(
                   <div key={i}>
-                    <Partner
-                      formErrors={formErrors}
+                    <PartnerAr
                       setDataFromChild={setDataFromChild}
+                      formErrors={formErrors}
                       num={i}
                       setPartnersInfo={setPartnersInfo}
                       partnersInfo={partnersInfo}
@@ -93,7 +98,7 @@ const AddPartnersAr = () => {
           </div>
           <div className="footer">
             <button className="mt-3" onClick={handleSubmit}>
-              تسجيل
+              إضافة
             </button>
           </div>
         </form>
@@ -105,4 +110,4 @@ const AddPartnersAr = () => {
   );
 };
 
-export default AddPartnersAr;
+export default AddNewPartnersAr;

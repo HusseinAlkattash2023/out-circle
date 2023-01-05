@@ -111,7 +111,7 @@ const ProfileScientificAr = () => {
           <span className="icon">
             <img src={user} alt="" width="40px" />
           </span>
-          <span className="text">Your Profile</span>
+          <span className="text">ملفك الشخصي</span>
         </header>
         <div><Toaster/></div>
         <div className="body my-3">

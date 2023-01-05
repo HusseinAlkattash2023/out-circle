@@ -13,6 +13,11 @@
     margin:0px auto 20px auto;
     width: 300px;
 }
+
+.profile_institute .section-ar .form-container h3{
+    font-family: 'Readex Pro', sans-serif;
+}
+
 .profile_institute section header{
     display: flex;
     align-items: center;
@@ -48,6 +53,11 @@
     letter-spacing: 1px;
     font-weight: 800;
 }
+
+.profile_institute .section-ar header .text{
+    font-family: changa;
+}
+
 .profile_institute .back {
     position: absolute;
     right: 20px;
@@ -118,6 +128,9 @@
     color:#fff;
     font-size: 20px;
 }
+.profile_institute .section-ar .information label p{
+    font-family: 'Readex Pro', sans-serif;
+}
 .profile_institute section .body .information input:focus{
     outline:none ;
 }
@@ -143,7 +156,9 @@
     transition: all 0.5s ease;
     opacity: 0.68;
 }
-
+.profile_institute .section-ar .footer .next{
+    font-family: 'Readex Pro', sans-serif;
+}
 .profile_institute section .body{
     overflow-y: scroll;
     height: 350px;
@@ -215,4 +230,15 @@
     .profile_institute section .form-container{
         border-radius: 30px;
     }
+    .profile_institute section .body .information input{
+        font-size: 16px;
+    }
+    .profile_institute section .body .information label p{
+        font-size: 16px;
+    }
+    .profile_institute .section-ar .form-container h3{
+        font-family: 'Readex Pro', sans-serif;
+        font-size: 20px;
+    }
+    
 }

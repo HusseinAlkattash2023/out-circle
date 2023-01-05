@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import back from "../../Assets/images/back.png";
 import corporate from "../../Assets/images/Mask Group -1.png";
 import "./index.css";
@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
 const AddNewPartners = () => {
+
+  const navigate = useNavigate();
   const [partnersInfo, setPartnersInfo] = useState([]);
   let company_id = localStorage.getItem("company_id");
   const [dataFromChild, setDataFromChild] = useState();
@@ -47,7 +49,7 @@ const AddNewPartners = () => {
         .then(() => {
           toast.success("Partner information has been added successfully");
           setTimeout(() => {
-
+            navigate("/corporate")
           }, 2000);
         })
         .catch((err) => console.log(err));
@@ -96,7 +98,7 @@ const AddNewPartners = () => {
           </div>
           <div className="footer">
             <button className="mt-3" onClick={handleSubmit}>
-              REGISTER
+              Add
             </button>
           </div>
         </form>

@@ -198,12 +198,11 @@ const UpdatePartners = () => {
             ))}
           </div>
           <div className="footer">
-            <button className="mt-3 w-100" onClick={handleSubmit} style={{ fontSize: "20px", padding: "8px 0" }}>
+            <button className="mt-3 w-100 button_update" onClick={handleSubmit}>
               Update
             </button>
             <button
-              className="mt-3 d-block w-100"
-              style={{ fontSize: "20px", padding: "8px 0", backgroundColor: "#27720e" }}
+              className="mt-3 d-block w-100 button_add"
               onClick={() => navigate("/add-new-partners")}
             >
               Add New Partners

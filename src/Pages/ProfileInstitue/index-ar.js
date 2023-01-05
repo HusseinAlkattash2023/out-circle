@@ -83,7 +83,7 @@ const ProfileInstitute = () => {
         formData
       )
         .then((res) => {
-          toast.success("Your data has been data updated successfully")
+          toast.success("تم تحديث بياناتك بنجاح")
         })
         .catch((err) => {
           console.log(err);
@@ -111,7 +111,7 @@ const ProfileInstitute = () => {
         <section className="section-ar">
         <header>
                 <span className='icon'><img src={user} alt="" width="40px"/></span>
-                <span className='text'>Your Profile</span>
+                <span className='text'>ملفك الشخصي</span>
         </header>
         <div className='form-container'>
           <div>
@@ -123,13 +123,6 @@ const ProfileInstitute = () => {
           <div className='footer'>
           <button
               className='next mt-3 ms-2 py-1 px-4'
-              disabled={page === 0}
-              onClick={(currPage) => {
-                setPage((currPage) => currPage - 1);
-              }}
-              >Prev</button>
-              <button
-              className='next mt-3 ms-2 py-1 px-4'
                 onClick={(e , currPage) => {
                   if(page === FormTitle.length-1){
                     handleSubmit(e);
@@ -138,8 +131,15 @@ const ProfileInstitute = () => {
                   }
                 }}
               >
-                {page === 1 ? "Update" : "Next"}
+                {page === 1 ? "تعديل" : "التالي"}
               </button>
+          <button
+              className='next mt-3 ms-2 py-1 px-4'
+              disabled={page === 0}
+              onClick={(currPage) => {
+                setPage((currPage) => currPage - 1);
+              }}
+              >السابق</button>
           </div>
         </div>
         </section>

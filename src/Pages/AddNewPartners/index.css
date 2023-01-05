@@ -163,18 +163,18 @@
     font-size: 20px;
 }
 .add_parteners .register_ar .form-container .input_ input{
-    width: 400px;
+    width:80%;
     padding: 8px 16px;
     border: 2px solid #c4f9ae;
     background: none;
     border-radius: 10px;
     color: white;
     font-size: 20px;
+    text-align: center;
 }
 .add_parteners .register_ar .form-container .input_{
     font-size: 13px;
-    text-align: right;
-    font-family: 'Readex Pro', sans-serif;
+    font-family: 'Readex Pro', sans-serif; 
     width: 100%;
 }
 .add_parteners .register .form-container .input_{
@@ -185,6 +185,7 @@
     font-size: 17px;
     text-align: right;
     font-family: 'Readex Pro', sans-serif;
+    width: 400px;
 }
 .add_parteners .register_ar .form-container h3{
     font-family: 'Readex Pro', sans-serif;
@@ -260,7 +261,7 @@
         border-radius: 30px;
     }
     .add_parteners .form-container .footer button{
-        font-size: 17px;
+        font-size: 16px;
         padding: 5px 10px;
         width: 130px;
     }

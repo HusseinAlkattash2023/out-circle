@@ -104,6 +104,9 @@
     letter-spacing: 1px;
     font-weight: 800;
 }
+.profile_scientific .section-ar header .text{
+    font-family:changa;
+}
 
 .profile_scientific .section2 img{
     position: absolute;

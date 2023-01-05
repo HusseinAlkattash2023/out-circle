@@ -232,6 +232,7 @@ const PageNotFound = lazy(() => import("./Pages/404/index"));
 const UpdatePartners = lazy(() => import('./Pages/UpdatePartners/index.js'));
 const UpdatePartnersAr = lazy(() => import('./Pages/UpdatePartners/index-ar.js'));
 const AddNewPartners = lazy(() => import('./Pages/AddNewPartners/index.js'));
+const AddNewPartnersAr = lazy(() => import('./Pages/AddNewPartners/index-ar.js'));
 
 function App() {
   const routes = [
@@ -869,6 +870,10 @@ function App() {
     {
       path: "/add-new-partners",
       element: <AddNewPartners />,
+    },
+    {
+      path: "/add-new-partners-ar",
+      element: <AddNewPartnersAr/>,
     },
     {
       path: "*",
