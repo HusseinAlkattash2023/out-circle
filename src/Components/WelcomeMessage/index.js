@@ -25,7 +25,7 @@ const WelcomeMessage = () => {
             serve you is our mission.
           </p>
           <p>Very important notes:</p>
-          <p>-Our main field of work is the consulting aspect</p>
+          <p>- Our main field of work is the consulting aspect</p>
           <p>
             - Most of our services are consulting ones with the possibility of
             applying them to become occupational services according to the

@@ -369,13 +369,13 @@
     .register_ .formRegister .forms .four ,
     .register_ .formRegister_ar .forms .four{
     position:absolute;
-    bottom: 240px;
+    bottom: 245px;
     left: -83px;
 }
     .register_ .formRegister .forms .fife,
     .register_ .formRegister_ar .forms .fife{
     position:absolute;
-    bottom: 240px;
+    bottom: 245px;
     left: 50px;
 }
 }

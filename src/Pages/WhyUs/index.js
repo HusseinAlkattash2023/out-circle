@@ -24,12 +24,11 @@ function WhyUs() {
                     <h2>Why us</h2>
                 </div>
                 <div className='text'>
-                    <p>Under natural conditions, Success is not considered as a real success or even skill...<br/>
-                    while despair under difficult circumstances is evidence of disability...</p>
-                    <p>Real Success, skills and experience appear only in difficult times and under hard circumstances...</p>
+                    <p>Under natural conditions, Success is not considered as a real success or even skill.</p>
+                    <p>while despair under difficult circumstances is evidence of disability.</p>
+                    <p>Real Success, skills and experience appear only in difficult times and under hard circumstances.</p>
                     <p>Real success is to find something from nothing</p>
-                    <p>We are a team that provides consultative and development services in addition to occupational services for all private business sectors in most of the
-                        governorates of syria in an out-of-the-ordinary technical way that saves time and efforts for every one.
+                    <p>We are a team that provides consultative and development services in addition to occupational services for all private business sectors in an out-of-the-ordinary technical way that saves time and efforts for every one.
                         it also gives valuable and actual results, in addition to challenges in the labor market outside the public 
                         cilcle and the usual routine.
                     </p>

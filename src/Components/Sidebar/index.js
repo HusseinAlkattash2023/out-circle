@@ -92,14 +92,14 @@ const Sidebar = ({item1 , item2 , item3 , route1 , route2 , route3}) => {
                 </a>
               </li>
             </ul>
-            <div className="ms-4">
+            {/* <div className="ms-4">
               <Link to="" className="me-1">
                 <img src={googlePlay} alt="" />
               </Link>
               <Link to="" className="ms-2">
                 <img src={appStore} alt="" />
               </Link>
-            </div>
+            </div> */}
           </div>
           </div>
         </div>
