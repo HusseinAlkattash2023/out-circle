@@ -226,12 +226,13 @@ function RegisterCorporate() {
         Axios.post(`${BASE_API_URL}/api/companies/add-new-user`, formData)
           .then((res) => {
             const data1 = res.data;
-            if (
-              data1 ===
-              "عذراً البريد الالكتروني الذي أدخلته موجود مسبقاً ،  من فضلك أدخل بريد الكتروني آخر ..."
-            ) {
+            if (data1 === "عذراً البريد الالكتروني الذي أدخلته موجود مسبقاً ،  من فضلك أدخل بريد الكتروني آخر ...") {
               toast.error(
                 "Sorry, the email you entered already exists, please enter another email..."
+              );
+            } else if (data1 === "عذراً رقم الموبايل الذي أدخلته موجود مسبقاً ،  من فضلك أدخل رقم موبايل آخر ..."){
+              toast.error(
+                "Sorry, the mobile number you entered already exists, please enter another mobile number..."
               );
             } else if (
               data1 ===

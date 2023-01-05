@@ -221,21 +221,10 @@ function RegisterCorporateAr() {
         Axios.post(`${BASE_API_URL}/api/companies/add-new-user`, formData)
           .then((res) => {
             const data1 = res.data;
-            if (
-              data1 ===
-              "عذراً البريد الالكتروني الذي أدخلته موجود مسبقاً ،  من فضلك أدخل بريد الكتروني آخر ..."
-            ) {
-              toast.error(
-                "عذراً البريد الالكتروني الذي أدخلته موجود مسبقاً ،  من فضلك أدخل بريد الكتروني آخر"
-              );
-            } else if (
-              data1 ===
-              "عذراً ، توجد شركة تحمل نفس رقم السجل ، الرجاء إدخال رقم سجل آخر ..."
-            ) {
-              toast.error(
-                "عذراً ، توجد شركة تحمل نفس رقم السجل ، الرجاء إدخال رقم سجل آخر"
-              );
-            } else {
+              if(typeof data1 === "string"){
+                toast.error(data1)
+              }
+             else {
               toast.success("تم إنشاء حسابك بنجاح");
               localStorage.setItem("number_partners", data.number_partners);
               localStorage.setItem("company_id" , data1);

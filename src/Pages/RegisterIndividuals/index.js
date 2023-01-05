@@ -193,9 +193,13 @@ function RegisterIndividuals() {
     Axios.post(`${BASE_API_URL}/api/individuals/add-new-user`, formData)
       .then((res) => {
         const data1 = res.data;
-        if (typeof data1 === "string") {
+        if (data1 === "عذراً البريد الالكتروني الذي أدخلته موجود مسبقاً ،  من فضلك أدخل بريد الكتروني آخر ...") {
           toast.error(
             "Sorry, the email you entered already exists, please enter another email..."
+          );
+        } else if (data1 === "عذراً رقم الموبايل الذي أدخلته موجود مسبقاً ،  من فضلك أدخل رقم موبايل آخر ..."){
+          toast.error(
+            "Sorry, the mobile number you entered already exists, please enter another mobile number..."
           );
         } else {
           toast.success("Your account has been created successfully");

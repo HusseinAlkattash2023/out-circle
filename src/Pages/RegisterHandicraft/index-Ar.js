@@ -173,9 +173,7 @@ function RegisterHandicraftAr() {
       .then((res) => {
         const data1 = res.data;
         if (typeof data1 === "string") {
-          toast.error(
-            "...عذرا ، البريد الإلكتروني الذي أدخلته موجود بالفعل ، يرجى إدخال بريد إلكتروني آخر"
-          );
+          toast.error(data1);
         } else {
           toast.success("تم إنشاء حسابك بنجاح");
           setTimeout(() => navigate("/login-ar"), 2000);
