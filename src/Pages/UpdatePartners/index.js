@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import back from "../../Assets/images/back.png";
 import corporate from "../../Assets/images/Mask Group -1.png";
 import "./index.css";
@@ -7,6 +7,7 @@ import { BsPersonPlus } from "react-icons/bs";
 import Axios from "axios";
 import { useSelector } from "react-redux";
 import update from "../../Assets/images/update.png";
+import axios from "axios";
 
 const UpdatePartners = () => {
   const [partnersInfo, setPartnersInfo] = useState([]);
@@ -15,6 +16,7 @@ const UpdatePartners = () => {
   let obj = JSON.parse(items);
   let company_id = obj._id;
   const ref1 = useRef();
+  const navigate = useNavigate();
 
   useEffect(() => {
     Axios.get(
@@ -26,7 +28,16 @@ const UpdatePartners = () => {
       .catch((err) => console.log(err));
   }, [BASE_API_URL, company_id]);
 
-  const handleSubmit = async(e) => {
+  const deletePartner = (e, partner_id) => {
+    e.preventDefault();
+    axios.delete(`${BASE_API_URL}/api/partners/delete-partner/${partner_id}?company_id=${company_id}`)
+      .then(() => {
+        document.location.reload();
+      })
+      .catch(err => console.log(err));
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     for await (let partner_info of partnersInfo) {
       try {
@@ -42,7 +53,7 @@ const UpdatePartners = () => {
             participation_rate: partner_info.participation_rate,
           }
         );
-      } catch(err) {
+      } catch (err) {
         console.log(err);
       }
     }
@@ -85,7 +96,7 @@ const UpdatePartners = () => {
                     placeholder="Partner's full name"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
                 <div className="my-3 input_">
@@ -104,7 +115,7 @@ const UpdatePartners = () => {
                     type="text"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
                 <div className="my-3 input_">
@@ -119,7 +130,7 @@ const UpdatePartners = () => {
                     placeholder="Personal mobile number"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
                 <div className="my-3 input_">
@@ -134,7 +145,7 @@ const UpdatePartners = () => {
                     placeholder="Whatsapp number"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
                 <div className="my-3 input_">
@@ -149,7 +160,7 @@ const UpdatePartners = () => {
                     placeholder="Landline extention"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
                 <div className="my-3 input_">
@@ -164,7 +175,7 @@ const UpdatePartners = () => {
                     placeholder="Personal email address"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
                 <div className="my-3 input_">
@@ -179,15 +190,23 @@ const UpdatePartners = () => {
                     placeholder="Participation rate"
                   />
                   <div>
-                    <img src={update} alt="" width="25px"/>
+                    <img src={update} alt="" width="25px" />
                   </div>
                 </div>
+                {partnersInfo.length > 2 && <button className="btn btn-danger w-100" onClick={(e) => deletePartner(e, partnerInfo._id)}>Delete</button>}
               </div>
             ))}
           </div>
           <div className="footer">
-            <button className="mt-3" onClick={handleSubmit}>
+            <button className="mt-3 w-100" onClick={handleSubmit} style={{ fontSize: "20px", padding: "8px 0" }}>
               Update
+            </button>
+            <button
+              className="mt-3 d-block w-100"
+              style={{ fontSize: "20px", padding: "8px 0", backgroundColor: "#27720e" }}
+              onClick={() => navigate("/add-new-partners")}
+            >
+              Add New Partners
             </button>
           </div>
         </form>

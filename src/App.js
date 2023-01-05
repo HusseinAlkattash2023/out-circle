@@ -210,7 +210,7 @@ const AddPartners = lazy(() => import("./Pages/AddPartners/index.js"));
 const AddPartnersAr = lazy(() => import("./Pages/AddPartners/index-ar.js"));
 const AdminLogin = lazy(() => import("./Dashboard/AdminLogin/index.js"));
 const Services = lazy(() => import("./Dashboard/Services/index.js"));
-const AdsManagment = lazy(() => 
+const AdsManagment = lazy(() =>
   import("./Dashboard/Ads/AdsManagment/index.js")
 );
 const UsersManagment = lazy(() => import("./Dashboard/Users/Managment/index.js"));
@@ -231,7 +231,7 @@ const DetailsAds = lazy(() => import("./Pages/DetailsAds/index.js"));
 const PageNotFound = lazy(() => import("./Pages/404/index"));
 const UpdatePartners = lazy(() => import('./Pages/UpdatePartners/index.js'));
 const UpdatePartnersAr = lazy(() => import('./Pages/UpdatePartners/index-ar.js'));
-
+const AddNewPartners = lazy(() => import('./Pages/AddNewPartners/index.js'));
 
 function App() {
   const routes = [
@@ -294,10 +294,10 @@ function App() {
     {
       path: "/dashboard/admin/delete-news",
       element: <DeleteNews />,
-    },{
+    }, {
       path: "/dashboard/admin/notifications-managment",
       element: <NotificationsManagment />,
-    },{
+    }, {
       path: "/dashboard/admin/add-notification",
       element: <AddNotification />,
     },
@@ -344,12 +344,12 @@ function App() {
     {
       path: "/add-partners-ar",
       element: <AddPartnersAr />,
-    },{
+    }, {
       path: "/update-partners",
       element: <UpdatePartners />,
-    },{
+    }, {
       path: "/update-partners-ar",
-      element: <UpdatePartnersAr/>,
+      element: <UpdatePartnersAr />,
     },
     {
       path: "/register-corporate",
@@ -474,70 +474,70 @@ function App() {
     {
       path: "/news",
       element: <News />,
-    },{
+    }, {
       path: "/news-ar",
-      element: <NewsAr/>,
+      element: <NewsAr />,
     },
     {
       path: "/ads",
       element: <Ads />,
-    },{
+    }, {
       path: "/ads-ar",
-      element: <AdsAr/>,
-    },{
+      element: <AdsAr />,
+    }, {
       path: "/detials-ads",
-      element: <DetailsAds/>,
+      element: <DetailsAds />,
     },
     {
       path: "/profile-individual",
       element: <ProfileIndividual />,
-    },{
+    }, {
       path: "/profile-individual-ar",
-      element: <ProfileIndividualAr/>,
-    },{
+      element: <ProfileIndividualAr />,
+    }, {
       path: "/notifications",
       element: <Notifications />,
-    },{
+    }, {
       path: "/notifications-ar",
-      element: <NotificationsAr/>,
+      element: <NotificationsAr />,
     },
     {
       path: "/change-password",
       element: <ChangePassword />,
-    },{
+    }, {
       path: "/change-password-ar",
-      element: <ChangePasswordAr/>,
-    },{
+      element: <ChangePasswordAr />,
+    }, {
       path: "/profile-handicraft",
       element: <ProfileHandicraft />,
-    },{
+    }, {
       path: "/profile-handicraft-ar",
-      element: <ProfileHandicraftAr/>,
-    },{
+      element: <ProfileHandicraftAr />,
+    }, {
       path: "/profile-scientific",
-      element: <ProfileScientific/>,
-    },{
+      element: <ProfileScientific />,
+    }, {
       path: "/profile-scientific-ar",
-      element: <ProfileScientificAr/>,
-    },{
+      element: <ProfileScientificAr />,
+    }, {
       path: "/profile-institute",
-      element: <ProfileInstitute/>,
-    },{
+      element: <ProfileInstitute />,
+    }, {
       path: "/profile-institute-ar",
-      element: <ProfileInstituteAr/>,
-    },{
+      element: <ProfileInstituteAr />,
+    }, {
       path: "/profile-corporate",
-      element: <ProfileCorporate/>,
-    },{
+      element: <ProfileCorporate />,
+    }, {
       path: "/profile-corporate-ar",
-      element: <ProfileCorporateAr/>,
-    },{
+      element: <ProfileCorporateAr />,
+    }, {
       path: "/visitor",
       element: <Visitor />,
-    },{
+    }, {
       path: "/visitor-ar",
-      element: <VisitorAr/>,
-    },{
+      element: <VisitorAr />,
+    }, {
       path: "/corporate/service1",
       element: <CorporateService1 />,
     },
@@ -768,104 +768,108 @@ function App() {
     {
       path: "/scientific/service2-ar",
       element: <ScientificServiceAr2 />,
-    },{
+    }, {
       path: "/scientific/service3-ar",
       element: <ScientificServiceAr3 />,
-    },{
+    }, {
       path: "/scientific/service4-ar",
       element: <ScientificServiceAr4 />,
-    },{
+    }, {
       path: "/scientific/service5-ar",
       element: <ScientificServiceAr5 />,
-    },{
+    }, {
       path: "/scientific/service6-ar",
       element: <ScientificServiceAr6 />,
-    },{
+    }, {
       path: "/scientific/service7-ar",
       element: <ScientificServiceAr7 />,
-    },{
+    }, {
       path: "/scientific/service8-ar",
       element: <ScientificServiceAr8 />,
-    },{
+    }, {
       path: "/career-services/service1",
       element: <CareerService1 />,
-    },{
+    }, {
       path: "/career-services/service2",
       element: <CareerService2 />,
-    },{
+    }, {
       path: "/career-services/service3",
       element: <CareerService3 />,
-    },{
+    }, {
       path: "/career-services/service4",
       element: <CareerService4 />,
-    },{
+    }, {
       path: "/career-services/service5",
       element: <CareerService5 />,
     },
     {
       path: "/career-services/service6",
       element: <CareerService6 />,
-    },{
+    }, {
       path: "/career-service/service1-ar",
       element: <CareerServiceAr1 />,
-    },{
+    }, {
       path: "/career-service/service2-ar",
       element: <CareerServiceAr2 />,
-    },{
+    }, {
       path: "/career-service/service3-ar",
       element: <CareerServiceAr3 />,
-    },{
+    }, {
       path: "/career-service/service4-ar",
       element: <CareerServiceAr4 />,
-    },{
+    }, {
       path: "/career-service/service5-ar",
       element: <CareerServiceAr5 />,
-    },{
+    }, {
       path: "/career-service/service6-ar",
       element: <CareerServiceAr6 />,
-    },{
+    }, {
       path: "/personal-services/service1",
       element: <PersonalService1 />,
-    },{
+    }, {
       path: "/personal-services/service2",
       element: <PersonalService2 />,
-    },{
+    }, {
       path: "/personal-services/service3",
       element: <PersonalService3 />,
-    },{
+    }, {
       path: "/personal-services/service4",
       element: <PersonalService4 />,
-    },{
+    }, {
       path: "/personal-services/service5",
       element: <PersonalService5 />,
-    },{
+    }, {
       path: "/personal-services/service6",
       element: <PersonalService6 />,
-    },{
+    }, {
       path: "/personal-services/service7",
       element: <PersonalService7 />,
-    },{
+    }, {
       path: "/personal-service/service1-ar",
       element: <PersonalServiceAr1 />,
-    },{
+    }, {
       path: "/personal-service/service2-ar",
       element: <PersonalServiceAr2 />,
-    },{
+    }, {
       path: "/personal-service/service3-ar",
       element: <PersonalServiceAr3 />,
-    },{
+    }, {
       path: "/personal-service/service4-ar",
       element: <PersonalServiceAr4 />,
-    },{
+    }, {
       path: "/personal-service/service5-ar",
       element: <PersonalServiceAr5 />,
-    },{
+    }, {
       path: "/personal-service/service6-ar",
       element: <PersonalServiceAr6 />,
-    },{
+    }, {
       path: "/personal-service/service7-ar",
       element: <PersonalServiceAr7 />,
-    },  
+    },
+    {
+      path: "/add-new-partners",
+      element: <AddNewPartners />,
+    },
     {
       path: "*",
       element: <PageNotFound />,

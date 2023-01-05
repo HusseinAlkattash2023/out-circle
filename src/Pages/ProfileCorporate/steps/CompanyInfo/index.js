@@ -131,14 +131,12 @@ const PersonalInfo = ({ userInfo , setUserInfo , file1 , setFile1 , file2 , setF
         </div>
         <div className='information'>
             <input  
-            type="number" 
+            type="number"
+            disabled
             value={userInfo.number_of_partners} 
             placeholder="Number of partners"
             onChange = {(e) => setUserInfo({...userInfo , number_of_partners : e.target.value})}
             />
-            <div>
-              <img src={update} alt=""/>
-            </div>
         </div>
         <div className='information'>
           <label htmlFor="file1">

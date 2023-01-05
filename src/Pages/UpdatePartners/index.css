@@ -184,6 +184,11 @@
 .add_parteners .register1_ar .form-container h3{
     font-family: 'Readex Pro', sans-serif;
 }
+
+.add_parteners .form-container .footer{
+    width: 60%;
+}
+
 .add_parteners .form-container .footer button{
     border: none;
     background-color: black;
