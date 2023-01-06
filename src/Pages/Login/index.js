@@ -25,7 +25,7 @@ function Login() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    setFormValues({ ...formValues, [name]: value.trim() });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -135,7 +135,7 @@ function Login() {
                     value={formValues.user_type}
                     onChange={handleChange}
                   >
-                    <option value="">account type</option>
+                    <option value="" hidden>account type</option>
                     <option value="companies">Corporate</option>
                     <option value="institutes">Institute</option>
                     <option value="scientific_careers">

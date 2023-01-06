@@ -75,7 +75,7 @@ const AddPartnersAr = () => {
           <span className="icon">
             <BsPersonPlus />
           </span>
-          <span className="text">add partners</span>
+          <span className="text">إضافة شركاء</span>
         </header>
         <form className="form-container">
           <div className="body">
