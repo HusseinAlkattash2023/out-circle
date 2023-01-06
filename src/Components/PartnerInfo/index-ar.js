@@ -23,7 +23,7 @@ function PartnerAr({ num, setPartnersInfo, partnersInfo  , formErrors , setDataF
         style={{ color: "#fff", borderBottom: "2px solid #fff" }}
       >
         {" "}
-        معلومات الشركاء({num + 1})
+            معلومات الشريك({num + 1})
       </h3>
       <div className="my-3 input_">
         <input
