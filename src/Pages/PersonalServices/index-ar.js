@@ -9,8 +9,8 @@ function PersonalServices_ar() {
   return (
     <div className='personalServices'>
         <header>
-            <Link to="/individuals">
-                <span>Back</span>
+            <Link to="/individuals-ar" className="back_ar">
+                <span>رجوع</span>
                 <img src={back} alt=""/>
             </Link>
         </header>

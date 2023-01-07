@@ -237,34 +237,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #22594e;
+    background-color: #269273;
     width: 100%;
     border-radius: 15px;
     padding: 5px 10px;
     color: #fff;
     margin-top: -20px;
+    opacity: 0.9;
 }
 .message .section2_ar .check{
     display: flex;
     align-items: center;
     text-align: right;
     justify-content: space-between;
-    background-color: #22594e;
+    background-color: #269273;
     width: 100%;
     border-radius: 8px;
     padding: 10px 10px 5px 10px;
     color: #fff;
     margin-top: -20px;
     border: 1px solid #707070;
+    opacity: 0.9;
 }
 .message .section2_ar .check p{
     font-size: 18px;
     font-family: 'Readex Pro', sans-serif;
     text-align: center;
+    opacity: 1;
 }
 .message .section2 .check p{
     text-align: center;
     margin-top: 10px;
+    opacity: 1;
 }
 .message .section2 .wages{
     width: 100%;
@@ -526,13 +530,14 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    background-color: #22594e;
+    background-color: #269273;
     width: 100%;
     border-radius: 30px;
     padding: 10px 10px 5px 10px;
     color: #fff;
     border: 1px solid #707070;
     font-family: 'Readex Pro', sans-serif;
+    opacity: 0.9;
 }
 .message2 .content .wages{
     position: absolute;

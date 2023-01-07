@@ -247,7 +247,7 @@ function HomeAr() {
               </a>
             </li>
             <li className="mx-0">
-              <a href="http://t.me/OutCircle" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/out.circle.2023/?fbclid=IwAR1Y7wuS-QtVNNG7hhzwsbzzNfPNUbVGrqTAfCVYPwKMZUGKfKdKJSPU9K8" target="_blank" rel="noreferrer">
                 <img src={instegram} alt="" />
               </a>
             </li>

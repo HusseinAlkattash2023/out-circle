@@ -68,7 +68,7 @@ const PartnerInfoAr = ({ num, setNum, setData, data, formErrors }) => {
           value={data.born_date}
           onChange={(e) => setData({ ...data, born_date: e.target.value })}
           type="text"
-          placeholder="الموليد"
+          placeholder="المواليد"
           onFocus={() => (ref.current.type = "date")}
           onBlur={() => (ref.current.type = "text")}
           className="input"

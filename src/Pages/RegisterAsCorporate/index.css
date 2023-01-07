@@ -243,6 +243,7 @@ font-family: 'Readex Pro', sans-serif;
 .register1 .body,
 .register1_ar .body{
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 350px;
 }
  .register1 .body::-webkit-scrollbar ,

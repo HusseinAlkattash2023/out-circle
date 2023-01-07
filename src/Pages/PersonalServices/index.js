@@ -9,7 +9,7 @@ function PersonalServices() {
   return (
     <div className='personalServices'>
         <header>
-            <Link to="/individuals">
+            <Link to="/individuals" className="back">
                 <span>Back</span>
                 <img src={back} alt=""/>
             </Link>
@@ -26,7 +26,7 @@ function PersonalServices() {
         demand7="personal-services/service2"
         service="Individuals"
         service1="Medical services"
-        service2="Git and occasions services"
+        service2="Gift and occasions services"
         service3="Travel and reservation services"
         service4="Maintenance Services"
         service5="Alternative energy services"

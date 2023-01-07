@@ -37,8 +37,8 @@ function Login() {
       )
         .then((res) => {
           let data = res.data;
-          if (typeof data === "string") {
-            toast.error(res.data);
+          if (data === "عذراً الحساب الذي ادخلته غير موجود ، رجاءً أدخل إيميل آخر من فضلك ...") {
+            toast.error("Sorry, the account you entered does not exist, please enter another email please...");
           } else {
             switch (formValues.user_type) {
               case "companies":

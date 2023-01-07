@@ -52,18 +52,18 @@
 }
 .careerServices .career{
     position: absolute;
-    top: 80%;
-    left: 8%;
-    font-size: 30px;
+    top: 75%;
+    left: 10.5%;
+    font-size: 25px;
     color:#c4f9ae;
     letter-spacing: 1px;
     font-family:algerian;
 }
 .careerServices .career_ar{
     position: absolute;
-    top: 80%;
-    right: 8%;
-    font-size: 30px;
+    top: 75%;
+    right: 10.5%;
+    font-size: 25px;
     color:#c4f9ae;
     letter-spacing: 1px;
     font-family: 'Lemonada', medium;

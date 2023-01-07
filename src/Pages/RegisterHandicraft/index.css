@@ -208,6 +208,7 @@ font-family: 'Readex Pro', sans-serif;
 .register_handicraft .register3 .bar,
 .register_handicraft .register3_ar .bar{
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 350px;
 }
 .register_handicraft .register3 .bar::-webkit-scrollbar,

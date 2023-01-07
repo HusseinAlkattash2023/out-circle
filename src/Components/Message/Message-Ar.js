@@ -232,7 +232,7 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
           </div>
           <div>
             <button>
-              <img src={send_message} alt="" />
+              <img src={send_message} alt=""/>
             </button>
           </div>
         </form>
@@ -252,7 +252,7 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
           </div>
         )}
         <div className="wages">
-          يتم تحديد الأجور بعد دراسة الطلب وقبل استكماله ،وفي بعض الخدمات يُطلب
+          يتم تحديد الأجور بعد دراسة الطلب وقبل استكماله، وفي بعض الخدمات يُطلب
           دفعة من الأجور كهامش جدية
         </div>
       </div>
@@ -469,7 +469,7 @@ const Message2 = ({
           </div>
         )}
         <div className="wages">
-          يتم تحديد الأجور بعد دراسة الطلب وقبل استكماله ،وفي بعض الخدمات يُطلب
+          يتم تحديد الأجور بعد دراسة الطلب وقبل استكماله، وفي بعض الخدمات يُطلب
           دفعة من الأجور كهامش جدية{" "}
         </div>
       </div>

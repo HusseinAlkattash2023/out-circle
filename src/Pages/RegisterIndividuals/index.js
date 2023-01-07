@@ -349,7 +349,7 @@ function RegisterIndividuals() {
                 onChange={(e) => {
                   setData({ ...data, scientific_sertificate: e.target.value });
                 }}
-                placeholder="Scientific sertificate"
+                placeholder="Scientific certificate"
                 type="text"
               />
             </div>

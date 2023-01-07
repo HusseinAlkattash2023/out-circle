@@ -84,7 +84,7 @@ function Scietific() {
         service3="Account management (financial and banking/social media... ect)"
         service4="Follow-up  services for the investment activities"
         service5="(Real estate, transpotation, financial, licenses ..ect) services"
-        service6="Cladding and decoration ideas and services for the company."
+        service6="Cladding and decoration ideas and services"
         service7="Providing qualified employees"
         service8="Advertising Services"
       />

@@ -256,6 +256,10 @@ function RegisterHandicraftAr() {
                 placeholder="الاسم الكامل"
                 className="input"
                 type="text"
+                value={data.full_name}
+                onChange={(e) => {
+                  setData({ ...data,full_name: e.target.value });
+                }}
               />
               <br />
               <span style={{ color: "red" }}>{errors.full_name?.message}</span>
