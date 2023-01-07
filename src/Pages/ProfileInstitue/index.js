@@ -106,7 +106,7 @@ const ProfileInstitute = () => {
   return (
     <div className='profile_institute'>
         <header>
-            <Link to="/" className='back'>
+            <Link to="/institute" className='back'>
                 <span>Back</span>
                 <img src={back} alt=""/>
             </Link>

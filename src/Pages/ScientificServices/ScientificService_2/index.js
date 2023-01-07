@@ -18,6 +18,7 @@ const ScientificService_2 = () => {
         text5={"...."}
         text6={"...."}
         text7={"...."}
+        text8={"...."}
         />
     </div>
   )

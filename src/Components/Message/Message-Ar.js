@@ -3,7 +3,7 @@ import "./Message.css";
 import { useNavigate } from "react-router-dom";
 import uploade from "../../Assets/images/Group 375.png";
 import check from "../../Assets/images/check_box.png";
-import send_message from "../../Assets/images/sendMessage.png";
+import send_message from "../../Assets/images/sendMessageAr.png";
 import { AudioRecorder } from "react-audio-voice-recorder";
 import logo from "../../Assets/images/logo.svg";
 import Axios from "axios";
@@ -29,8 +29,9 @@ const MessageAr = ({
   text5,
   text6,
   text7,
+  text8,
   change_route,
-  user
+  user,
 }) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   useEffect(() => {
@@ -66,6 +67,7 @@ const MessageAr = ({
       text5={text5}
       text6={text6}
       text7={text7}
+      text8={text8}
       change_route={change_route}
       user={user}
     />
@@ -74,7 +76,7 @@ const MessageAr = ({
 
 export default MessageAr;
 
-const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
+const Message1 = ({ text, image, gmail, admin, change_route, user }) => {
   const navigate = useNavigate();
 
   const user_ = localStorage.getItem(`${user}`);
@@ -90,10 +92,9 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
   const [value3, setValue3] = useState();
 
   const handleChange = (e) => {
-    localStorage.setItem("notes" , e.target.value);
+    localStorage.setItem("notes", e.target.value);
     setValue1(e.target.value);
-  }
-
+  };
 
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
@@ -107,10 +108,9 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
     nest.className = "sss";
   };
 
-
   const ConfirmAudio = () => {
-    toast.success("تم تحميل مقطع صوتي بنجاح")
-  }
+    toast.success("تم تحميل مقطع صوتي بنجاح");
+  };
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
@@ -172,7 +172,8 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
             localStorage.removeItem("visitor");
-            setValue1("")
+            localStorage.removeItem("notes");
+            setValue1("");
             setValue2();
             setValue3();
           }
@@ -227,12 +228,12 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
               multiple
             />
           </div>
-          <div className="audio_ar">
+          <div disabled className="audio_ar">
             <AudioRecorder onRecordingComplete={addAudioElement} />
           </div>
           <div>
             <button>
-              <img src={send_message} alt=""/>
+              <img src={send_message} alt="" />
             </button>
           </div>
         </form>
@@ -243,12 +244,14 @@ const Message1 = ({ text, image, gmail, admin, change_route , user }) => {
             style={{ cursor: "pointer" }}
           >
             <img src={check} alt="" width="30px" />
-            <p>معلومات يجب استكمالها في حال كنت زائراً لإتمام إرسال الطلب</p>
+            <p>
+              في حال كنت زائر يرجى عدم تسجيل صوت أو تحميل ملف أو كتابة رسالة لحين استكمال المعلومات هنا
+            </p>
           </div>
         ) : (
           <div className="check">
             <img src={check} alt="" width="30px" />
-            <p>معلومات يجب استكمالها في حال كنت زائراً لإتمام إرسال الطلب</p>
+            <p>في حال كنت زائر يرجى عدم تسجيل صوت أو تحميل ملف أو كتابة رسالة لحين استكمال المعلومات هنا</p>
           </div>
         )}
         <div className="wages">
@@ -272,8 +275,9 @@ const Message2 = ({
   text5,
   text6,
   text7,
+  text8,
   change_route,
-  user
+  user,
 }) => {
   const navigate = useNavigate();
 
@@ -292,10 +296,9 @@ const Message2 = ({
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const handleChange = (e) => {
-    localStorage.setItem("notes" , e.target.value);
+    localStorage.setItem("notes", e.target.value);
     setValue1(e.target.value);
-  }
-
+  };
 
   const data_ = [
     {
@@ -328,13 +331,13 @@ const Message2 = ({
     },
   ];
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const audioBlob = await fetch(value3).then((r) => r.blob());
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
     data_.push({
       key: "file2",
-      value:value3 ? audioFile : null,
+      value: value3 ? audioFile : null,
     });
     const formData = new FormData();
     data_.map((item) => formData.append(item.key, item.value));
@@ -353,7 +356,7 @@ const Message2 = ({
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
             localStorage.removeItem("visitor");
-            setValue1("")
+            setValue1("");
             setValue2();
             setValue3();
           }
@@ -377,8 +380,8 @@ const Message2 = ({
   };
 
   const ConfirmAudio = () => {
-    toast.success("تم تحميل مقطع صوتي بنجاح")
-  }
+    toast.success("تم تحميل مقطع صوتي بنجاح");
+  };
 
   const visitorInformation = () => {
     navigate("/visitor-ar");
@@ -413,6 +416,9 @@ const Message2 = ({
         </div>
         <div>
           <p>{text7}</p>
+        </div>
+        <div className="text8">
+          <p>{text8}</p>
         </div>
       </div>
       <div className="content">
@@ -460,12 +466,12 @@ const Message2 = ({
             style={{ cursor: "pointer" }}
           >
             <img src={check} alt="" width="30px" />
-            <p>معلومات يجب استكمالها في حال كنت زائراً لإتمام إرسال الطلب</p>
+            <p>في حال كنت زائر يرجى عدم تسجيل صوت أو تحميل ملف أو كتابة رسالة لحين استكمال المعلومات هنا</p>
           </div>
         ) : (
           <div className="check">
             <img src={check} alt="" width="30px" />
-            <p>معلومات يجب استكمالها في حال كنت زائراً لإتمام إرسال الطلب</p>
+            <p>في حال كنت زائر يرجى عدم تسجيل صوت أو تحميل ملف أو كتابة رسالة لحين استكمال المعلومات هنا</p>
           </div>
         )}
         <div className="wages">

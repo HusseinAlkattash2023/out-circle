@@ -18,6 +18,7 @@ const CorporateServiceAr_7 = () => {
         text5={"...."}
         text6={"...."}
         text7={"...."}
+        text8={"...."}
         />
     </div>
 )

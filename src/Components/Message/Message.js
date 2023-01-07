@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Message.css";
-import { Link ,  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import uploade from "../../Assets/images/Group 375.png";
 import check from "../../Assets/images/check_box.png";
 import send_message from "../../Assets/images/sendMessage.png";
@@ -28,9 +28,10 @@ const Message = ({
   text5,
   text6,
   text7,
+  text8,
   gmail,
   admin,
-  change_route
+  change_route,
 }) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   useEffect(() => {
@@ -44,7 +45,14 @@ const Message = ({
   }, []);
   const width = windowSize.innerWidth;
   return width > 600 ? (
-    <Message1 user={user} text={text} image={image} gmail={gmail} admin={admin} change_route={change_route}/>
+    <Message1
+      user={user}
+      text={text}
+      image={image}
+      gmail={gmail}
+      admin={admin}
+      change_route={change_route}
+    />
   ) : (
     <Message2
       head={head}
@@ -56,6 +64,7 @@ const Message = ({
       text5={text5}
       text6={text6}
       text7={text7}
+      text8={text8}
       gmail={gmail}
       admin={admin}
       change_route={change_route}
@@ -66,13 +75,14 @@ const Message = ({
 
 export default Message;
 
-const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
-
+const Message1 = ({ text, image, gmail, admin, change_route, user }) => {
   const user_ = localStorage.getItem(`${user}`);
   const user_obj = JSON.parse(user_);
-  const data = user_ ? localStorage.getItem("user") : localStorage.getItem("visitor");
+  const data = user_
+    ? localStorage.getItem("user")
+    : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
-  
+
   const localNotes = localStorage.getItem("notes");
   const navigate = useNavigate();
   const [value1, setValue1] = useState(localNotes);
@@ -82,9 +92,9 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const handleChange = (e) => {
-    localStorage.setItem("notes" , e.target.value);
+    localStorage.setItem("notes", e.target.value);
     setValue1(e.target.value);
-  }
+  };
 
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
@@ -101,31 +111,36 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
     {
       key: "text",
       value: value1,
-    },{
+    },
+    {
       key: "user_email",
       value: obj ? obj.email : "",
-    },{
+    },
+    {
       key: "admin_email",
-      value:gmail,
-    },{
+      value: gmail,
+    },
+    {
       key: "admin_email",
-      value:admin,
-    },{
+      value: admin,
+    },
+    {
       key: "subject",
       value: "Services",
-    },{
+    },
+    {
       key: "phone_number",
       value: obj ? obj.phone_number : "",
-    },{
+    },
+    {
       key: "whatsapp_number",
       value: obj ? obj.whatsapp_number : "",
     },
   ];
 
   const ConfirmAudio = () => {
-    toast.success("Audio clip uploaded successfully")
-  }
-
+    toast.success("Audio clip uploaded successfully");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -145,31 +160,31 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
       }
     }
 
-    if(!obj){
-      toast.error("Please click on the green rectangle to complete your information to complete sending the request")
-    }else{
-        Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
-      .then((res) => {
-        if (typeof res.data === "object") {
-          toast.success("Your message was sent successfully");
-          localStorage.removeItem("visitor");
-          setValue1("")
-          setValue2()
-          setValue3()
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (!obj) {
+      toast.error(
+        "Please click on the green rectangle to complete your information to complete sending the request"
+      );
+    } else {
+      Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
+        .then((res) => {
+          if (typeof res.data === "object") {
+            toast.success("Your message was sent successfully");
+            localStorage.removeItem("visitor");
+            setValue1("");
+            setValue2();
+            setValue3();
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-
   };
 
-  const visitorInformation = ()=> {
-    navigate("/visitor")
-    localStorage.setItem("change_route" , `${change_route}`)
-  }
-
+  const visitorInformation = () => {
+    navigate("/visitor");
+    localStorage.setItem("change_route", `${change_route}`);
+  };
 
   return (
     <div className="message">
@@ -190,13 +205,14 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
             value={value1}
             onChange={handleChange}
             placeholder="Write message here..."
-            
           ></textarea>
           <div className="upload">
             <label htmlFor="file">
-            {
-                !value2 ? <p>Upload a file here to send more detials</p> : <p>Your file has been uploaded successfully</p>
-            }
+              {!value2 ? (
+                <p>Upload a file here to send more detials</p>
+              ) : (
+                <p>Your file has been uploaded successfully</p>
+              )}
               <img src={uploade} alt="" width="40px" />
             </label>
             <input
@@ -210,7 +226,7 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
             />
           </div>
           <div className="audio">
-            <AudioRecorder  onRecordingComplete={addAudioElement} />
+            <AudioRecorder onRecordingComplete={addAudioElement} />
           </div>
           <div>
             <button>
@@ -218,24 +234,27 @@ const Message1 = ({ text, image , gmail , admin , change_route , user}) => {
             </button>
           </div>
         </form>
-        {
-          !user_obj ? (
-          <div className="check" onClick={visitorInformation} style={{cursor:"pointer"}}>
+        {!user_obj ? (
+          <div
+            className="check"
+            onClick={visitorInformation}
+            style={{ cursor: "pointer" }}
+          >
             <p>
-                Information must be complated first in case you are a
-                visitor to send that request.
+              If you are a visitor, please do not record a voice, upload a file,
+              or write a message until the information is completed here
             </p>
             <img src={check} alt="" width="40px" />
           </div>
-          ):(
-          <div className="check" style={{cursor:"pointer"}}>
+        ) : (
+          <div className="check" style={{ cursor: "pointer" }}>
             <p>
-                Information that must be complated first in case you are a
-                visitor to send that request.
+              If you are a visitor, please do not record a voice, upload a file,
+              or write a message until the information is completed here
             </p>
             <img src={check} alt="" width="40px" />
           </div>
-          )}
+        )}
         <div className="wages">
           Wages are determined after studying the request and before complation.
           In some services, a payment of wages is requesred as a downpayment.
@@ -255,16 +274,17 @@ const Message2 = ({
   text5,
   text6,
   text7,
+  text8,
   gmail,
   admin,
   change_route,
-  user
+  user,
 }) => {
-
-
   const user_ = localStorage.getItem(`${user}`);
   const user_obj = JSON.parse(user_);
-  const data = user_ ? localStorage.getItem("user") : localStorage.getItem("visitor");
+  const data = user_
+    ? localStorage.getItem("user")
+    : localStorage.getItem("visitor");
   const obj = JSON.parse(data);
 
   const localNotes = localStorage.getItem("notes");
@@ -277,10 +297,9 @@ const Message2 = ({
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const handleChange = (e) => {
-    localStorage.setItem("notes" , e.target.value);
+    localStorage.setItem("notes", e.target.value);
     setValue1(e.target.value);
-  }
-
+  };
 
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
@@ -295,8 +314,8 @@ const Message2 = ({
   };
 
   const ConfirmAudio = () => {
-    toast.success("Audio clip uploaded successfully")
-  }
+    toast.success("Audio clip uploaded successfully");
+  };
 
   const data_ = [
     {
@@ -309,11 +328,13 @@ const Message2 = ({
     },
     {
       key: "admin_email",
-      value:gmail,
-    },{
+      value: gmail,
+    },
+    {
       key: "admin_email",
-      value:admin,
-    },{
+      value: admin,
+    },
+    {
       key: "subject",
       value: "Services",
     },
@@ -326,7 +347,7 @@ const Message2 = ({
       value: obj ? obj.whatsapp_number : "",
     },
   ];
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const audioBlob = await fetch(value3).then((r) => r.blob());
     const audioFile = new File([audioBlob], "voice.mp3", { type: "audio/mp3" });
@@ -343,29 +364,31 @@ const Message2 = ({
       }
     }
 
-    if(!obj){
-      toast.error("Please click on the green rectangle to complete your information to complete sending the request")
-    }else{
-        Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
+    if (!obj) {
+      toast.error(
+        "Please click on the green rectangle to complete your information to complete sending the request"
+      );
+    } else {
+      Axios.post(`${BASE_API_URL}/api/email/send-email`, formData)
         .then((res) => {
           if (typeof res.data === "object") {
             toast.success("Your message was sent successfully");
             localStorage.removeItem("visitor");
-            setValue1("")
-            setValue2()
-            setValue3()
+            setValue1("");
+            setValue2();
+            setValue3();
           }
-        }).catch((err) => {
+        })
+        .catch((err) => {
           console.log(err);
         });
     }
   };
 
-  const visitorInformation = ()=> {
-    navigate("/visitor")
-    localStorage.setItem("change_route" , `${change_route}`)
-  }
-
+  const visitorInformation = () => {
+    navigate("/visitor");
+    localStorage.setItem("change_route", `${change_route}`);
+  };
 
   return (
     <div className="message2">
@@ -396,6 +419,9 @@ const Message2 = ({
         <div>
           <p>{text7}</p>
         </div>
+        <div className="text8">
+          <p>{text8}</p>
+        </div>
       </div>
       <div className="content_en">
         <div>
@@ -409,10 +435,14 @@ const Message2 = ({
             placeholder="write your message here..."
           ></textarea>
           <div className="upload">
-          <label htmlFor="file">
-              {
-                !value2 ? <p>Upload a file here to send more detials</p> : <p className="uploaded">Your file has been uploaded successfully</p>
-              }
+            <label htmlFor="file">
+              {!value2 ? (
+                <p>Upload a file here to send more detials</p>
+              ) : (
+                <p className="uploaded">
+                  Your file has been uploaded successfully
+                </p>
+              )}
               <img src={uploade} alt="" width="40px" />
             </label>
             <input
@@ -432,24 +462,27 @@ const Message2 = ({
             </button>
           </div>
         </form>
-        {
-          !user_obj ? (
-          <div className="check" onClick={visitorInformation} style={{cursor:"pointer"}}>
+        {!user_obj ? (
+          <div
+            className="check"
+            onClick={visitorInformation}
+            style={{ cursor: "pointer" }}
+          >
             <p>
-                Information must be complated first in case you are a
-                visitor to send that request.
+              If you are a visitor, please do not record a voice, upload a file,
+              or write a message until the information is completed here
             </p>
             <img src={check} alt="" width="40px" />
           </div>
-          ):(
-          <div className="check" style={{cursor:"pointer"}}>
+        ) : (
+          <div className="check" style={{ cursor: "pointer" }}>
             <p>
-                Information that must be complated first in case you are a
-                visitor to send that request.
+              If you are a visitor, please do not record a voice, upload a file,
+              or write a message until the information is completed here
             </p>
             <img src={check} alt="" width="40px" />
           </div>
-          )}
+        )}
         <div className="wages_">
           Wages are determined after studying the request and before complation.
           In some services, a payment of wages is requesred as a downpayment.

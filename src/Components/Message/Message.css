@@ -239,8 +239,8 @@
     justify-content: center;
     background-color: #269273;
     width: 100%;
-    border-radius: 15px;
-    padding: 5px 10px;
+    border-radius: 20px;
+    padding: 5px 5px 0px 5px;
     color: #fff;
     margin-top: -20px;
     opacity: 0.9;
@@ -252,7 +252,7 @@
     justify-content: space-between;
     background-color: #269273;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 10px 10px 5px 10px;
     color: #fff;
     margin-top: -20px;
@@ -260,7 +260,7 @@
     opacity: 0.9;
 }
 .message .section2_ar .check p{
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Readex Pro', sans-serif;
     text-align: center;
     opacity: 1;
@@ -269,16 +269,18 @@
     text-align: center;
     margin-top: 10px;
     opacity: 1;
+    font-size: 15px;
 }
 .message .section2 .wages{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
     color: #000;
     background-color: #d2bc8e;
-    padding: 5px 10px;
+    padding: 14px 4px;
     border-radius: 15px;
     font-family: arial;
     text-align: center;
+    font-size: 14px;
 }
 .message .section2_ar .wages{
     width: 100%;
@@ -385,6 +387,7 @@
     height: 50px;
     border: 1px solid #707070;
 }
+
 .message2 .body_ div{
     background-image: linear-gradient(to right, #20ab84, #105c48);
     margin: 5px auto;
@@ -521,6 +524,7 @@
 .message2 .content_en form button img{
     width:45px ;
 }
+
 .message2 .content .check ,
 .message2 .content_en .check{
     position: absolute;
@@ -538,6 +542,10 @@
     border: 1px solid #707070;
     font-family: 'Readex Pro', sans-serif;
     opacity: 0.9;
+}
+.message2 .content .check p ,
+.message2 .content_en .check p{
+    font-size: 14px;
 }
 .message2 .content .wages{
     position: absolute;
@@ -590,7 +598,7 @@
     }
     .message .section2_ar{
         position: relative;
-        top: 40%;
+        top: 35%;
         width:60%;
         left: 50%;
         transform: translate(-50% , -50%);
@@ -598,7 +606,7 @@
     }
     .message .section2{
         position: relative;
-        top: 40%;
+        top: 35%;
         width:60%;
         left: 50%;
         transform: translate(-50% , -50%);

@@ -17,7 +17,8 @@ const PersonalService_7 = () => {
         text4={"...."}
         text5={"...."}
         text6={"...."}
-        text70={"...."}
+        text7={"...."}
+        text8={"...."}
         />
     </div>
   )

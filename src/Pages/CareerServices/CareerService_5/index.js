@@ -17,7 +17,8 @@ const CareerService_5 = () => {
         text4={"Selling or buying a real estat or a car according to the required specifications"}
         text5={"Concluding contracts to Completely or partially cladding a real estate"}
         text6={"Supervising and following up the existing cladding"}
-        text7={"The possibility of completing, applying and following up the  decorative designs"}
+        text7={"Decoration ideas"}
+        text8={"The possibility of completing, applying and following up the  decorative designs"}
         />
     </div>
   )

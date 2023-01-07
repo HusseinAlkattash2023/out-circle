@@ -1,7 +1,7 @@
 import React, {useState , useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import back from '../../Assets/images/back.png';
-import institute from "../../Assets/images/Mask Group -2.png"
+import institute from "../../Assets/images/ar_photo/institute.png"
 import PersonalInfo from './steps/PersonalInfo/index-ar';
 import InstituteInfo from './steps/InstituteInfo/index-ar'
 import user from '../../Assets/images/user.png'
@@ -102,8 +102,8 @@ const ProfileInstitute = () => {
   return (
     <div className='profile_institute'>
         <header>
-            <Link to="/" className='back'>
-                <span>Back</span>
+            <Link to="/institute-ar" className='back_ar'>
+                <span>رجوع</span>
                 <img src={back} alt=""/>
             </Link>
         </header>
@@ -143,7 +143,7 @@ const ProfileInstitute = () => {
           </div>
         </div>
         </section>
-        <div className='section2'>
+        <div className='section2_ar'>
           <img src={institute} alt=""/>
         </div>
     </div>

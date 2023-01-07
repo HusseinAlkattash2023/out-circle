@@ -18,6 +18,7 @@ const HandicraftServiceAr_5 = () => {
         text5={"...."}
         text6={"...."}
         text7={"...."}
+        text8={"...."}
         />
     </div>
   )

@@ -17,7 +17,8 @@ const HandicraftServices_3 = () => {
         text4={"Partially or completely achievement or supervising the financing transactions"}
         text5={"Partially or completely managing social media accounts"}
         text6={"Supervising the social media accounts"}
-        text7={"Managing any department of the company"}
+        text7={"...."}
+        text8={"...."}
         />
     </div>
   )

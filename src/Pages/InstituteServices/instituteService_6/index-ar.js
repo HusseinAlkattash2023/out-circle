@@ -18,6 +18,7 @@ const InstituteServiceAr_6 = () => {
         text5={"...."}
         text6={"...."}
         text7={"...."}
+        text8={"...."}
         />
     </div>
   )

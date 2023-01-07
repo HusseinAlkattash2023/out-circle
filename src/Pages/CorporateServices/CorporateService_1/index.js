@@ -18,6 +18,7 @@ const CorporateService_1 = () => {
         text5={"Providing consultations and new development ideas"}
         text6={"Increase spread and profit"}
         text7={"Providing appropriate experiences"}
+        text8={"The possibility of follow-up and management of proposals and consultations "}
         />
     </div>
   )

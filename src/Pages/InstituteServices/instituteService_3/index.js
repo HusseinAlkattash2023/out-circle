@@ -18,6 +18,7 @@ const InstituteService_3 = () => {
         text5={"Partially or completely managing social media accounts"}
         text6={"Supervising the social media accounts"}
         text7={"Managing any department of the company"}
+        text8={"Supervising any department of the company"}
         />
     </div>
   )
