@@ -224,7 +224,7 @@ function RegisterCorporateAr() {
               if(typeof data1 === "string"){
                 toast.error(data1)
               }
-             else {
+            else {
               toast.success("تم إنشاء حسابك بنجاح");
               localStorage.setItem("number_partners", data.number_partners);
               localStorage.setItem("company_id" , data1);
