@@ -97,7 +97,7 @@ function Login_ar() {
         if (!values.password) {
         errors.password = "الرجاء إدخال كلمة المرور";
         } else if (values.password.length < 8) {
-            errors.password = "يجب أن تكون كلمة المرور أكثر من 8 أحرف";
+            errors.password = "كلمة المرور يجب ان تحوي 8 محارف على الأقل";
         }
         if(!values.user_type){
             errors.user_type = "الرجاء إدخال نوع الحساب الخاص بك";

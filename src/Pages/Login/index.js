@@ -39,7 +39,10 @@ function Login() {
           let data = res.data;
           if (data === "عذراً الحساب الذي ادخلته غير موجود ، رجاءً أدخل إيميل آخر من فضلك ...") {
             toast.error("Sorry, the account you entered does not exist, please enter another email please...");
-          } else {
+          }else if(data === "كلمة السر التي أدخلتها غير صحيحة ، من فضلك أعد إدخال كلمة السر بشكل صحيح .."){
+            toast.error("The password you entered is incorrect, please re-enter the correct password");
+          }
+          else {
             switch (formValues.user_type) {
               case "companies":
                 localStorage.setItem("user_corporate", JSON.stringify(data));
