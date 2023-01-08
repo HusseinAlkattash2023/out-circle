@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CorporateManagment = () => {
 
+
     const navigate = useNavigate();
 
     const BASE_API_URL = useSelector(state => state.BASE_API_URL);
@@ -45,7 +46,7 @@ const CorporateManagment = () => {
                 .catch(err => console.log(err));
         }
 
-    }, [BASE_API_URL, navigate]);
+    }, [BASE_API_URL, getAllCompanies, get_all_partners, navigate]);
 
     return (
         <div className="corporate-managment text-center">

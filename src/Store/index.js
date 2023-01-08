@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const initState = {
-    BASE_API_URL: "",
+    BASE_API_URL: "https://out-circle2023.cleverapps.io",
     userInfo: localStorage.getItem("user-info")
 }
 

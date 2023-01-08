@@ -22,7 +22,7 @@ const InstitutesManagment = () => {
                 setInstitutesInfoList(res.data);
             })
             .catch(err => console.log(err));
-    }, [BASE_API_URL]);
+    }, [BASE_API_URL, navigate]);
 
     return (
         <div className="institutes-managment text-center">

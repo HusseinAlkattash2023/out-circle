@@ -356,6 +356,7 @@ const Message2 = ({
           if (typeof res.data === "object") {
             toast.success("لقد تم ارسال رسالتك بنجاح");
             localStorage.removeItem("visitor");
+            localStorage.removeItem("notes");
             setValue1("");
             setValue2();
             setValue3();

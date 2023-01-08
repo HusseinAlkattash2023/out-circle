@@ -20,7 +20,7 @@ const IndividualsManagment = () => {
                 setIndividualsInfoList(res.data);
             })
             .catch(err => console.log(err));
-    }, [BASE_API_URL]);
+    }, [BASE_API_URL, navigate]);
 
     return (
         <div className="individuals-managment text-center">

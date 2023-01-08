@@ -20,7 +20,7 @@ const HandcraftsManagment = () => {
                 setCraftsmenInfoList(res.data);
             })
             .catch(err => console.log(err));
-    }, [BASE_API_URL]);
+    }, [BASE_API_URL, navigate]);
 
     return (
         <div className="handcraft-managment text-center">

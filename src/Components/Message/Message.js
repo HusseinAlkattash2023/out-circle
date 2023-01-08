@@ -170,6 +170,7 @@ const Message1 = ({ text, image, gmail, admin, change_route, user }) => {
           if (typeof res.data === "object") {
             toast.success("Your message was sent successfully");
             localStorage.removeItem("visitor");
+            localStorage.removeItem("notes");
             setValue1("");
             setValue2();
             setValue3();
@@ -374,6 +375,7 @@ const Message2 = ({
           if (typeof res.data === "object") {
             toast.success("Your message was sent successfully");
             localStorage.removeItem("visitor");
+            localStorage.removeItem("notes");
             setValue1("");
             setValue2();
             setValue3();

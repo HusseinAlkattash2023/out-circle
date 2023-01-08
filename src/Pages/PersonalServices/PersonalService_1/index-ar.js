@@ -1,7 +1,6 @@
 import React from 'react';
 import MessageAr from '../../../Components/Message/Message-Ar';
 import image from '../../../Assets/images/personal_service-ar/image1.png';
-import './index.css';
 
 const PersonalServiceAr_1 = () => {
   return (

@@ -5,7 +5,7 @@ import './index.css';
 
 const PersonalService_1 = () => {
   return (
-    <div>
+    <div className="PersonalService_1">
       <Message
         gmail={"p.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
