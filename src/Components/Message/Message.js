@@ -400,7 +400,7 @@ const Message2 = ({
         <p className="address">{address}</p>
       </div>
       <div className="body_">
-        <div>
+        <div className="text1">
           <p>{text1}</p>
         </div>
         <div>
@@ -421,7 +421,7 @@ const Message2 = ({
         <div>
           <p>{text7}</p>
         </div>
-        <div className="text8">
+        <div>
           <p>{text8}</p>
         </div>
       </div>

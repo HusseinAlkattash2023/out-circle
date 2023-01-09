@@ -436,7 +436,7 @@ const Message2 = ({
             <label htmlFor="file">
               <img src={uploade} alt="" width="40px" />
               {!value2 ? (
-                <p>تحميل الملف هنا ﻹرسال مزيد من التفاصيل</p>
+                <p>حمّل ملف هنا لمزيد من التفاصيل</p>
               ) : (
                 <p>تم تحميل ملفك بنجاح</p>
               )}

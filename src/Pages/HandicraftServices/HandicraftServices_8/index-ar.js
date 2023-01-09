@@ -9,8 +9,8 @@ const HandicraftServiceAr_8 = () => {
         admin={"outcircle2023@gmail.com"}
         change_route={"handicraft/service8-ar"}
         user={"user_handicraft"}
-        image={image1} text={"الخدمات الإعلانية"}
-        head={"حرفيين"} address = {"الخدمات الإعلانية"}
+        image={image1} text={"خدمات إعلانية"}
+        head={"حرفيين"} address = {"خدمات إعلانية"}
         text1={"حجز مساحة إعلانية لمنتجك أو خدمتك"}
         text2={"إعلان عام لمدة محددة عبر كافة الوسائل الخاصة بنا "}
         text3={"الاستشارة الإعلانية وأفكار عن إعلانك وإداراته"}

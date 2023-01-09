@@ -161,7 +161,7 @@ function Home() {
               style={{ display: "flex", alignItems: "center" }}
             >
               <div style={{ border: "2px solid black", color: "black" }}>
-                Login
+                Sign in
               </div>
               <img
                 src={user}

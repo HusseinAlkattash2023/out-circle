@@ -13,7 +13,7 @@ const InstituteService_2 = () => {
         head={"Institute"} address={"New business advice and ideas."}
         text1={"Providing new business ideas in the context of current work"}
         text2={"Providing new business ideas in another suitable field of work"}
-        text3={"Achieving additional qualitative revenues"}
+        text3={"Achieving additional qualitative revenue"}
         text4={"The possibility of follow-up and management of proposals and consultations"}
         text5={"...."}
         text6={"...."}

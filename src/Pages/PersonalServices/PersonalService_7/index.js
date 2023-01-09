@@ -12,7 +12,7 @@ const PersonalService_7 = () => {
         image={image} text={"Alternative energy services"}
         head={"individuals"} address={"Alternative energy services"}
         text1={"Provide honest advice about suitable alternative energy products and assess the real needs of each person"}
-        text2={"Assistance in securing alternative energy systems at reasonable, competitive and guaranteed prices."}
+        text2={"Assistance in providing guaranteed alternative energy systems at reasonable and competitive prices."}
         text3={"Assist in updating or replacing existing systems at a reasonable and appropriate cost."}
         text4={"...."}
         text5={"...."}

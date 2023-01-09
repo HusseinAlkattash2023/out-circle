@@ -138,7 +138,7 @@ const ProfileInstitute = () => {
                   }
                 }}
               >
-                {page === 1 ? "تعديل" : "التالي"}
+                {page === 1 ? "تحديث" : "التالي"}
           </button>
           <button
               className='next mt-3 ms-2 py-1 px-4'

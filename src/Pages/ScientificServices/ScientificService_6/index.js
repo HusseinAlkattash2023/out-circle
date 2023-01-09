@@ -10,10 +10,10 @@ const ScientificService_6 = () => {
         change_route={"scientific/service6"}
         user={"user_scientific"}
         image={image} text={"Cladding and decoration ideas and services for the company"}
-        head={"Profissional Scientific"} address={"Cladding and decoration ideas and services for the company"}
-        text1={"Concluding contracts to Completely or partially cladding a real estate2"}
+        head={"Scientific Professions"} address={"Cladding and decoration ideas and services for the company"}
+        text1={"Concluding contracts to completely or partially real estate cladding"}
         text2={"Supervising and following up the existing cladding"}
-        text3={"Ideas for decoration"}
+        text3={"Decoration ideas"}
         text4={"The possibility of completing, applying and following up the  decorative designs"}
         text5={"...."}
         text6={"...."}

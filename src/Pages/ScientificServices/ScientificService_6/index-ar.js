@@ -9,7 +9,7 @@ return (
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service6-ar"}
         user={"user_scientific"}
-        image={image1} text={"أفكار وخدمات إكساء وديكور للشركة"}
+        image={image1} text={"أفكار وخدمات إكساء وديكور"}
         head={"مهن علمية"} address = {"أفكار وخدمات إكساء وديكور للشركة"}
         text1={"تعهد إكساء عقار كامل أو جزئي"}
         text2={"الإشراف على الإكساء القائم و متابعته"}

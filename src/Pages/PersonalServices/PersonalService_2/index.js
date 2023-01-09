@@ -10,10 +10,10 @@ const PersonalService_2 = () => {
         change_route={"personal-services/service2"}
         user={"user_individuals"}
         image={image} text={"Consultations on general issues and problems"}
-        head={"individuals"} address={"Consultations on issues and general problems"}
+        head={"individuals"} address={"Consultations on general issues and problems"}
         text1={"Providing consultations, advice and solutions in any general issue or problem."}
         text2={"Sharing ideas and providing the best solution"}
-        text3={"Advice on personal issues, if desired(as humanitarian service)"}
+        text3={"Providing advice on personal issues if desired (as a humanitarian service)."}
         text4={"Providing practical assistance if possible"}
         text5={"...."}
         text6={"...."}

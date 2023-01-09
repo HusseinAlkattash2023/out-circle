@@ -10,8 +10,8 @@ const ScientificService_7 = () => {
         change_route={"scientific/service7"}
         user={"user_scientific"}
         image={image} text={"Providing qualified employees"}
-        head={"Profissional Scientific"} address={"Providing qualified employees"}
-        text1={"Providing qualified personnel in the required field"}
+        head={"Scientific Professions"} address={"Providing qualified employees"}
+        text1={"Providing qualified persons in the required field"}
         text2={"Highlighting real skills and experience for the benefit of working"}
         text3={"...."}
         text4={"...."}

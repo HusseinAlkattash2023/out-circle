@@ -131,7 +131,7 @@ function Login() {
             <form onSubmit={handleSubmit} noValidate>
               <div className="bar">
                 <div className="select">
-                  <label>select your type account</label>
+                  <label>select your account type</label>
                   <br />
                   <select
                     name="user_type"
@@ -142,7 +142,7 @@ function Login() {
                     <option value="companies">Corporate</option>
                     <option value="institutes">Institute</option>
                     <option value="scientific_careers">
-                      Scientific Profissional
+                      Scientific Professions
                     </option>
                     <option value="craftsmen">Handicraft</option>
                     <option value="individuals">Individuals</option>
@@ -191,7 +191,7 @@ function Login() {
                 forget password
               </Link>
               <button type="submit" className="loginButton mt-1">
-                login
+                Sign in
               </button>
               <br />
             </form>

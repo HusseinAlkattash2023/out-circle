@@ -10,10 +10,10 @@ const ScientificService_2 = () => {
         change_route={"scientific/service2"}
         user={"user_scientific"}
         image={image} text={"New business advice and ideas"}
-        head={"Profissional Scientific"} address={"New business advice and ideas."}
+        head={"Scientific Professions"} address={"New business advice and ideas."}
         text1={"Providing new business ideas in the context of current work"}
         text2={"Providing new business ideas in another suitable field of work"}
-        text3={"Achieving additional qualitative revenues"}
+        text3={"Achieving additional qualitative revenue"}
         text4={"The possibility of follow-up and management of proposals and consultations"}
         text5={"...."}
         text6={"...."}

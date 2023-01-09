@@ -167,7 +167,7 @@ function Login_ar() {
                     <button type='submit' className='loginButton mt-2'>تسجيل الدخول</button><br/>
                 </form>
                 <div className='register mt-3'>
-                    <p className='my-0'>هل لديك حساب؟</p>
+                    <p className='my-0'>ليس لديك حساب؟</p>
                     <Link to="/register-ar">
                         <button>التسجيل</button>
                     </Link>

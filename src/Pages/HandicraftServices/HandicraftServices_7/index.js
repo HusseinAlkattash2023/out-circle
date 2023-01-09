@@ -11,7 +11,7 @@ const HandicraftServices_7 = () => {
         user={"user_handicraft"}
         image={image} text={"Providing qualified employees."}
         head={"Handicraft"} address={"Providing qualified employees"}
-        text1={"Providing qualified personnel in the required field"}
+        text1={"Providing qualified persons in the required field"}
         text2={"Highlighting real skills and experience for the benefit of working"}
         text3={"...."}
         text4={"...."}

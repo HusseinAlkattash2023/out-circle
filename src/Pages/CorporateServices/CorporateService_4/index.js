@@ -13,7 +13,7 @@ const CorporateService_4 = () => {
         head={"Corporate"} address={"Follow-up  services for the investment activities of the company"}
         text1={"Financial portfolio management"}
         text2={"Supervising the financial portfolio"}
-        text3={"Follow-up the company's additional business(tenders, auctions, etc.)"}
+        text3={"Follow-up the company's additional business (tenders, auctions, etc.)"}
         text4={"Managing or supervising the company projects (construction, cladding, undertakings, etc.)"}
         text5={"...."}
         text6={"...."}

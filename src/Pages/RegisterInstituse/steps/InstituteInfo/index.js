@@ -31,7 +31,7 @@ const InstituteInfo = ({ data, setData, file1, setFile1 , formErrors}) => {
             placeholder="Institute record number"
             type="number"
           /><br/>
-          {formErrors.record_numbere && (
+          {formErrors.record_number && (
             <span className="error" style={{ color: "red" }}>
               {formErrors.record_number}
             </span>

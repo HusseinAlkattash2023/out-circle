@@ -11,7 +11,7 @@ const InstituteService_7 = () => {
         user={"user_institute"}
         image={image1} text={"Providing qualified employees."}
         head={"Institute"} address={"Providing qualified employees"}
-        text1={"Providing qualified personnel in the required field"}
+        text1={"Providing qualified persons in the required field"}
         text2={"Highlighting real skills and experience for the benefit of working"}
         text3={"...."}
         text4={"...."}

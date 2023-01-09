@@ -1,9 +1,11 @@
-import React from 'react'
-import Message from '../../../Components/Message/Message'
-import image from '../../../Assets/images/personal_services/Group 444.png'
+import React from 'react';
+import Message from '../../../Components/Message/Message';
+import image from '../../../Assets/images/personal_services/Group 444.png';
+import './index.css'
+
 const PersonalService_6 = () => {
   return (
-    <div>
+    <div className="PersonalService_6">
         <Message 
         gmail={"p.individuals.outcircle@gmail.com"}
         admin={"outcircle2023@gmail.com"}
@@ -11,7 +13,7 @@ const PersonalService_6 = () => {
         user={"user_individuals"}
         image={image} text={"Bill and fee payment service"}
         head={"individuals"} address={"Bill and fee payment service"}
-        text1={"Saving time and effort by providing monthly subscriptions to pay electricity, water, landline, mobile and internet bills at nominal prices and in an orderly manner"}
+        text1={"Save time and effort by providing monthly subscriptions to pay electricity, water, landline, mobile and internet bills at nominal prices in organizly manner"}
         text2={"Providing electronic payment service for taxes, fees, traffic violations and any electronic fee."}
         text3={"...."}
         text4={"...."}

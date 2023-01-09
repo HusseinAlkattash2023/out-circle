@@ -13,8 +13,8 @@ const InstituteService_4 = () => {
         head={"Institute"} address={"Follow-up  services for the investment activities of the institute"}
         text1={"Financial portfolio management"}
         text2={"Supervising the financial portfolio"}
-        text3={"Follow-up the company's additional business(tenders, auctions, etc.)"}
-        text4={"Managing or supervising the company projects (construction, cladding, undertakings, etc.)"}
+        text3={"Follow-up the institute's additional business (tenders, auctions, etc.)"}
+        text4={"Managing or supervising the institute projects (construction, cladding, undertakings, etc.)"}
         text5={"...."}
         text6={"...."}
         text7={"...."}

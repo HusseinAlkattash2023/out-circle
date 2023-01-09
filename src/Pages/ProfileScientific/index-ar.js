@@ -248,7 +248,7 @@ const ProfileScientificAr = () => {
             </div>
             </div>
             <div className="footer">
-                <button type="submit" className="mt-4 py-1 px-3">تعديل</button>
+                <button type="submit" className="mt-4 py-1 px-3">تحديث</button>
             </div>
           </form>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Message from "../../../Components/Message/Message";
 import image from "../../../Assets/images/personal_services/Group 480.png";
-import './index.css';
+
 
 const PersonalService_1 = () => {
   return (
@@ -31,7 +31,7 @@ const PersonalService_1 = () => {
           "Providing psychological support to all cases through effective and studied methods"
         }
         text8={
-          " You can also provide us with your personal medical experiences and the cases you have experienced by presenting it to us to be used for the benefit of all in the event that similar cases are presented to us  "
+          "You can also provide us with your personal medical experiences and cases to be used for the benefit of all."
         }
       />
     </div>

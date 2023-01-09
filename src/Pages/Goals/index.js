@@ -59,27 +59,27 @@ function Goals() {
               in easy ways, anywhere and anytime.
             </p>
             <p>
-              2- Saving time and effort and the trouble of thinking about
-              general and petty matters within the work by providing
-              consultations and services, organizing and following-up work.
+              2- Saving time, effort and the trouble of thinking about general
+              and petty matters within the work by providing consultations and
+              services, organizing and following-up work.
             </p>
             <p>
               3- Providing integrated and comprehensive services that meet most
               of the clients’ occupational and personal needs in one place,
-              which saves the trouble of being distracted for the clients.
+              which saves the trouble of being distracted.
             </p>
             <p>
               4- Develop business and create new ideas that contribute to
               generate revenues under all circumstances.
             </p>
             <p>
-              5- Our most interest is to obtain distinguished results in
-              reality, as we are not satisfied with providing advice and
-              services in verbal terms only.
+              5- Our most interest is to obtain real distinguished results, as
+              we are not satisfied to providing verbal advice and services.
             </p>
             <p>6- Diligent follow-up and providing after-sales services</p>
             <p>
-              7- Highlight on the ignored Experienced people and give them their right.
+              7- Highlight on the ignored experienced people and give them their
+              right.
             </p>
             <p>8- Prividing personal and humanitarian services.</p>
           </div>

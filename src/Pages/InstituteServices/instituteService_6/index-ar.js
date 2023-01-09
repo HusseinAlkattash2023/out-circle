@@ -9,8 +9,8 @@ const InstituteServiceAr_6 = () => {
         gmail={"institute.outcircle@gmail.com"}
         change_route={"institute/service6-ar"}
         user={"user_institute"}
-        image={image1} text={"أفكار وخدمات إكساء وديكور للشركة"}
-        head={"مؤسسة"} address = {"أفكار وخدمات إكساء وديكور للشركة"}
+        image={image1} text={"أفكار وخدمات إكساء وديكور للمؤسسة"}
+        head={"مؤسسة"} address = {"أفكار وخدمات إكساء وديكور للمؤسسة"}
         text1={"تعهد إكساء عقار كامل أو جزئي"}
         text2={"الإشراف على الإكساء القائم و متابعته"}
         text3={"طرح أفكار ديكور"}

@@ -13,7 +13,7 @@ const InstituteService_8 = () => {
         head={"institute"} address={"Advertising Services"}
         text1={"Reserve advertising space for your product or service"}
         text2={"Public advertisement for a specified period through all our means"}
-        text3={"Advertising advice and ideas for your ad and its management"}
+        text3={"Advertising advice and ideas for your ad and manage it"}
         text4={"New ad ideas with the possibility of design and follow-up"}
         text5={"...."}
         text6={"...."}

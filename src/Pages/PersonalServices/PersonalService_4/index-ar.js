@@ -9,7 +9,7 @@ const PersonalServiceAr_4 = () => {
         admin={"outcircle2023@gmail.com"}
         change_route={"personal-service/service4-ar"}
         user={"user_individuals"}
-        image={image} text={"خدمات السفر والجوازات"}
+        image={image} text={"خدمات السفر والحجوزات"}
         head={"أفراد"} address={"خدمات السفر والجوازات"}
         text1={"تقديم النصائح والأفكار حول أماكن السياحية الخارجية أو الداخلية"}
         text3={"تقديم النصائح حول البرامج السياحية الأنسب والمضمونة"}

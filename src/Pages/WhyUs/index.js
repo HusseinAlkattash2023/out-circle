@@ -30,7 +30,7 @@ function WhyUs() {
           </p>
           <p>
             {" "}
-            Also despair under difficult circumstances is evidence of
+            Also, despair under difficult circumstances is evidence of
             disability.
           </p>
           <p>
@@ -42,8 +42,8 @@ function WhyUs() {
             We are a team that provides consultative and development services in
             addition to occupational services for all private business sectors
             in an out-of-the-ordinary technical way that saves time and efforts
-            for every one. it also gives valuable and actual results, in
-            addition to challenges in the labor market outside the public cilcle
+            for every one, it also gives valuable and actual results, in
+            addition to challenges in the labor market outside the public circle
             and the usual routine.
           </p>
           <p>

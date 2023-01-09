@@ -9,8 +9,8 @@ return (
         admin={"outcircle2023@gmail.com"}
         change_route={"scientific/service8-ar"}
         user={"user_scientific"}
-        image={image1} text={"الخدمات الإعلانية"}
-        head={"مهن علمية"} address = {"الخدمات الإعلانية"}
+        image={image1} text={"خدمات إعلانية"}
+        head={"مهن علمية"} address = {"خدمات إعلانية"}
         text1={"حجز مساحة إعلانية لمنتجك أو خدمتك"}
         text2={"إعلان عام لمدة محددة عبر كافة الوسائل الخاصة بنا "}
         text3={"الاستشارة الإعلانية وأفكار عن إعلانك وإداراته"}

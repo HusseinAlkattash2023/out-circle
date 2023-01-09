@@ -9,10 +9,10 @@ const PersonalService_3 = () => {
         admin={"outcircle2023@gmail.com"}
         change_route={"personal-services/service3"}
         user={"user_individuals"}
-        image={image} text={"Git and occasions services"}
-        head={"individuals"} address={"Git and occasions services"}
-        text1={"Presenting completely new ideas in the type of gift requested."}
-        text2={"Follow up the coordination and presentation of gifts"}
+        image={image} text={"Gift and occasions services"}
+        head={"individuals"} address={"Gift and occasions services"}
+        text1={"Presenting completely new ideas in the type of desired gift."}
+        text2={"Follow on the coordination and presentation of gifts"}
         text3={"Providing ideas for coordination and organization of occasions appropriately"}
         text4={"Management and follow-up coordination of occasions"}
         text5={"...."}

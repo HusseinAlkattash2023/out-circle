@@ -185,7 +185,7 @@ function RegisterScientific() {
           <span className="icon">
             <BsPersonPlus />
           </span>
-          <span className="text">New User / Profisional Scientific</span>
+          <span className="text">New User / Scientific Professions</span>
         </header>
         <div>
           <Toaster />

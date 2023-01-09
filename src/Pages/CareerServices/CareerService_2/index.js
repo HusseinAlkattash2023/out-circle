@@ -11,7 +11,7 @@ const CareerService_2 = () => {
         user={"user_individuals"}
         image={image} text={"Providing a job opportunity"}
         head={"individuals"} address={"Providing a job opportunity"}
-        text1={"Providing a job opporjunty in the field of your scientific or practical experience with real impartiality according to your entitlement"}
+        text1={"Providing a job opportunity in the field of your scientific or practical experience with real impartiality according to your entitlement"}
         text2={"Providing the highest possible income for you by employing in several fields together"}
         text3={"The possibility to get a job opportunity with us according to your skills"}
         text4={"Providing a business oppotunity in your home (marketing / non-marketing)"}

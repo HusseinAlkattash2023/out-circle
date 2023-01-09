@@ -10,9 +10,9 @@ const ScientificService_5 = () => {
         change_route={"scientific/service5"}
         user={"user_scientific"}
         image={image} text={"(Real estate, transpotation, financial, licenses  ..ect) services"}
-        head={"Profissional Scientific"} address={"(Real estate, transpotation, financial, licenses ..ect) services"}
+        head={"Scientific Professions"} address={"(Real estate, transpotation, financial, licenses ..ect) services"}
         text1={"Follow up the transactions of real estate, financial and municipality"}
-        text2={"Follow up the transactions of the commercial registry and social affairs"}
+        text2={"Follow up the transactions of the licenses and social affairs"}
         text3={"Follow up the transactions in transportation directorate and other government department"}
         text4={"Selling or buying a real estat or a car according to the required specifications"}
         text5={"...."}

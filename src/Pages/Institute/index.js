@@ -63,7 +63,7 @@ function Institute() {
                             <img src={notifications} alt=""/>
                         </Link>
                         <Link onClick={Logout} to="/" className="my-2">
-                            <span>Logout</span>
+                            <span>Sign out</span>
                             <img src={logout} alt=""/>
                         </Link>
                         <Link to="/" className="my-2">
