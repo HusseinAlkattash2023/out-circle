@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/out-circle/static/css/main.a96a56b6.css",
-    "main.js": "/out-circle/static/js/main.2a51e60e.js",
+    "main.js": "/out-circle/static/js/main.c8a070dc.js",
     "static/js/2670.7274007f.chunk.js": "/out-circle/static/js/2670.7274007f.chunk.js",
     "static/css/7767.6ed786a3.chunk.css": "/out-circle/static/css/7767.6ed786a3.chunk.css",
     "static/js/7767.fcacf770.chunk.js": "/out-circle/static/js/7767.fcacf770.chunk.js",
@@ -213,7 +213,7 @@
     "static/media/image1.png": "/out-circle/static/media/image1.652d8a180cc30fdbbba6.png",
     "static/media/corporate8.png": "/out-circle/static/media/corporate8.a753f492cc37e8e61956.png",
     "static/media/Group 472.png": "/out-circle/static/media/Group 472.544286767791dbb76462.png",
-    "static/media/Group 448.png": "/out-circle/static/media/Group 448.30aa39f373dc6f65b174.png",
+    "static/media/Group 443.png": "/out-circle/static/media/Group 443.30aa39f373dc6f65b174.png",
     "static/media/Group 467.png": "/out-circle/static/media/Group 467.d26117cfa8f3990aa307.png",
     "static/media/handicraft5.png": "/out-circle/static/media/handicraft5.96d5ef66dd4ac4d9a7c4.png",
     "static/media/institute1.png": "/out-circle/static/media/institute1.95fc91e9b6267c55cc34.png",
@@ -227,7 +227,7 @@
     "static/media/handicraft8.png": "/out-circle/static/media/handicraft8.c650d556fab19a3e4796.png",
     "static/media/handicraft6.png": "/out-circle/static/media/handicraft6.6662267c58d955b5bde2.png",
     "static/media/Group 468.png": "/out-circle/static/media/Group 468.2ed6ad286a0ac0c82be5.png",
-    "static/media/Group 443.png": "/out-circle/static/media/Group 443.51a3ee0ea985978cfcf5.png",
+    "static/media/Group 448.png": "/out-circle/static/media/Group 448.51a3ee0ea985978cfcf5.png",
     "static/media/institute7.png": "/out-circle/static/media/institute7.d61dcb7b5a85dd3330c6.png",
     "static/media/Group 465.png": "/out-circle/static/media/Group 465.c525ca3cc41b6fa17518.png",
     "static/media/handicraft4.png": "/out-circle/static/media/handicraft4.51feecd9dd4f6510fa6d.png",
@@ -285,7 +285,7 @@
     "static/media/Group 360.svg": "/out-circle/static/media/Group 360.9759f5e39d748aed772b37c333329921.svg",
     "static/media/Path 314.svg": "/out-circle/static/media/Path 314.d95c043c72adf10b003f.svg",
     "main.a96a56b6.css.map": "/out-circle/static/css/main.a96a56b6.css.map",
-    "main.2a51e60e.js.map": "/out-circle/static/js/main.2a51e60e.js.map",
+    "main.c8a070dc.js.map": "/out-circle/static/js/main.c8a070dc.js.map",
     "2670.7274007f.chunk.js.map": "/out-circle/static/js/2670.7274007f.chunk.js.map",
     "7767.6ed786a3.chunk.css.map": "/out-circle/static/css/7767.6ed786a3.chunk.css.map",
     "7767.fcacf770.chunk.js.map": "/out-circle/static/js/7767.fcacf770.chunk.js.map",
@@ -449,6 +449,6 @@
   },
   "entrypoints": [
     "static/css/main.a96a56b6.css",
-    "static/js/main.2a51e60e.js"
+    "static/js/main.c8a070dc.js"
   ]
 }
